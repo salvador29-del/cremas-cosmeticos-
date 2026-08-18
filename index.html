@@ -92,6 +92,9 @@ nav a:hover {
     text-decoration: none;
     font-weight: bold;
     margin: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .button:hover {
@@ -118,20 +121,7 @@ section h2 {
     font-size: 18px;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-    background: #eee;
-}
+/* VIDEO */
 
 .video-container {
     max-width: 850px;
@@ -147,6 +137,92 @@ section h2 {
     background: #000;
 }
 
+/* BOTÓN PRODUCTOS */
+
+.products-button-area {
+    text-align: center;
+    padding: 20px 20px 50px;
+}
+
+.products-button {
+    display: inline-block;
+    background: #b21f2d;
+    color: white;
+    padding: 17px 35px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 19px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(178,31,45,0.25);
+}
+
+.products-button:hover {
+    background: #8e1723;
+}
+
+/* PRODUCTOS OCULTOS */
+
+#productos-contenido {
+    display: none;
+    animation: aparecer 0.5s ease;
+}
+
+#productos-contenido.mostrar {
+    display: block;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* GALERÍA */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.gallery-item {
+    background: white;
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+.gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    background: #eee;
+}
+
+/* COMPRA */
+
+.buy-area {
+    text-align: center;
+    padding: 20px 20px 40px;
+}
+
+.buy-area p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* CONTACTO */
+
 .contact {
     text-align: center;
     background: #f6e8dc;
@@ -160,6 +236,8 @@ section h2 {
 .contact a {
     color: #b21f2d;
 }
+
+/* AVISOS LEGALES */
 
 .legal {
     background: #fff;
@@ -175,6 +253,8 @@ section h2 {
     font-size: 14px;
 }
 
+/* FOOTER */
+
 footer {
     background: #b21f2d;
     color: white;
@@ -182,6 +262,8 @@ footer {
     padding: 25px 15px;
     font-size: 14px;
 }
+
+/* MÓVIL */
 
 @media (max-width: 600px) {
 
@@ -215,8 +297,17 @@ footer {
         font-size: 25px;
     }
 
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
     .gallery img {
-        height: 230px;
+        height: 300px;
+    }
+
+    .products-button {
+        width: 90%;
+        font-size: 17px;
     }
 }
 </style>
@@ -225,92 +316,219 @@ footer {
 <body>
 
 <header>
+
     <h1>Parfüm und Düften Perez</h1>
+
     <p>✨ Cremas · Cosméticos · Cuidado Personal ✨</p>
+
 </header>
 
 <nav>
+
     <a href="#inicio">Inicio</a>
-    <a href="#productos">Productos</a>
-    <a href="#galeria">Galería</a>
     <a href="#video">Vídeo</a>
+    <a href="#productos">Productos</a>
     <a href="#contacto">Contacto</a>
     <a href="#legal">Avisos legales</a>
+
 </nav>
 
+<!-- INICIO -->
+
 <section class="hero" id="inicio">
+
     <h2>Cuida tu piel, disfruta tu belleza</h2>
 
     <p>
-        Descubre nuestra selección de cremas, cosméticos y productos
-        de cuidado personal.
+        Descubre nuestra selección de cremas, cosméticos
+        y productos de cuidado personal.
     </p>
 
-    <a class="button"
-       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-       target="_blank">
-        🛒 Hacer un pedido
-    </a>
-
-    <a class="button" href="#productos">
-        🧴 Ver productos
-    </a>
 </section>
 
-<section id="productos">
-    <h2>🧴 Cremas y Cosméticos</h2>
-
-    <div class="intro">
-        <p>
-            Productos seleccionados para el cuidado de la piel y el bienestar
-            personal. Descubre nuestras propuestas y encuentra los productos
-            que mejor se adapten a tus necesidades.
-        </p>
-
-        <p>
-            Para realizar tu pedido, utiliza el botón de compra y accederás
-            directamente a la plataforma oficial de Chogan.
-        </p>
-    </div>
-</section>
-
-<section id="galeria">
-    <h2>✨ Nuestros productos</h2>
-
-    <div class="gallery">
-
-        <img src="3db33307-8cb5-4233-8c37-38a98181a286.jpeg" alt="Cremas y cosméticos">
-        <img src="4408fca4-abab-4d68-bab0-7430429b0d9e.jpeg" alt="Productos cosméticos">
-        <img src="3d955cec-3099-4ccb-91ac-8c7a6310522a.jpeg" alt="Productos de cuidado personal">
-        <img src="c76562b5-0431-4a0a-b914-c0e9a805d4a0.jpeg" alt="Cremas">
-        <img src="1bbf28bf-08df-46f7-9f92-cd117f80332e.jpeg" alt="Cosméticos">
-        <img src="37f74a70-5162-4296-a7ff-8104b67193b3.jpeg" alt="Productos de belleza">
-        <img src="ae5552eb-e472-491c-8317-e4bd4dbf7753.jpeg" alt="Cuidado de la piel">
-        <img src="7fdb1c64-db8d-43d7-b4f2-3acc932654af.jpeg" alt="Cremas y cuidado personal">
-        <img src="bd5459f3-13c6-45d4-9d4e-02727b6bbee2.jpeg" alt="Cosméticos y belleza">
-        <img src="d332e65c-0e3f-4425-83de-faa2a8539db6.jpeg" alt="Productos de cuidado personal">
-        <img src="8b9e44a1-46e2-4e20-9828-0465c1fe8881.jpeg" alt="Cremas y cosméticos">
-        <img src="f352294f-31ce-47b4-9e1e-d46e2f2795f2.jpeg" alt="Productos de belleza">
-        <img src="8ee37d51-6b17-4ae2-ba97-2122bdf60564.jpeg" alt="Cuidado personal">
-
-    </div>
-</section>
+<!-- VIDEO -->
 
 <section id="video">
+
     <h2>🎥 Descubre nuestros productos</h2>
 
     <div class="video-container">
+
         <video controls playsinline preload="metadata">
-            <source src="c5f3bebc-231d-47a0-b61f-2b49c24ab1ca.mov" type="video/quicktime">
+
+            <source
+                src="c5f3bebc-231d-47a0-b61f-2b49c24ab1ca.mov"
+                type="video/quicktime"
+            >
+
             Tu navegador no puede reproducir este vídeo.
+
         </video>
+
     </div>
+
 </section>
 
+<!-- BOTÓN PARA MOSTRAR PRODUCTOS -->
+
+<div class="products-button-area">
+
+    <button
+        class="products-button"
+        onclick="mostrarProductos()"
+        id="boton-productos"
+    >
+        🧴 VER PRODUCTOS
+    </button>
+
+</div>
+
+<!-- PRODUCTOS -->
+
+<section id="productos-contenido">
+
+    <div id="productos">
+
+        <h2>🧴 Nuestros productos</h2>
+
+        <div class="intro">
+
+            <p>
+                Descubre nuestra selección de productos para el cuidado
+                personal después del baño y para el cuidado de la piel.
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- GALERÍA DE LAS 13 FOTOS -->
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img
+                src="3db33307-8cb5-4233-8c37-38a98181a286.jpeg"
+                alt="Producto de cuidado personal"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="4408fca4-abab-4d68-bab0-7430429b0d9e.jpeg"
+                alt="Producto cosmético"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="3d955cec-3099-4ccb-91ac-8c7a6310522a.jpeg"
+                alt="Producto de cuidado personal"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="c76562b5-0431-4a0a-b914-c0e9a805d4a0.jpeg"
+                alt="Crema"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="1bbf28bf-08df-46f7-9f92-cd117f80332e.jpeg"
+                alt="Producto cosmético"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="37f74a70-5162-4296-a7ff-8104b67193b3.jpeg"
+                alt="Producto de belleza"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="ae5552eb-e472-491c-8317-e4bd4dbf7753.jpeg"
+                alt="Cuidado de la piel"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="7fdb1c64-db8d-43d7-b4f2-3acc932654af.jpeg"
+                alt="Crema y cuidado personal"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="bd5459f3-13c6-45d4-9d4e-02727b6bbee2.jpeg"
+                alt="Cosméticos y belleza"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="d332e65c-0e3f-4425-83de-faa2a8539db6.jpeg"
+                alt="Producto de cuidado personal"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="8b9e44a1-46e2-4e20-9828-0465c1fe8881.jpeg"
+                alt="Crema y cosméticos"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="f352294f-31ce-47b4-9e1e-d46e2f2795f2.jpeg"
+                alt="Producto de belleza"
+            >
+        </div>
+
+        <div class="gallery-item">
+            <img
+                src="8ee37d51-6b17-4ae2-ba97-2122bdf60564.jpeg"
+                alt="Producto de cuidado personal"
+            >
+        </div>
+
+    </div>
+
+    <!-- BOTÓN DE COMPRA -->
+
+    <div class="buy-area">
+
+        <p>
+            ¿Te interesa alguno de nuestros productos?
+        </p>
+
+        <a
+            class="button"
+            href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            🛒 COMPRAR DIRECTAMENTE EN CHOGAN
+        </a>
+
+    </div>
+
+</section>
+
+<!-- CONTACTO -->
+
 <section id="contacto" class="contact">
+
     <h2>📞 Contacto</h2>
 
-    <p>¿Tienes alguna pregunta o necesitas ayuda con tu pedido?</p>
+    <p>
+        ¿Tienes alguna pregunta o necesitas ayuda con tu pedido?
+    </p>
 
     <p>
         📧
@@ -326,12 +544,18 @@ footer {
         </a>
     </p>
 
-    <a class="button"
-       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-       target="_blank">
+    <a
+        class="button"
+        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
         🛒 Pedir directamente
     </a>
+
 </section>
+
+<!-- AVISOS LEGALES -->
 
 <section id="legal" class="legal">
 
@@ -426,15 +650,57 @@ footer {
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
+
     <p>
-        © 2026 Parfüm und Düften Perez - Afiliado independiente de Chogan.
+        © 2026 Parfüm und Düften Perez -
+        Afiliado independiente de Chogan.
     </p>
 
     <p>
         Cremas · Cosméticos · Cuidado Personal
     </p>
+
 </footer>
+
+<script>
+
+function mostrarProductos() {
+
+    const productos =
+        document.getElementById("productos-contenido");
+
+    const boton =
+        document.getElementById("boton-productos");
+
+    if (productos.classList.contains("mostrar")) {
+
+        productos.classList.remove("mostrar");
+
+        boton.innerHTML = "🧴 VER PRODUCTOS";
+
+    } else {
+
+        productos.classList.add("mostrar");
+
+        boton.innerHTML = "⬆️ OCULTAR PRODUCTOS";
+
+        setTimeout(function() {
+
+            productos.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }, 100);
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
