@@ -1,323 +1,514 @@
+
+
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parfüm und Düften Perez | Cremas & Cosméticos</title>
+<title>Parfüm und Düfte Perez | Cremas & Cosméticos</title>
 
-<meta name="description" content="Parfüm und Düften Perez - Cremas, cosméticos y productos de cuidado personal.">
+<meta name="description" content="Parfüm und Düfte Perez: cremas, cosméticos, body mist y cuidado personal.">
+
+<meta name="theme-color" content="#b21f2d">
 
 <style>
-* {
-    box-sizing: border-box;
-}
+
+* { box-sizing: border-box; }
 
 html {
+
     scroll-behavior: smooth;
+
+    scroll-padding-top: 80px;
+
 }
 
 body {
+
     margin: 0;
+
     font-family: Arial, Helvetica, sans-serif;
+
     background: #fff8ef;
+
     color: #333;
+
     line-height: 1.6;
+
 }
 
 header {
+
     background: #fff8ef;
+
     text-align: center;
+
     padding: 28px 15px 20px;
+
     border-bottom: 1px solid #ead8ca;
+
 }
 
 header h1 {
+
     margin: 0;
+
     color: #b21f2d;
+
     font-size: 32px;
+
 }
 
 header p {
+
     margin: 8px 0 0;
+
     color: #7a5a50;
+
     font-size: 18px;
+
 }
 
 nav {
+
     background: #b21f2d;
+
     padding: 12px;
+
     text-align: center;
+
     position: sticky;
+
     top: 0;
+
     z-index: 100;
+
 }
 
 nav a {
+
     color: white;
+
     text-decoration: none;
+
     margin: 0 9px;
+
     font-weight: bold;
+
     font-size: 15px;
+
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
+nav a:hover { text-decoration: underline; }
 
 .hero {
+
     text-align: center;
+
     padding: 55px 20px;
-    background: #fff8ef;
+
 }
 
 .hero h2 {
+
     color: #b21f2d;
+
     font-size: 36px;
+
     margin-bottom: 12px;
+
 }
 
 .hero p {
+
     max-width: 700px;
+
     margin: 0 auto 25px;
+
     font-size: 19px;
+
 }
 
 .button {
+
     display: inline-block;
+
     background: #b21f2d;
+
     color: white;
-    padding: 13px 24px;
+
+    padding: 13px 20px;
+
     border-radius: 30px;
+
     text-decoration: none;
+
     font-weight: bold;
+
     margin: 6px;
+
     border: none;
+
     cursor: pointer;
-    font-size: 16px;
+
+    font-size: 15px;
+
+    text-align: center;
+
 }
 
-.button:hover {
-    background: #8e1723;
-}
+.button:hover { background: #8e1723; }
 
 section {
+
     max-width: 1100px;
+
     margin: auto;
-    padding: 50px 20px;
+
+    padding: 45px 20px;
+
 }
 
 section h2 {
+
     text-align: center;
+
     color: #b21f2d;
+
     margin-bottom: 30px;
+
     font-size: 30px;
+
 }
 
 .intro {
+
     text-align: center;
+
     max-width: 800px;
+
     margin: auto;
+
     font-size: 18px;
+
 }
 
-/* VIDEO */
+/* VÍDEO */
 
 .video-container {
+
     max-width: 850px;
+
     margin: auto;
+
     text-align: center;
+
 }
 
 .video-container video {
+
     width: 100%;
+
     max-height: 600px;
+
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+
     background: #000;
+
 }
 
 /* BOTÓN PRODUCTOS */
 
 .products-button-area {
+
     text-align: center;
-    padding: 20px 20px 50px;
+
+    padding: 20px 15px 45px;
+
 }
 
 .products-button {
+
     display: inline-block;
+
     background: #b21f2d;
+
     color: white;
+
     padding: 17px 35px;
+
     border-radius: 35px;
-    text-decoration: none;
+
     font-weight: bold;
+
     font-size: 19px;
+
     border: none;
+
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(178,31,45,0.25);
+
+    box-shadow: 0 5px 15px rgba(178,31,45,.25);
+
 }
 
-.products-button:hover {
-    background: #8e1723;
-}
+.products-button:hover { background: #8e1723; }
 
 /* PRODUCTOS OCULTOS */
 
-#productos-contenido {
-    display: none;
-    animation: aparecer 0.5s ease;
-}
+#productos-contenido { display: none; }
 
 #productos-contenido.mostrar {
+
     display: block;
+
+    animation: aparecer .5s ease;
+
 }
 
 @keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(12px); }
+
+    to { opacity: 1; transform: translateY(0); }
+
 }
 
-/* GALERÍA */
+/* TARJETAS */
 
 .gallery {
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 30px;
+
 }
 
 .gallery-item {
+
+    min-width: 0;
+
     background: white;
-    padding: 10px;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-}
 
-.gallery img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    background: #eee;
-}
+    padding: 12px;
 
-/* COMPRA */
+    border-radius: 16px;
 
-.buy-area {
+    box-shadow: 0 4px 15px rgba(0,0,0,.10);
+
+    border: 1px solid #ead8ca;
+
     text-align: center;
-    padding: 20px 20px 40px;
+
 }
 
-.buy-area p {
-    font-size: 18px;
-    margin-bottom: 20px;
+.gallery-item img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 620px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    border-radius: 10px;
+
+    background: #fff8ef;
+
 }
+
+.product-info { padding: 12px 4px 5px; }
+
+.product-info h3 {
+
+    color: #b21f2d;
+
+    font-size: 21px;
+
+    margin: 4px 0 8px;
+
+}
+
+.article {
+
+    font-size: 14px;
+
+    color: #705b51;
+
+    margin: 4px 0;
+
+}
+
+.price {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #9d752b;
+
+    margin: 8px 0 12px;
+
+}
+
+.order-buttons {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 12px;
+
+}
+
+.order-buttons .button {
+
+    display: block;
+
+    margin: 0;
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    padding: 13px 10px;
+
+}
+
+.chogan-button { background: #b21f2d; }
+
+.whatsapp-button { background: #168b48; }
+
+.whatsapp-button:hover { background: #116d38; }
 
 /* CONTACTO */
 
 .contact {
+
     text-align: center;
+
     background: #f6e8dc;
+
     border-radius: 20px;
+
 }
 
-.contact p {
-    font-size: 18px;
-}
+.contact p { font-size: 18px; }
 
-.contact a {
+.contact a:not(.button) {
+
     color: #b21f2d;
+
+    overflow-wrap: anywhere;
+
 }
 
 /* AVISOS LEGALES */
 
 .legal {
+
     background: #fff;
+
     border-top: 1px solid #ead8ca;
+
 }
 
 .legal h3 {
+
     color: #b21f2d;
+
     margin-top: 30px;
+
 }
 
-.legal p {
-    font-size: 14px;
-}
+.legal p { font-size: 14px; }
 
-/* FOOTER */
+/* PIE */
 
 footer {
-    background: #b21f2d;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    font-size: 14px;
-}
 
-/* MÓVIL */
+    background: #b21f2d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    font-size: 14px;
+
+}
 
 @media (max-width: 600px) {
 
-    header h1 {
-        font-size: 25px;
-    }
+    header h1 { font-size: 25px; }
 
-    header p {
-        font-size: 16px;
-    }
+    header p { font-size: 16px; }
 
     nav a {
+
         display: inline-block;
+
         margin: 4px 5px;
+
         font-size: 13px;
+
     }
 
-    .hero h2 {
-        font-size: 28px;
-    }
+    .hero h2 { font-size: 28px; }
 
-    .hero p {
-        font-size: 17px;
-    }
+    .hero p { font-size: 17px; }
 
-    section {
-        padding: 35px 15px;
-    }
+    section { padding: 35px 15px; }
 
-    section h2 {
-        font-size: 25px;
-    }
+    section h2 { font-size: 25px; }
 
     .gallery {
+
         grid-template-columns: 1fr;
+
+        gap: 20px;
+
     }
 
-    .gallery img {
-        height: 300px;
-    }
+    .gallery-item { padding: 10px; }
 
     .products-button {
+
         width: 90%;
+
         font-size: 17px;
+
     }
+
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-    <h1>Parfüm und Düften Perez</h1>
+    <h1>Parfüm und Düfte Perez</h1>
 
     <p>✨ Cremas · Cosméticos · Cuidado Personal ✨</p>
 
@@ -326,9 +517,13 @@ footer {
 <nav>
 
     <a href="#inicio">Inicio</a>
+
     <a href="#video">Vídeo</a>
+
     <a href="#productos">Productos</a>
+
     <a href="#contacto">Contacto</a>
+
     <a href="#legal">Avisos legales</a>
 
 </nav>
@@ -340,13 +535,16 @@ footer {
     <h2>Cuida tu piel, disfruta tu belleza</h2>
 
     <p>
+
         Descubre nuestra selección de cremas, cosméticos
+
         y productos de cuidado personal.
+
     </p>
 
 </section>
 
-<!-- VIDEO -->
+<!-- VÍDEO ORIGINAL CONSERVADO -->
 
 <section id="video">
 
@@ -357,8 +555,11 @@ footer {
         <video controls playsinline preload="metadata">
 
             <source
+
                 src="c5f3bebc-231d-47a0-b61f-2b49c24ab1ca.mov"
+
                 type="video/quicktime"
+
             >
 
             Tu navegador no puede reproducir este vídeo.
@@ -374,16 +575,26 @@ footer {
 <div class="products-button-area">
 
     <button
+
         class="products-button"
+
         onclick="mostrarProductos()"
+
         id="boton-productos"
+
+        aria-expanded="false"
+
+        aria-controls="productos-contenido"
+
     >
+
         🧴 VER PRODUCTOS
+
     </button>
 
 </div>
 
-<!-- PRODUCTOS -->
+<!-- GALERÍA DE LOS CINCO ANUNCIOS -->
 
 <section id="productos-contenido">
 
@@ -394,126 +605,285 @@ footer {
         <div class="intro">
 
             <p>
-                Descubre nuestra selección de productos para el cuidado
-                personal después del baño y para el cuidado de la piel.
+
+                Elige tu producto y pulsa el botón correspondiente
+
+                para pedirlo en Chogan o consultarnos por WhatsApp.
+
             </p>
 
         </div>
 
     </div>
 
-    <!-- GALERÍA DE LAS 13 FOTOS -->
-
     <div class="gallery">
 
-        <div class="gallery-item">
-            <img
-                src="3db33307-8cb5-4233-8c37-38a98181a286.jpeg"
-                alt="Producto de cuidado personal"
-            >
-        </div>
+        <!-- GOLDEN HOUR -->
 
-        <div class="gallery-item">
-            <img
-                src="4408fca4-abab-4d68-bab0-7430429b0d9e.jpeg"
-                alt="Producto cosmético"
-            >
-        </div>
+        <article class="gallery-item">
 
-        <div class="gallery-item">
             <img
-                src="3d955cec-3099-4ccb-91ac-8c7a6310522a.jpeg"
-                alt="Producto de cuidado personal"
-            >
-        </div>
 
-        <div class="gallery-item">
-            <img
-                src="c76562b5-0431-4a0a-b914-c0e9a805d4a0.jpeg"
-                alt="Crema"
-            >
-        </div>
+                src="3003EA1B-7744-46A9-9A4E-27DFED53A707.png"
 
-        <div class="gallery-item">
-            <img
-                src="1bbf28bf-08df-46f7-9f92-cd117f80332e.jpeg"
-                alt="Producto cosmético"
-            >
-        </div>
+                alt="Golden Hour, body mist Aurodhea"
 
-        <div class="gallery-item">
-            <img
-                src="37f74a70-5162-4296-a7ff-8104b67193b3.jpeg"
-                alt="Producto de belleza"
-            >
-        </div>
+                loading="lazy"
 
-        <div class="gallery-item">
-            <img
-                src="ae5552eb-e472-491c-8317-e4bd4dbf7753.jpeg"
-                alt="Cuidado de la piel"
             >
-        </div>
 
-        <div class="gallery-item">
-            <img
-                src="7fdb1c64-db8d-43d7-b4f2-3acc932654af.jpeg"
-                alt="Crema y cuidado personal"
-            >
-        </div>
+            <div class="product-info">
 
-        <div class="gallery-item">
-            <img
-                src="bd5459f3-13c6-45d4-9d4e-02727b6bbee2.jpeg"
-                alt="Cosméticos y belleza"
-            >
-        </div>
+                <h3>Golden Hour</h3>
 
-        <div class="gallery-item">
-            <img
-                src="d332e65c-0e3f-4425-83de-faa2a8539db6.jpeg"
-                alt="Producto de cuidado personal"
-            >
-        </div>
+                <p class="article">Artículo: SBM003</p>
 
-        <div class="gallery-item">
-            <img
-                src="8b9e44a1-46e2-4e20-9828-0465c1fe8881.jpeg"
-                alt="Crema y cosméticos"
-            >
-        </div>
+                <p class="price">19,90 €</p>
 
-        <div class="gallery-item">
-            <img
-                src="f352294f-31ce-47b4-9e1e-d46e2f2795f2.jpeg"
-                alt="Producto de belleza"
-            >
-        </div>
+                <div class="order-buttons">
 
-        <div class="gallery-item">
+                    <a class="button chogan-button"
+
+                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        🛒 PEDIR EN CHOGAN
+
+                    </a>
+
+                    <a class="button whatsapp-button"
+
+                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Golden%20Hour%20(SBM003)%20por%2019%2C90%20%E2%82%AC."
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        WhatsApp · PEDIR
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- TROPICAL BREEZE -->
+
+        <article class="gallery-item">
+
             <img
-                src="8ee37d51-6b17-4ae2-ba97-2122bdf60564.jpeg"
-                alt="Producto de cuidado personal"
+
+                src="Tropical_Breeze_SBM001.jpeg"
+
+                alt="Tropical Breeze, body mist Aurodhea"
+
+                loading="lazy"
+
             >
-        </div>
+
+            <div class="product-info">
+
+                <h3>Tropical Breeze</h3>
+
+                <p class="article">Artículo: SBM001</p>
+
+                <p class="price">19,90 €</p>
+
+                <div class="order-buttons">
+
+                    <a class="button chogan-button"
+
+                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        🛒 PEDIR EN CHOGAN
+
+                    </a>
+
+                    <a class="button whatsapp-button"
+
+                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Tropical%20Breeze%20(SBM001)%20por%2019%2C90%20%E2%82%AC."
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        WhatsApp · PEDIR
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- BRAZILIAN SUNSET -->
+
+        <article class="gallery-item">
+
+            <img
+
+                src="Brazilian_Sunset_SBM005.jpeg"
+
+                alt="Brazilian Sunset, body mist Aurodhea"
+
+                loading="lazy"
+
+            >
+
+            <div class="product-info">
+
+                <h3>Brazilian Sunset</h3>
+
+                <p class="article">Artículo: SBM005</p>
+
+                <p class="price">19,90 €</p>
+
+                <div class="order-buttons">
+
+                    <a class="button chogan-button"
+
+                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        🛒 PEDIR EN CHOGAN
+
+                    </a>
+
+                    <a class="button whatsapp-button"
+
+                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Brazilian%20Sunset%20(SBM005)%20por%2019%2C90%20%E2%82%AC."
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        WhatsApp · PEDIR
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- PACIFIC AURA -->
+
+        <article class="gallery-item">
+
+            <img
+
+                src="Pacific_Aura_SBM002.jpeg"
+
+                alt="Pacific Aura, body mist Aurodhea"
+
+                loading="lazy"
+
+            >
+
+            <div class="product-info">
+
+                <h3>Pacific Aura</h3>
+
+                <p class="article">Artículo: SBM002</p>
+
+                <p class="price">19,90 €</p>
+
+                <div class="order-buttons">
+
+                    <a class="button chogan-button"
+
+                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        🛒 PEDIR EN CHOGAN
+
+                    </a>
+
+                    <a class="button whatsapp-button"
+
+                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Pacific%20Aura%20(SBM002)%20por%2019%2C90%20%E2%82%AC."
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        WhatsApp · PEDIR
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- SUMMER DREAM -->
+
+        <article class="gallery-item">
+
+            <img
+
+                src="Summer_Dream_SBM004.jpeg"
+
+                alt="Summer Dream, body mist Aurodhea"
+
+                loading="lazy"
+
+            >
+
+            <div class="product-info">
+
+                <h3>Summer Dream</h3>
+
+                <p class="article">Artículo: SBM004</p>
+
+                <p class="price">19,90 €</p>
+
+                <div class="order-buttons">
+
+                    <a class="button chogan-button"
+
+                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        🛒 PEDIR EN CHOGAN
+
+                    </a>
+
+                    <a class="button whatsapp-button"
+
+                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Summer%20Dream%20(SBM004)%20por%2019%2C90%20%E2%82%AC."
+
+                       target="_blank" rel="noopener noreferrer">
+
+                        WhatsApp · PEDIR
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
 
     </div>
 
-    <!-- BOTÓN DE COMPRA -->
+    <div class="buy-area" style="text-align:center; padding:30px 0 10px;">
 
-    <div class="buy-area">
+        <p>¿Necesitas ayuda para elegir tu producto?</p>
 
-        <p>
-            ¿Te interesa alguno de nuestros productos?
-        </p>
+        <a class="button whatsapp-button"
 
-        <a
-            class="button"
-            href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            🛒 COMPRAR DIRECTAMENTE EN CHOGAN
+           style="background:#168b48;"
+
+           href="https://wa.me/491745201068?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20los%20productos."
+
+           target="_blank" rel="noopener noreferrer">
+
+            💬 CONSULTAR POR WHATSAPP
+
         </a>
 
     </div>
@@ -526,36 +896,53 @@ footer {
 
     <h2>📞 Contacto</h2>
 
-    <p>
-        ¿Tienes alguna pregunta o necesitas ayuda con tu pedido?
-    </p>
+    <p>¿Tienes alguna pregunta o necesitas ayuda con tu pedido?</p>
 
     <p>
+
         📧
+
         <a href="mailto:sperez29973@outlook.com">
+
             sperez29973@outlook.com
+
         </a>
+
     </p>
 
     <p>
+
         📞
-        <a href="tel:+491745201068">
-            +49 174 5201068
-        </a>
+
+        <a href="tel:+491745201068">+49 174 5201068</a>
+
     </p>
 
-    <a
-        class="button"
-        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
+    <a class="button"
+
+       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+
+       target="_blank" rel="noopener noreferrer">
+
         🛒 Pedir directamente
+
+    </a>
+
+    <a class="button whatsapp-button"
+
+       style="background:#168b48;"
+
+       href="https://wa.me/491745201068?text=Hola%2C%20tengo%20una%20consulta."
+
+       target="_blank" rel="noopener noreferrer">
+
+        💬 WhatsApp
+
     </a>
 
 </section>
 
-<!-- AVISOS LEGALES -->
+<!-- AVISOS LEGALES CONSERVADOS -->
 
 <section id="legal" class="legal">
 
@@ -564,104 +951,130 @@ footer {
     <h3>1. Información del responsable</h3>
 
     <p>
+
         Este sitio web es operado por Salvador Pérez,
+
         como afiliado independiente de Chogan.
+
     </p>
 
-    <p>
-        Nombre comercial: Parfüm und Düften Perez
-    </p>
+    <p>Nombre comercial: Parfüm und Düfte Perez</p>
+
+    <p>Correo electrónico: sperez29973@outlook.com</p>
+
+    <p>Teléfono: +49 174 5201068</p>
 
     <p>
-        Correo electrónico: sperez29973@outlook.com
-    </p>
 
-    <p>
-        Teléfono: +49 174 5201068
-    </p>
-
-    <p>
         Dirección postal: se añadirá antes de la publicación definitiva.
+
     </p>
 
     <h3>2. Afiliación a Chogan</h3>
 
     <p>
+
         Este sitio web es independiente y está gestionado por un
+
         afiliado independiente de Chogan.
+
     </p>
 
     <p>
+
         Las compras se realizan a través de la plataforma oficial de
+
         Chogan mediante enlaces de afiliación. Este sitio puede recibir
+
         una comisión por las ventas realizadas mediante dichos enlaces.
+
     </p>
 
     <p>
+
         “Chogan” es una marca registrada de su correspondiente titular.
+
         Los productos y las marcas mencionadas pertenecen a sus respectivos
+
         propietarios.
+
     </p>
 
     <h3>3. Pedidos</h3>
 
     <p>
+
         Los pedidos y las compras se realizan directamente en la plataforma
+
         oficial de Chogan. Este sitio web no procesa directamente pagos ni
+
         almacena datos bancarios de los clientes.
+
     </p>
 
     <h3>4. Protección de datos</h3>
 
     <p>
+
         Los datos de contacto enviados voluntariamente por correo electrónico
+
         o teléfono se utilizarán únicamente para responder a las consultas
+
         del usuario y gestionar la comunicación relacionada con sus pedidos.
+
     </p>
 
     <p>
+
         No se solicitarán ni almacenarán datos bancarios a través de este
+
         sitio web.
+
     </p>
 
     <h3>5. Cookies</h3>
 
     <p>
+
         Esta página está diseñada para funcionar sin utilizar cookies
+
         propias de seguimiento. Los servicios externos enlazados desde esta
+
         página pueden aplicar sus propias políticas de privacidad y cookies.
+
     </p>
 
     <h3>6. Responsabilidad</h3>
 
     <p>
+
         La información publicada en este sitio tiene carácter informativo.
+
         Las características, disponibilidad, precios y condiciones de los
+
         productos pueden cambiar. Para la información definitiva sobre un
+
         producto o pedido, debe consultarse la plataforma oficial de Chogan.
+
     </p>
 
     <h3>7. Derechos de autor</h3>
 
     <p>
+
         El contenido propio de esta página no podrá reproducirse o utilizarse
+
         con fines comerciales sin autorización previa.
+
     </p>
 
 </section>
 
-<!-- FOOTER -->
-
 <footer>
 
-    <p>
-        © 2026 Parfüm und Düften Perez -
-        Afiliado independiente de Chogan.
-    </p>
+    <p>© 2026 Parfüm und Düfte Perez - Afiliado independiente de Chogan.</p>
 
-    <p>
-        Cremas · Cosméticos · Cuidado Personal
-    </p>
+    <p>Cremas · Cosméticos · Cuidado Personal</p>
 
 </footer>
 
@@ -669,29 +1082,30 @@ footer {
 
 function mostrarProductos() {
 
-    const productos =
-        document.getElementById("productos-contenido");
+    const productos = document.getElementById("productos-contenido");
 
-    const boton =
-        document.getElementById("boton-productos");
+    const boton = document.getElementById("boton-productos");
 
-    if (productos.classList.contains("mostrar")) {
+    const visible = productos.classList.toggle("mostrar");
 
-        productos.classList.remove("mostrar");
+    boton.innerHTML = visible
 
-        boton.innerHTML = "🧴 VER PRODUCTOS";
+        ? "⬆️ OCULTAR PRODUCTOS"
 
-    } else {
+        : "🧴 VER PRODUCTOS";
 
-        productos.classList.add("mostrar");
+    boton.setAttribute("aria-expanded", String(visible));
 
-        boton.innerHTML = "⬆️ OCULTAR PRODUCTOS";
+    if (visible) {
 
         setTimeout(function() {
 
             productos.scrollIntoView({
+
                 behavior: "smooth",
+
                 block: "start"
+
             });
 
         }, 100);
@@ -703,4 +1117,5 @@ function mostrarProductos() {
 </script>
 
 </body>
+
 </html>
