@@ -16,619 +16,165 @@
 
 <style>
 
-* { box-sizing: border-box; }
+*{box-sizing:border-box}
 
-html {
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 
-    scroll-behavior: smooth;
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff8ef;color:#333;line-height:1.6}
 
-    scroll-padding-top: 90px;
+header{position:relative;background:#fff8ef;text-align:center;padding:28px 55px 20px 15px;border-bottom:1px solid #ead8ca}
 
-}
+header h1{margin:0;color:#b21f2d;font-size:32px}
 
-body {
+header p{margin:8px 0 0;color:#7a5a50;font-size:18px}
 
-    margin: 0;
+/* BARRA SUPERIOR: SOLO LA BOLA DE IDIOMAS */
 
-    font-family: Arial, Helvetica, sans-serif;
+nav{background:transparent;padding:0;text-align:right;position:absolute;top:15px;right:15px;z-index:1000}
 
-    background: #fff8ef;
+nav a{display:none}
 
-    color: #333;
+.language-area{display:block;position:relative;margin:0}
 
-    line-height: 1.6;
+.language-button{background:#fff8ef;color:#b21f2d;border:2px solid #ead8ca;border-radius:50%;width:45px;height:45px;font-size:22px;font-weight:bold;cursor:pointer}
 
-}
+.language-menu{display:none;position:absolute;right:0;top:calc(100% + 10px);width:190px;padding:12px;background:white;border:1px solid #ead8ca;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.18);text-align:left;z-index:200}
 
-header {
+.language-menu.open{display:block}
 
-    background: #fff8ef;
+.language-menu p{margin:0 0 8px;font-size:13px;color:#705b51}
 
-    text-align: center;
+.language-menu button{display:block;width:100%;border:none;background:white;color:#333;padding:9px;text-align:left;border-radius:8px;font-size:15px;cursor:pointer}
 
-    padding: 28px 15px 20px;
+.language-menu button:hover{background:#fff0e6;color:#b21f2d}
 
-    border-bottom: 1px solid #ead8ca;
+#google_translate_element{display:none}
 
-}
+.goog-te-banner-frame,.goog-te-banner-frame.skiptranslate{display:none!important}
 
-header h1 {
+body{top:0!important}
 
-    margin: 0;
+.skiptranslate{font-size:12px}
 
-    color: #b21f2d;
+/* PRESENTACIÓN */
 
-    font-size: 32px;
+.hero{text-align:center;padding:55px 20px}
 
-}
+.hero h2{color:#b21f2d;font-size:36px;margin-bottom:12px}
 
-header p {
+.hero p{max-width:700px;margin:0 auto 25px;font-size:19px}
 
-    margin: 8px 0 0;
+.button{display:inline-block;background:#b21f2d;color:white;padding:13px 20px;border-radius:30px;text-decoration:none;font-weight:bold;margin:6px;border:none;cursor:pointer;font-size:15px;text-align:center}
 
-    color: #7a5a50;
+.button:hover{background:#8e1723}
 
-    font-size: 18px;
+section{max-width:1100px;margin:auto;padding:45px 20px}
 
-}
+section h2{text-align:center;color:#b21f2d;margin-bottom:30px;font-size:30px}
 
-/* MENÚ Y SELECTOR DE IDIOMAS */
+.intro{text-align:center;max-width:800px;margin:auto;font-size:18px}
 
-nav {
+/* VÍDEOS */
 
-    background: #b21f2d;
+.video-container{max-width:850px;margin:auto;text-align:center}
 
-    padding: 12px 10px;
+.video-container video{width:100%;max-height:600px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.15);background:#000}
 
-    text-align: center;
+.products-button-area{text-align:center;padding:20px 15px 35px}
 
-    position: sticky;
+.products-button{display:inline-block;background:#b21f2d;color:white;padding:17px 30px;border-radius:35px;font-weight:bold;font-size:19px;border:none;cursor:pointer;box-shadow:0 5px 15px rgba(178,31,45,.25)}
 
-    top: 0;
+.products-button:hover{background:#8e1723}
 
-    z-index: 100;
+/* VENTANAS EMERGENTES */
 
-}
+.product-modal{display:none;position:fixed;inset:0;z-index:3000;background:rgba(20,15,12,.78);padding:18px;overflow-y:auto}
 
-nav a {
+.product-modal.open{display:block}
 
-    display: inline-block;
+.modal-content{position:relative;max-width:1050px;margin:20px auto;padding:25px;background:#fff8ef;border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
 
-    color: white;
+.modal-close{position:sticky;top:0;float:right;z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:#b21f2d;color:white;font-size:28px;line-height:1;cursor:pointer}
 
-    text-decoration: none;
+.modal-content h2{padding-right:45px}
 
-    margin: 4px 9px;
-
-    font-weight: bold;
-
-    font-size: 15px;
-
-    cursor: pointer;
-
-}
-
-nav a:hover { text-decoration: underline; }
-
-.language-area {
-
-    display: inline-block;
-
-    position: relative;
-
-    margin-left: 8px;
-
-}
-
-.language-button {
-
-    background: #fff8ef;
-
-    color: #b21f2d;
-
-    border: 2px solid white;
-
-    border-radius: 50px;
-
-    padding: 7px 12px;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-}
-
-.language-menu {
-
-    display: none;
-
-    position: absolute;
-
-    right: 0;
-
-    top: calc(100% + 10px);
-
-    width: 190px;
-
-    padding: 12px;
-
-    background: white;
-
-    border: 1px solid #ead8ca;
-
-    border-radius: 14px;
-
-    box-shadow: 0 6px 20px rgba(0,0,0,.18);
-
-    text-align: left;
-
-    z-index: 200;
-
-}
-
-.language-menu.open { display: block; }
-
-.language-menu p {
-
-    margin: 0 0 8px;
-
-    font-size: 13px;
-
-    color: #705b51;
-
-}
-
-.language-menu button {
-
-    display: block;
-
-    width: 100%;
-
-    border: none;
-
-    background: white;
-
-    color: #333;
-
-    padding: 9px;
-
-    text-align: left;
-
-    border-radius: 8px;
-
-    font-size: 15px;
-
-    cursor: pointer;
-
-}
-
-.language-menu button:hover {
-
-    background: #fff0e6;
-
-    color: #b21f2d;
-
-}
-
-#google_translate_element {
-
-    display: none;
-
-}
-
-.goog-te-banner-frame,
-
-.goog-te-banner-frame.skiptranslate {
-
-    display: none !important;
-
-}
-
-body { top: 0 !important; }
-
-.skiptranslate {
-
-    font-size: 12px;
-
-}
-
-/* INICIO */
-
-.hero {
-
-    text-align: center;
-
-    padding: 55px 20px;
-
-}
-
-.hero h2 {
-
-    color: #b21f2d;
-
-    font-size: 36px;
-
-    margin-bottom: 12px;
-
-}
-
-.hero p {
-
-    max-width: 700px;
-
-    margin: 0 auto 25px;
-
-    font-size: 19px;
-
-}
-
-.button {
-
-    display: inline-block;
-
-    background: #b21f2d;
-
-    color: white;
-
-    padding: 13px 20px;
-
-    border-radius: 30px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    margin: 6px;
-
-    border: none;
-
-    cursor: pointer;
-
-    font-size: 15px;
-
-    text-align: center;
-
-}
-
-.button:hover { background: #8e1723; }
-
-section {
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 45px 20px;
-
-}
-
-section h2 {
-
-    text-align: center;
-
-    color: #b21f2d;
-
-    margin-bottom: 30px;
-
-    font-size: 30px;
-
-}
-
-.intro {
-
-    text-align: center;
-
-    max-width: 800px;
-
-    margin: auto;
-
-    font-size: 18px;
-
-}
-
-/* VÍDEO */
-
-.video-container {
-
-    max-width: 850px;
-
-    margin: auto;
-
-    text-align: center;
-
-}
-
-.video-container video {
-
-    width: 100%;
-
-    max-height: 600px;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,.15);
-
-    background: #000;
-
-}
-
-/* BOTÓN PRODUCTOS */
-
-.products-button-area {
-
-    text-align: center;
-
-    padding: 20px 15px 45px;
-
-}
-
-.products-button {
-
-    display: inline-block;
-
-    background: #b21f2d;
-
-    color: white;
-
-    padding: 17px 35px;
-
-    border-radius: 35px;
-
-    font-weight: bold;
-
-    font-size: 19px;
-
-    border: none;
-
-    cursor: pointer;
-
-    box-shadow: 0 5px 15px rgba(178,31,45,.25);
-
-}
-
-.products-button:hover { background: #8e1723; }
+body.modal-open{overflow:hidden}
 
 /* PRODUCTOS */
 
-#productos-contenido { display: none; }
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}
 
-#productos-contenido.mostrar {
+.gallery-item{min-width:0;background:white;padding:12px;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.10);border:1px solid #ead8ca;text-align:center}
 
-    display: block;
+.gallery-item img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;object-position:center;border-radius:10px;background:#fff8ef}
 
-    animation: aparecer .5s ease;
+.product-info{padding:12px 4px 5px}
 
-}
+.product-info h3{color:#b21f2d;font-size:21px;margin:4px 0 8px}
 
-@keyframes aparecer {
+.article{font-size:14px;color:#705b51;margin:4px 0}
 
-    from { opacity: 0; transform: translateY(12px); }
+.price{font-size:25px;font-weight:bold;color:#9d752b;margin:8px 0 12px}
 
-    to { opacity: 1; transform: translateY(0); }
+.order-buttons{display:flex;flex-direction:column;gap:8px;margin-top:12px}
 
-}
+.order-buttons .button{display:block;margin:0;width:100%;border-radius:10px;padding:13px 10px}
 
-.gallery {
+.chogan-button{background:#b21f2d}
 
-    display: grid;
+.whatsapp-button{background:#168b48}
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 22px;
-
-    margin-top: 30px;
-
-}
-
-.gallery-item {
-
-    min-width: 0;
-
-    background: white;
-
-    padding: 12px;
-
-    border-radius: 16px;
-
-    box-shadow: 0 4px 15px rgba(0,0,0,.10);
-
-    border: 1px solid #ead8ca;
-
-    text-align: center;
-
-}
-
-.gallery-item img {
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    max-height: 620px;
-
-    object-fit: contain;
-
-    object-position: center;
-
-    border-radius: 10px;
-
-    background: #fff8ef;
-
-}
-
-.product-info { padding: 12px 4px 5px; }
-
-.product-info h3 {
-
-    color: #b21f2d;
-
-    font-size: 21px;
-
-    margin: 4px 0 8px;
-
-}
-
-.article {
-
-    font-size: 14px;
-
-    color: #705b51;
-
-    margin: 4px 0;
-
-}
-
-.price {
-
-    font-size: 25px;
-
-    font-weight: bold;
-
-    color: #9d752b;
-
-    margin: 8px 0 12px;
-
-}
-
-.order-buttons {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 8px;
-
-    margin-top: 12px;
-
-}
-
-.order-buttons .button {
-
-    display: block;
-
-    margin: 0;
-
-    width: 100%;
-
-    border-radius: 10px;
-
-    padding: 13px 10px;
-
-}
-
-.chogan-button { background: #b21f2d; }
-
-.whatsapp-button { background: #168b48; }
-
-.whatsapp-button:hover { background: #116d38; }
+.whatsapp-button:hover{background:#116d38}
 
 /* CONTACTO */
 
-.contact {
+.contact{text-align:center;background:#f6e8dc;border-radius:20px}
 
-    text-align: center;
+.contact p{font-size:18px}
 
-    background: #f6e8dc;
-
-    border-radius: 20px;
-
-}
-
-.contact p { font-size: 18px; }
-
-.contact a:not(.button) {
-
-    color: #b21f2d;
-
-    overflow-wrap: anywhere;
-
-}
+.contact a:not(.button){color:#b21f2d;overflow-wrap:anywhere}
 
 /* AVISOS LEGALES */
 
-.legal {
+.legal{background:#fff;border-top:1px solid #ead8ca}
 
-    background: #fff;
+.legal h3{color:#b21f2d;margin-top:30px}
 
-    border-top: 1px solid #ead8ca;
-
-}
-
-.legal h3 {
-
-    color: #b21f2d;
-
-    margin-top: 30px;
-
-}
-
-.legal p { font-size: 14px; }
+.legal p{font-size:14px}
 
 /* PIE */
 
-footer {
+footer{background:#b21f2d;color:white;text-align:center;padding:25px 15px;font-size:14px}
 
-    background: #b21f2d;
+@media(max-width:600px){
 
-    color: white;
+ header h1{font-size:24px}
 
-    text-align: center;
+ header p{font-size:15px}
 
-    padding: 25px 15px;
+ nav{top:10px;right:10px}
 
-    font-size: 14px;
+ .language-button{width:40px;height:40px}
 
-}
+ .hero h2{font-size:28px}
 
-@media (max-width: 600px) {
+ .hero p{font-size:17px}
 
-    header h1 { font-size: 25px; }
+ section{padding:35px 15px}
 
-    header p { font-size: 16px; }
+ section h2{font-size:25px}
 
-    nav { padding: 10px 5px; }
+ .gallery{grid-template-columns:1fr;gap:20px}
 
-    nav a {
+ .gallery-item{padding:10px}
 
-        margin: 4px 5px;
+ .products-button{width:95%;font-size:17px}
 
-        font-size: 13px;
+ .product-modal{padding:8px}
 
-    }
+ .modal-content{margin:8px auto;padding:14px 10px}
 
-    .language-area { margin-left: 4px; }
-
-    .language-button { padding: 6px 10px; }
-
-    .hero h2 { font-size: 28px; }
-
-    .hero p { font-size: 17px; }
-
-    section { padding: 35px 15px; }
-
-    section h2 { font-size: 25px; }
-
-    .gallery {
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-    }
-
-    .gallery-item { padding: 10px; }
-
-    .products-button {
-
-        width: 90%;
-
-        font-size: 17px;
-
-    }
+ .modal-content .gallery{grid-template-columns:1fr}
 
 }
 
@@ -646,35 +192,13 @@ footer {
 
 </header>
 
-<nav aria-label="Menú principal">
+<!-- ÚNICO ELEMENTO DE LA BARRA SUPERIOR: IDIOMAS -->
 
-    <a href="#inicio">Inicio</a>
-
-    <a href="#video">Vídeo</a>
-
-    <a href="#video-lush-cloud">Lush Cloud</a>
-
-    <a href="#productos" onclick="abrirProductos(event)">Productos</a>
-
-    <a href="#contacto">Contacto</a>
-
-    <a href="#legal">Avisos legales</a>
+<nav aria-label="Selector de idioma">
 
     <div class="language-area">
 
-        <button
-
-            type="button"
-
-            class="language-button"
-
-            aria-label="Cambiar idioma"
-
-            aria-expanded="false"
-
-            onclick="alternarIdiomas()"
-
-        >🌐</button>
+        <button type="button" class="language-button" aria-label="Cambiar idioma" aria-expanded="false" onclick="alternarIdiomas()">🌐</button>
 
         <div class="language-menu" id="language-menu">
 
@@ -700,23 +224,17 @@ footer {
 
 </nav>
 
-<!-- Traductor de idiomas -->
-
 <div id="google_translate_element"></div>
 
 <section class="hero" id="inicio">
 
     <h2>Cuida tu piel, disfruta tu belleza</h2>
 
-    <p>
-
-        Descubre nuestra selección de cremas, cosméticos
-
-        y productos de cuidado personal.
-
-    </p>
+    <p>Descubre nuestra selección de cremas, cosméticos y productos de cuidado personal.</p>
 
 </section>
+
+<!-- PRIMER VÍDEO: BODY MIST -->
 
 <section id="video">
 
@@ -726,13 +244,7 @@ footer {
 
         <video controls playsinline preload="metadata">
 
-            <source
-
-                src="c5f3bebc-231d-47a0-b61f-2b49c24ab1ca.mov"
-
-                type="video/quicktime"
-
-            >
+            <source src="c5f3bebc-231d-47a0-b61f-2b49c24ab1ca.mov" type="video/quicktime">
 
             Tu navegador no puede reproducir este vídeo.
 
@@ -740,21 +252,21 @@ footer {
 
     </div>
 
+    <div class="products-button-area">
+
+        <button class="products-button" type="button" onclick="abrirVentana('modal-body')">🛍️ VER PRODUCTOS</button>
+
+    </div>
+
 </section>
 
-<!-- VÍDEO LUSH CLOUD -->
+<!-- SEGUNDO VÍDEO: PERFUMES PARA EL CABELLO -->
 
 <section id="video-lush-cloud">
 
     <h2>✨ Aurodhea Lush Cloud · Perfumes para el cabello</h2>
 
-    <p class="intro">
-
-        Descubre la colección Lush Cloud: cinco perfumes para el cabello
-
-        con una presentación elegante y aromas especiales.
-
-    </p>
+    <p class="intro">Descubre la colección Lush Cloud: cinco perfumes para el cabello con una presentación elegante y aromas especiales.</p>
 
     <div class="video-container">
 
@@ -762,7 +274,7 @@ footer {
 
             <source src="Aurodhea_Lush_Cloud_5_productos_con_musica.mov" type="video/quicktime">
 
-            Tu navegador no puede reproducir este vídeo. Puedes ver los productos en la sección inferior.
+            Tu navegador no puede reproducir este vídeo. Puedes ver los productos con el botón inferior.
 
         </video>
 
@@ -770,423 +282,305 @@ footer {
 
     <div class="products-button-area">
 
-        <a class="button" href="#productos" onclick="abrirProductos(event)">
-
-            🛍️ VER LOS CINCO PERFUMES
-
-        </a>
+        <button class="products-button" type="button" onclick="abrirVentana('modal-cabello')">🛍️ VER LOS CINCO PERFUMES</button>
 
     </div>
 
 </section>
 
-<div class="products-button-area">
+<!-- VENTANA 1: LOS CINCO BODY MIST -->
 
-    <button
+<div class="product-modal" id="modal-body" role="dialog" aria-modal="true" aria-labelledby="titulo-body" onclick="cerrarSiFondo(event,'modal-body')">
 
-        class="products-button"
+    <div class="modal-content">
 
-        onclick="mostrarProductos()"
+        <button class="modal-close" type="button" aria-label="Cerrar productos" onclick="cerrarVentana('modal-body')">&times;</button>
 
-        id="boton-productos"
+        <h2 id="titulo-body">🧴 Body Mist · Nuestros productos</h2>
 
-        aria-expanded="false"
+        <p class="intro">Elige tu producto y pide directamente a Chogan o por WhatsApp.</p>
 
-        aria-controls="productos-contenido"
+        <div class="gallery">
 
-    >
+            <article class="gallery-item">
 
-        🧴 VER PRODUCTOS
+                <img src="3003EA1B-7744-46A9-9A4E-27DFED53A707.png" alt="Golden Hour, body mist Aurodhea" loading="lazy">
 
-    </button>
+                <div class="product-info">
 
-</div>
+                    <h3>Golden Hour</h3>
 
-<section id="productos-contenido">
+                    <p class="article">Artículo: SBM003</p>
 
-    <div id="productos">
+                    <p class="price">19,90 €</p>
 
-        <h2>🧴 Nuestros productos</h2>
+                    <div class="order-buttons">
 
-        <div class="intro">
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-            <p>
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Golden%20Hour%20(SBM003)%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-                Elige tu producto y pulsa el botón correspondiente
+                    </div>
 
-                para pedirlo en Chogan o consultarnos por WhatsApp.
+                </div>
 
-            </p>
+            </article>
+
+            <article class="gallery-item">
+
+                <img src="Tropical_Breeze_SBM001.jpeg" alt="Tropical Breeze, body mist Aurodhea" loading="lazy">
+
+                <div class="product-info">
+
+                    <h3>Tropical Breeze</h3>
+
+                    <p class="article">Artículo: SBM001</p>
+
+                    <p class="price">19,90 €</p>
+
+                    <div class="order-buttons">
+
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
+
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Tropical%20Breeze%20(SBM001)%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="gallery-item">
+
+                <img src="Brazilian_Sunset_SBM005.jpeg" alt="Brazilian Sunset, body mist Aurodhea" loading="lazy">
+
+                <div class="product-info">
+
+                    <h3>Brazilian Sunset</h3>
+
+                    <p class="article">Artículo: SBM005</p>
+
+                    <p class="price">19,90 €</p>
+
+                    <div class="order-buttons">
+
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
+
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Brazilian%20Sunset%20(SBM005)%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="gallery-item">
+
+                <img src="Pacific_Aura_SBM002.jpeg" alt="Pacific Aura, body mist Aurodhea" loading="lazy">
+
+                <div class="product-info">
+
+                    <h3>Pacific Aura</h3>
+
+                    <p class="article">Artículo: SBM002</p>
+
+                    <p class="price">19,90 €</p>
+
+                    <div class="order-buttons">
+
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
+
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Pacific%20Aura%20(SBM002)%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="gallery-item">
+
+                <img src="Summer_Dream_SBM004.jpeg" alt="Summer Dream, body mist Aurodhea" loading="lazy">
+
+                <div class="product-info">
+
+                    <h3>Summer Dream</h3>
+
+                    <p class="article">Artículo: SBM004</p>
+
+                    <p class="price">19,90 €</p>
+
+                    <div class="order-buttons">
+
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
+
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Summer%20Dream%20(SBM004)%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="products-button-area">
+
+            <button class="button" type="button" onclick="cerrarVentana('modal-body')">✕ CERRAR Y SEGUIR VIENDO LA PÁGINA</button>
 
         </div>
 
     </div>
 
-    <div class="gallery">
+</div>
 
-        <!-- BODY MIST -->
+<!-- VENTANA 2: LOS CINCO PERFUMES PARA EL CABELLO -->
 
-        <article class="gallery-item">
+<div class="product-modal" id="modal-cabello" role="dialog" aria-modal="true" aria-labelledby="titulo-cabello" onclick="cerrarSiFondo(event,'modal-cabello')">
 
-            <img src="3003EA1B-7744-46A9-9A4E-27DFED53A707.png"
+    <div class="modal-content">
 
-                 alt="Golden Hour, body mist Aurodhea" loading="lazy">
+        <button class="modal-close" type="button" aria-label="Cerrar productos" onclick="cerrarVentana('modal-cabello')">&times;</button>
 
-            <div class="product-info">
+        <h2 id="titulo-cabello">✨ Lush Cloud · Perfumes para el cabello · 100 ml</h2>
 
-                <h3>Golden Hour</h3>
+        <p class="intro">Elige tu perfume y pide directamente a Chogan o por WhatsApp.</p>
 
-                <p class="article">Artículo: SBM003</p>
+        <div class="gallery">
 
-                <p class="price">19,90 €</p>
+            <article class="gallery-item">
 
-                <div class="order-buttons">
+                <img src="01-Juicy-Bliss-SHM001.jpg" alt="Juicy Bliss, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
 
-                    <a class="button chogan-button"
+                <div class="product-info">
 
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
+                    <h3>Juicy Bliss</h3>
 
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
+                    <p class="article">Artículo: SHM001 · 100 ml</p>
 
-                    <a class="button whatsapp-button"
+                    <p class="price">19,90 €</p>
 
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Golden%20Hour%20(SBM003)%20por%2019%2C90%20%E2%82%AC."
+                    <div class="order-buttons">
 
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-                </div>
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Juicy%20Bliss%20(SHM001)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-            </div>
-
-        </article>
-
-        <article class="gallery-item">
-
-            <img src="Tropical_Breeze_SBM001.jpeg"
-
-                 alt="Tropical Breeze, body mist Aurodhea" loading="lazy">
-
-            <div class="product-info">
-
-                <h3>Tropical Breeze</h3>
-
-                <p class="article">Artículo: SBM001</p>
-
-                <p class="price">19,90 €</p>
-
-                <div class="order-buttons">
-
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Tropical%20Breeze%20(SBM001)%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+                    </div>
 
                 </div>
 
-            </div>
+            </article>
 
-        </article>
+            <article class="gallery-item">
 
-        <article class="gallery-item">
+                <img src="02-Blooming-Musk-SHM002.jpg" alt="Blooming Musk, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
 
-            <img src="Brazilian_Sunset_SBM005.jpeg"
+                <div class="product-info">
 
-                 alt="Brazilian Sunset, body mist Aurodhea" loading="lazy">
+                    <h3>Blooming Musk</h3>
 
-            <div class="product-info">
+                    <p class="article">Artículo: SHM002 · 100 ml</p>
 
-                <h3>Brazilian Sunset</h3>
+                    <p class="price">19,90 €</p>
 
-                <p class="article">Artículo: SBM005</p>
+                    <div class="order-buttons">
 
-                <p class="price">19,90 €</p>
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-                <div class="order-buttons">
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Blooming%20Musk%20(SHM002)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Brazilian%20Sunset%20(SBM005)%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+                    </div>
 
                 </div>
 
-            </div>
+            </article>
 
-        </article>
+            <article class="gallery-item">
 
-        <article class="gallery-item">
+                <img src="03-White-Petals-SHM003.jpg" alt="White Petals, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
 
-            <img src="Pacific_Aura_SBM002.jpeg"
+                <div class="product-info">
 
-                 alt="Pacific Aura, body mist Aurodhea" loading="lazy">
+                    <h3>White Petals</h3>
 
-            <div class="product-info">
+                    <p class="article">Artículo: SHM003 · 100 ml</p>
 
-                <h3>Pacific Aura</h3>
+                    <p class="price">19,90 €</p>
 
-                <p class="article">Artículo: SBM002</p>
+                    <div class="order-buttons">
 
-                <p class="price">19,90 €</p>
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-                <div class="order-buttons">
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20White%20Petals%20(SHM003)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Pacific%20Aura%20(SBM002)%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+                    </div>
 
                 </div>
 
-            </div>
+            </article>
 
-        </article>
+            <article class="gallery-item">
 
-        <article class="gallery-item">
+                <img src="04-Golden-Essence-SHM004.jpg" alt="Golden Essence, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
 
-            <img src="Summer_Dream_SBM004.jpeg"
+                <div class="product-info">
 
-                 alt="Summer Dream, body mist Aurodhea" loading="lazy">
+                    <h3>Golden Essence</h3>
 
-            <div class="product-info">
+                    <p class="article">Artículo: SHM004 · 100 ml</p>
 
-                <h3>Summer Dream</h3>
+                    <p class="price">19,90 €</p>
 
-                <p class="article">Artículo: SBM004</p>
+                    <div class="order-buttons">
 
-                <p class="price">19,90 €</p>
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-                <div class="order-buttons">
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Golden%20Essence%20(SHM004)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Summer%20Dream%20(SBM004)%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+                    </div>
 
                 </div>
 
-            </div>
+            </article>
 
-        </article>
+            <article class="gallery-item">
 
-        <!-- LUSH CLOUD: CINCO PERFUMES PARA EL CABELLO -->
+                <img src="05-Oriental-Seduction-SHM005.jpg" alt="Oriental Seduction, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
 
-        <article class="gallery-item">
+                <div class="product-info">
 
-            <img src="01-Juicy-Bliss-SHM001.jpg"
+                    <h3>Oriental Seduction</h3>
 
-                 alt="Juicy Bliss, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
+                    <p class="article">Artículo: SHM005 · 100 ml</p>
 
-            <div class="product-info">
+                    <p class="price">19,90 €</p>
 
-                <h3>Juicy Bliss</h3>
+                    <div class="order-buttons">
 
-                <p class="article">Artículo: SHM001 · 100 ml</p>
+                        <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-                <p class="price">19,90 €</p>
+                        <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Oriental%20Seduction%20(SHM005)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-                <div class="order-buttons">
-
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Juicy%20Bliss%20(SHM001)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+                    </div>
 
                 </div>
 
-            </div>
+            </article>
 
-        </article>
+        </div>
 
-        <article class="gallery-item">
+        <div class="products-button-area">
 
-            <img src="02-Blooming-Musk-SHM002.jpg"
+            <button class="button" type="button" onclick="cerrarVentana('modal-cabello')">✕ CERRAR Y SEGUIR VIENDO LA PÁGINA</button>
 
-                 alt="Blooming Musk, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
-
-            <div class="product-info">
-
-                <h3>Blooming Musk</h3>
-
-                <p class="article">Artículo: SHM002 · 100 ml</p>
-
-                <p class="price">19,90 €</p>
-
-                <div class="order-buttons">
-
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Blooming%20Musk%20(SHM002)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-        <article class="gallery-item">
-
-            <img src="03-White-Petals-SHM003.jpg"
-
-                 alt="White Petals, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
-
-            <div class="product-info">
-
-                <h3>White Petals</h3>
-
-                <p class="article">Artículo: SHM003 · 100 ml</p>
-
-                <p class="price">19,90 €</p>
-
-                <div class="order-buttons">
-
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20White%20Petals%20(SHM003)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-        <article class="gallery-item">
-
-            <img src="04-Golden-Essence-SHM004.jpg"
-
-                 alt="Golden Essence, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
-
-            <div class="product-info">
-
-                <h3>Golden Essence</h3>
-
-                <p class="article">Artículo: SHM004 · 100 ml</p>
-
-                <p class="price">19,90 €</p>
-
-                <div class="order-buttons">
-
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Golden%20Essence%20(SHM004)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
-
-                </div>
-
-            </div>
-
-        </article>
-
-        <article class="gallery-item">
-
-            <img src="05-Oriental-Seduction-SHM005.jpg"
-
-                 alt="Oriental Seduction, perfume para el cabello Aurodhea Lush Cloud" loading="lazy">
-
-            <div class="product-info">
-
-                <h3>Oriental Seduction</h3>
-
-                <p class="article">Artículo: SHM005 · 100 ml</p>
-
-                <p class="price">19,90 €</p>
-
-                <div class="order-buttons">
-
-                    <a class="button chogan-button"
-
-                       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
-
-                    <a class="button whatsapp-button"
-
-                       href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Oriental%20Seduction%20(SHM005)%2C%20100%20ml%2C%20por%2019%2C90%20%E2%82%AC."
-
-                       target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
-
-                </div>
-
-            </div>
-
-        </article>
+        </div>
 
     </div>
 
-    <div style="text-align:center; padding:30px 0 10px;">
+</div>
 
-        <p>¿Necesitas ayuda para elegir tu producto?</p>
-
-        <a class="button whatsapp-button"
-
-           href="https://wa.me/491745201068?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20los%20productos."
-
-           target="_blank" rel="noopener noreferrer">
-
-            💬 CONSULTAR POR WHATSAPP
-
-        </a>
-
-    </div>
-
-</section>
+<!-- CONTACTO AL FINAL DE LOS PRODUCTOS -->
 
 <section id="contacto" class="contact">
 
@@ -1198,19 +592,13 @@ footer {
 
     <p>📞 <a href="tel:+491745201068">+49 174 5201068</a></p>
 
-    <a class="button"
+    <a class="button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 Pedir directamente</a>
 
-       href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-       target="_blank" rel="noopener noreferrer">🛒 Pedir directamente</a>
-
-    <a class="button whatsapp-button"
-
-       href="https://wa.me/491745201068?text=Hola%2C%20tengo%20una%20consulta."
-
-       target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+    <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20tengo%20una%20consulta." target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
 
 </section>
+
+<!-- AVISOS LEGALES AL FINAL -->
 
 <section id="legal" class="legal">
 
@@ -1270,67 +658,71 @@ footer {
 
 <script>
 
-function mostrarProductos() {
+/* ABRIR LAS VENTANAS DE PRODUCTOS */
 
-    const productos = document.getElementById("productos-contenido");
+function abrirVentana(id) {
 
-    const boton = document.getElementById("boton-productos");
+    const modal = document.getElementById(id);
 
-    const visible = productos.classList.toggle("mostrar");
+    if (!modal) return;
 
-    boton.innerHTML = visible
+    modal.classList.add("open");
 
-        ? "⬆️ OCULTAR PRODUCTOS"
+    document.body.classList.add("modal-open");
 
-        : "🧴 VER PRODUCTOS";
+    const closeButton = modal.querySelector(".modal-close");
 
-    boton.setAttribute("aria-expanded", String(visible));
+    if (closeButton) closeButton.focus();
 
-    if (visible) {
+}
 
-        setTimeout(function() {
+/* CERRAR UNA VENTANA */
 
-            productos.scrollIntoView({
+function cerrarVentana(id) {
 
-                behavior: "smooth",
+    const modal = document.getElementById(id);
 
-                block: "start"
+    if (!modal) return;
 
-            });
+    modal.classList.remove("open");
 
-        }, 100);
+    if (!document.querySelector(".product-modal.open")) {
+
+        document.body.classList.remove("modal-open");
 
     }
 
 }
 
-/* El enlace del menú abre los productos automáticamente */
+/* CERRAR AL TOCAR FUERA DEL CONTENIDO */
 
-function abrirProductos(event) {
+function cerrarSiFondo(event, id) {
 
-    event.preventDefault();
+    if (event.target === document.getElementById(id)) {
 
-    const productos = document.getElementById("productos-contenido");
+        cerrarVentana(id);
 
-    if (!productos.classList.contains("mostrar")) {
+    }
 
-        mostrarProductos();
+}
 
-    } else {
+/* CERRAR CON ESCAPE */
 
-        productos.scrollIntoView({
+document.addEventListener("keydown", function(event) {
 
-            behavior: "smooth",
+    if (event.key === "Escape") {
 
-            block: "start"
+        document.querySelectorAll(".product-modal.open").forEach(function(modal) {
+
+            cerrarVentana(modal.id);
 
         });
 
     }
 
-}
+});
 
-/* Abrir y cerrar el menú de idiomas */
+/* ABRIR Y CERRAR EL SELECTOR DE IDIOMAS */
 
 function alternarIdiomas() {
 
@@ -1344,7 +736,7 @@ function alternarIdiomas() {
 
 }
 
-/* Cambiar idioma usando el traductor de Google */
+/* CAMBIAR IDIOMA CON GOOGLE TRANSLATE */
 
 function cambiarIdioma(idioma) {
 
@@ -1352,33 +744,7 @@ function cambiarIdioma(idioma) {
 
     menu.classList.remove("open");
 
-    document.querySelector(".language-button")
-
-        .setAttribute("aria-expanded", "false");
-
-    if (idioma === "es") {
-
-        const selector = document.querySelector(".goog-te-combo");
-
-        if (selector) {
-
-            selector.value = "es";
-
-            selector.dispatchEvent(new Event("change"));
-
-        } else {
-
-            document.cookie =
-
-                "googtrans=/auto/es; path=/; SameSite=Lax";
-
-            location.reload();
-
-        }
-
-        return;
-
-    }
+    document.querySelector(".language-button").setAttribute("aria-expanded", "false");
 
     const selector = document.querySelector(".goog-te-combo");
 
@@ -1390,9 +756,9 @@ function cambiarIdioma(idioma) {
 
     } else {
 
-        document.cookie =
+        document.cookie = "googtrans=/auto/" + idioma + "; path=/; SameSite=Lax";
 
-            "googtrans=/auto/" + idioma + "; path=/; SameSite=Lax";
+        document.cookie = "googtrans=/auto/" + idioma + "; path=/; domain=" + location.hostname + "; SameSite=Lax";
 
         location.reload();
 
@@ -1400,7 +766,7 @@ function cambiarIdioma(idioma) {
 
 }
 
-/* Cargar el traductor */
+/* CARGAR TRADUCTOR */
 
 function googleTranslateElementInit() {
 
@@ -1416,7 +782,7 @@ function googleTranslateElementInit() {
 
 }
 
-/* Cerrar el selector si se pulsa fuera */
+/* CERRAR EL MENÚ DE IDIOMAS AL TOCAR FUERA */
 
 document.addEventListener("click", function(event) {
 
@@ -1426,9 +792,7 @@ document.addEventListener("click", function(event) {
 
         document.getElementById("language-menu").classList.remove("open");
 
-        document.querySelector(".language-button")
-
-            .setAttribute("aria-expanded", "false");
+        document.querySelector(".language-button").setAttribute("aria-expanded", "false");
 
     }
 
