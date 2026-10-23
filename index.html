@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 
 <html lang="es">
@@ -24,7 +22,7 @@ html {
 
     scroll-behavior: smooth;
 
-    scroll-padding-top: 80px;
+    scroll-padding-top: 90px;
 
 }
 
@@ -74,11 +72,13 @@ header p {
 
 }
 
+/* MENÚ Y SELECTOR DE IDIOMAS */
+
 nav {
 
     background: #b21f2d;
 
-    padding: 12px;
+    padding: 12px 10px;
 
     text-align: center;
 
@@ -92,19 +92,149 @@ nav {
 
 nav a {
 
+    display: inline-block;
+
     color: white;
 
     text-decoration: none;
 
-    margin: 0 9px;
+    margin: 4px 9px;
 
     font-weight: bold;
 
     font-size: 15px;
 
+    cursor: pointer;
+
 }
 
 nav a:hover { text-decoration: underline; }
+
+.language-area {
+
+    display: inline-block;
+
+    position: relative;
+
+    margin-left: 8px;
+
+}
+
+.language-button {
+
+    background: #fff8ef;
+
+    color: #b21f2d;
+
+    border: 2px solid white;
+
+    border-radius: 50px;
+
+    padding: 7px 12px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+.language-menu {
+
+    display: none;
+
+    position: absolute;
+
+    right: 0;
+
+    top: calc(100% + 10px);
+
+    width: 190px;
+
+    padding: 12px;
+
+    background: white;
+
+    border: 1px solid #ead8ca;
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,.18);
+
+    text-align: left;
+
+    z-index: 200;
+
+}
+
+.language-menu.open { display: block; }
+
+.language-menu p {
+
+    margin: 0 0 8px;
+
+    font-size: 13px;
+
+    color: #705b51;
+
+}
+
+.language-menu button {
+
+    display: block;
+
+    width: 100%;
+
+    border: none;
+
+    background: white;
+
+    color: #333;
+
+    padding: 9px;
+
+    text-align: left;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+}
+
+.language-menu button:hover {
+
+    background: #fff0e6;
+
+    color: #b21f2d;
+
+}
+
+#google_translate_element {
+
+    display: none;
+
+}
+
+.goog-te-banner-frame,
+
+.goog-te-banner-frame.skiptranslate {
+
+    display: none !important;
+
+}
+
+body { top: 0 !important; }
+
+.skiptranslate {
+
+    font-size: 12px;
+
+}
+
+/* INICIO */
 
 .hero {
 
@@ -260,7 +390,7 @@ section h2 {
 
 .products-button:hover { background: #8e1723; }
 
-/* PRODUCTOS OCULTOS */
+/* PRODUCTOS */
 
 #productos-contenido { display: none; }
 
@@ -279,8 +409,6 @@ section h2 {
     to { opacity: 1; transform: translateY(0); }
 
 }
-
-/* TARJETAS */
 
 .gallery {
 
@@ -462,15 +590,19 @@ footer {
 
     header p { font-size: 16px; }
 
-    nav a {
+    nav { padding: 10px 5px; }
 
-        display: inline-block;
+    nav a {
 
         margin: 4px 5px;
 
         font-size: 13px;
 
     }
+
+    .language-area { margin-left: 4px; }
+
+    .language-button { padding: 6px 10px; }
 
     .hero h2 { font-size: 28px; }
 
@@ -514,21 +646,61 @@ footer {
 
 </header>
 
-<nav>
+<nav aria-label="Menú principal">
 
     <a href="#inicio">Inicio</a>
 
     <a href="#video">Vídeo</a>
 
-    <a href="#productos">Productos</a>
+    <a href="#productos" onclick="abrirProductos(event)">Productos</a>
 
     <a href="#contacto">Contacto</a>
 
     <a href="#legal">Avisos legales</a>
 
+    <div class="language-area">
+
+        <button
+
+            type="button"
+
+            class="language-button"
+
+            aria-label="Cambiar idioma"
+
+            aria-expanded="false"
+
+            onclick="alternarIdiomas()"
+
+        >🌐</button>
+
+        <div class="language-menu" id="language-menu">
+
+            <p>🌍 Elige tu idioma</p>
+
+            <button type="button" onclick="cambiarIdioma('de')">🇩🇪 Deutsch</button>
+
+            <button type="button" onclick="cambiarIdioma('es')">🇪🇸 Español</button>
+
+            <button type="button" onclick="cambiarIdioma('it')">🇮🇹 Italiano</button>
+
+            <button type="button" onclick="cambiarIdioma('tr')">🇹🇷 Türkçe</button>
+
+            <button type="button" onclick="cambiarIdioma('ru')">🇷🇺 Русский</button>
+
+            <button type="button" onclick="cambiarIdioma('pt')">🇵🇹 Português</button>
+
+            <button type="button" onclick="cambiarIdioma('sq')">🇦🇱 Shqip</button>
+
+        </div>
+
+    </div>
+
 </nav>
 
-<!-- INICIO -->
+<!-- Traductor de idiomas -->
+
+<div id="google_translate_element"></div>
 
 <section class="hero" id="inicio">
 
@@ -543,8 +715,6 @@ footer {
     </p>
 
 </section>
-
-<!-- VÍDEO ORIGINAL CONSERVADO -->
 
 <section id="video">
 
@@ -570,8 +740,6 @@ footer {
 
 </section>
 
-<!-- BOTÓN PARA MOSTRAR PRODUCTOS -->
-
 <div class="products-button-area">
 
     <button
@@ -593,8 +761,6 @@ footer {
     </button>
 
 </div>
-
-<!-- GALERÍA DE LOS CINCO ANUNCIOS -->
 
 <section id="productos-contenido">
 
@@ -618,19 +784,11 @@ footer {
 
     <div class="gallery">
 
-        <!-- GOLDEN HOUR -->
-
         <article class="gallery-item">
 
-            <img
+            <img src="3003EA1B-7744-46A9-9A4E-27DFED53A707.png"
 
-                src="3003EA1B-7744-46A9-9A4E-27DFED53A707.png"
-
-                alt="Golden Hour, body mist Aurodhea"
-
-                loading="lazy"
-
-            >
+                 alt="Golden Hour, body mist Aurodhea" loading="lazy">
 
             <div class="product-info">
 
@@ -646,21 +804,13 @@ footer {
 
                        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        🛒 PEDIR EN CHOGAN
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
                     <a class="button whatsapp-button"
 
                        href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Golden%20Hour%20(SBM003)%20por%2019%2C90%20%E2%82%AC."
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        WhatsApp · PEDIR
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">WhatsApp · PEDIR</a>
 
                 </div>
 
@@ -668,19 +818,11 @@ footer {
 
         </article>
 
-        <!-- TROPICAL BREEZE -->
-
         <article class="gallery-item">
 
-            <img
+            <img src="Tropical_Breeze_SBM001.jpeg"
 
-                src="Tropical_Breeze_SBM001.jpeg"
-
-                alt="Tropical Breeze, body mist Aurodhea"
-
-                loading="lazy"
-
-            >
+                 alt="Tropical Breeze, body mist Aurodhea" loading="lazy">
 
             <div class="product-info">
 
@@ -696,21 +838,13 @@ footer {
 
                        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        🛒 PEDIR EN CHOGAN
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
                     <a class="button whatsapp-button"
 
                        href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Tropical%20Breeze%20(SBM001)%20por%2019%2C90%20%E2%82%AC."
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        WhatsApp · PEDIR
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">WhatsApp · PEDIR</a>
 
                 </div>
 
@@ -718,19 +852,11 @@ footer {
 
         </article>
 
-        <!-- BRAZILIAN SUNSET -->
-
         <article class="gallery-item">
 
-            <img
+            <img src="Brazilian_Sunset_SBM005.jpeg"
 
-                src="Brazilian_Sunset_SBM005.jpeg"
-
-                alt="Brazilian Sunset, body mist Aurodhea"
-
-                loading="lazy"
-
-            >
+                 alt="Brazilian Sunset, body mist Aurodhea" loading="lazy">
 
             <div class="product-info">
 
@@ -746,21 +872,13 @@ footer {
 
                        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        🛒 PEDIR EN CHOGAN
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
                     <a class="button whatsapp-button"
 
                        href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Brazilian%20Sunset%20(SBM005)%20por%2019%2C90%20%E2%82%AC."
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        WhatsApp · PEDIR
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">WhatsApp · PEDIR</a>
 
                 </div>
 
@@ -768,19 +886,11 @@ footer {
 
         </article>
 
-        <!-- PACIFIC AURA -->
-
         <article class="gallery-item">
 
-            <img
+            <img src="Pacific_Aura_SBM002.jpeg"
 
-                src="Pacific_Aura_SBM002.jpeg"
-
-                alt="Pacific Aura, body mist Aurodhea"
-
-                loading="lazy"
-
-            >
+                 alt="Pacific Aura, body mist Aurodhea" loading="lazy">
 
             <div class="product-info">
 
@@ -796,21 +906,13 @@ footer {
 
                        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        🛒 PEDIR EN CHOGAN
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
                     <a class="button whatsapp-button"
 
                        href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Pacific%20Aura%20(SBM002)%20por%2019%2C90%20%E2%82%AC."
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        WhatsApp · PEDIR
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">WhatsApp · PEDIR</a>
 
                 </div>
 
@@ -818,19 +920,11 @@ footer {
 
         </article>
 
-        <!-- SUMMER DREAM -->
-
         <article class="gallery-item">
 
-            <img
+            <img src="Summer_Dream_SBM004.jpeg"
 
-                src="Summer_Dream_SBM004.jpeg"
-
-                alt="Summer Dream, body mist Aurodhea"
-
-                loading="lazy"
-
-            >
+                 alt="Summer Dream, body mist Aurodhea" loading="lazy">
 
             <div class="product-info">
 
@@ -846,21 +940,13 @@ footer {
 
                        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        🛒 PEDIR EN CHOGAN
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
                     <a class="button whatsapp-button"
 
                        href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Summer%20Dream%20(SBM004)%20por%2019%2C90%20%E2%82%AC."
 
-                       target="_blank" rel="noopener noreferrer">
-
-                        WhatsApp · PEDIR
-
-                    </a>
+                       target="_blank" rel="noopener noreferrer">WhatsApp · PEDIR</a>
 
                 </div>
 
@@ -870,13 +956,11 @@ footer {
 
     </div>
 
-    <div class="buy-area" style="text-align:center; padding:30px 0 10px;">
+    <div style="text-align:center; padding:30px 0 10px;">
 
         <p>¿Necesitas ayuda para elegir tu producto?</p>
 
         <a class="button whatsapp-button"
-
-           style="background:#168b48;"
 
            href="https://wa.me/491745201068?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20los%20productos."
 
@@ -890,59 +974,29 @@ footer {
 
 </section>
 
-<!-- CONTACTO -->
-
 <section id="contacto" class="contact">
 
     <h2>📞 Contacto</h2>
 
     <p>¿Tienes alguna pregunta o necesitas ayuda con tu pedido?</p>
 
-    <p>
+    <p>📧 <a href="mailto:sperez29973@outlook.com">sperez29973@outlook.com</a></p>
 
-        📧
-
-        <a href="mailto:sperez29973@outlook.com">
-
-            sperez29973@outlook.com
-
-        </a>
-
-    </p>
-
-    <p>
-
-        📞
-
-        <a href="tel:+491745201068">+49 174 5201068</a>
-
-    </p>
+    <p>📞 <a href="tel:+491745201068">+49 174 5201068</a></p>
 
     <a class="button"
 
        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
 
-       target="_blank" rel="noopener noreferrer">
-
-        🛒 Pedir directamente
-
-    </a>
+       target="_blank" rel="noopener noreferrer">🛒 Pedir directamente</a>
 
     <a class="button whatsapp-button"
 
-       style="background:#168b48;"
-
        href="https://wa.me/491745201068?text=Hola%2C%20tengo%20una%20consulta."
 
-       target="_blank" rel="noopener noreferrer">
-
-        💬 WhatsApp
-
-    </a>
+       target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
 
 </section>
-
-<!-- AVISOS LEGALES CONSERVADOS -->
 
 <section id="legal" class="legal">
 
@@ -950,13 +1004,7 @@ footer {
 
     <h3>1. Información del responsable</h3>
 
-    <p>
-
-        Este sitio web es operado por Salvador Pérez,
-
-        como afiliado independiente de Chogan.
-
-    </p>
+    <p>Este sitio web es operado por Salvador Pérez, como afiliado independiente de Chogan.</p>
 
     <p>Nombre comercial: Parfüm und Düfte Perez</p>
 
@@ -964,109 +1012,37 @@ footer {
 
     <p>Teléfono: +49 174 5201068</p>
 
-    <p>
-
-        Dirección postal: se añadirá antes de la publicación definitiva.
-
-    </p>
+    <p>Dirección postal: se añadirá antes de la publicación definitiva.</p>
 
     <h3>2. Afiliación a Chogan</h3>
 
-    <p>
+    <p>Este sitio web es independiente y está gestionado por un afiliado independiente de Chogan.</p>
 
-        Este sitio web es independiente y está gestionado por un
+    <p>Las compras se realizan a través de la plataforma oficial de Chogan mediante enlaces de afiliación. Este sitio puede recibir una comisión por las ventas realizadas mediante dichos enlaces.</p>
 
-        afiliado independiente de Chogan.
-
-    </p>
-
-    <p>
-
-        Las compras se realizan a través de la plataforma oficial de
-
-        Chogan mediante enlaces de afiliación. Este sitio puede recibir
-
-        una comisión por las ventas realizadas mediante dichos enlaces.
-
-    </p>
-
-    <p>
-
-        “Chogan” es una marca registrada de su correspondiente titular.
-
-        Los productos y las marcas mencionadas pertenecen a sus respectivos
-
-        propietarios.
-
-    </p>
+    <p>“Chogan” es una marca registrada de su correspondiente titular. Los productos y las marcas mencionadas pertenecen a sus respectivos propietarios.</p>
 
     <h3>3. Pedidos</h3>
 
-    <p>
-
-        Los pedidos y las compras se realizan directamente en la plataforma
-
-        oficial de Chogan. Este sitio web no procesa directamente pagos ni
-
-        almacena datos bancarios de los clientes.
-
-    </p>
+    <p>Los pedidos y las compras se realizan directamente en la plataforma oficial de Chogan. Este sitio web no procesa directamente pagos ni almacena datos bancarios de los clientes.</p>
 
     <h3>4. Protección de datos</h3>
 
-    <p>
+    <p>Los datos de contacto enviados voluntariamente por correo electrónico o teléfono se utilizarán únicamente para responder a las consultas del usuario y gestionar la comunicación relacionada con sus pedidos.</p>
 
-        Los datos de contacto enviados voluntariamente por correo electrónico
-
-        o teléfono se utilizarán únicamente para responder a las consultas
-
-        del usuario y gestionar la comunicación relacionada con sus pedidos.
-
-    </p>
-
-    <p>
-
-        No se solicitarán ni almacenarán datos bancarios a través de este
-
-        sitio web.
-
-    </p>
+    <p>No se solicitarán ni almacenarán datos bancarios a través de este sitio web.</p>
 
     <h3>5. Cookies</h3>
 
-    <p>
-
-        Esta página está diseñada para funcionar sin utilizar cookies
-
-        propias de seguimiento. Los servicios externos enlazados desde esta
-
-        página pueden aplicar sus propias políticas de privacidad y cookies.
-
-    </p>
+    <p>Esta página está diseñada para funcionar sin utilizar cookies propias de seguimiento. Los servicios externos enlazados desde esta página pueden aplicar sus propias políticas de privacidad y cookies. El traductor externo de Google puede aplicar sus propias condiciones y tecnologías.</p>
 
     <h3>6. Responsabilidad</h3>
 
-    <p>
-
-        La información publicada en este sitio tiene carácter informativo.
-
-        Las características, disponibilidad, precios y condiciones de los
-
-        productos pueden cambiar. Para la información definitiva sobre un
-
-        producto o pedido, debe consultarse la plataforma oficial de Chogan.
-
-    </p>
+    <p>La información publicada en este sitio tiene carácter informativo. Las características, disponibilidad, precios y condiciones de los productos pueden cambiar. Para la información definitiva sobre un producto o pedido, debe consultarse la plataforma oficial de Chogan.</p>
 
     <h3>7. Derechos de autor</h3>
 
-    <p>
-
-        El contenido propio de esta página no podrá reproducirse o utilizarse
-
-        con fines comerciales sin autorización previa.
-
-    </p>
+    <p>El contenido propio de esta página no podrá reproducirse o utilizarse con fines comerciales sin autorización previa.</p>
 
 </section>
 
@@ -1114,7 +1090,139 @@ function mostrarProductos() {
 
 }
 
+/* El enlace del menú abre los productos automáticamente */
+
+function abrirProductos(event) {
+
+    event.preventDefault();
+
+    const productos = document.getElementById("productos-contenido");
+
+    if (!productos.classList.contains("mostrar")) {
+
+        mostrarProductos();
+
+    } else {
+
+        productos.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "start"
+
+        });
+
+    }
+
+}
+
+/* Abrir y cerrar el menú de idiomas */
+
+function alternarIdiomas() {
+
+    const menu = document.getElementById("language-menu");
+
+    const boton = document.querySelector(".language-button");
+
+    const abierto = menu.classList.toggle("open");
+
+    boton.setAttribute("aria-expanded", String(abierto));
+
+}
+
+/* Cambiar idioma usando el traductor de Google */
+
+function cambiarIdioma(idioma) {
+
+    const menu = document.getElementById("language-menu");
+
+    menu.classList.remove("open");
+
+    document.querySelector(".language-button")
+
+        .setAttribute("aria-expanded", "false");
+
+    if (idioma === "es") {
+
+        const selector = document.querySelector(".goog-te-combo");
+
+        if (selector) {
+
+            selector.value = "es";
+
+            selector.dispatchEvent(new Event("change"));
+
+        } else {
+
+            document.cookie =
+
+                "googtrans=/auto/es; path=/; SameSite=Lax";
+
+            location.reload();
+
+        }
+
+        return;
+
+    }
+
+    const selector = document.querySelector(".goog-te-combo");
+
+    if (selector) {
+
+        selector.value = idioma;
+
+        selector.dispatchEvent(new Event("change"));
+
+    } else {
+
+        document.cookie =
+
+            "googtrans=/auto/" + idioma + "; path=/; SameSite=Lax";
+
+        location.reload();
+
+    }
+
+}
+
+/* Cargar el traductor */
+
+function googleTranslateElementInit() {
+
+    new google.translate.TranslateElement({
+
+        pageLanguage: "es",
+
+        includedLanguages: "de,es,it,tr,ru,pt,sq",
+
+        autoDisplay: false
+
+    }, "google_translate_element");
+
+}
+
+/* Cerrar el selector si se pulsa fuera */
+
+document.addEventListener("click", function(event) {
+
+    const area = document.querySelector(".language-area");
+
+    if (!area.contains(event.target)) {
+
+        document.getElementById("language-menu").classList.remove("open");
+
+        document.querySelector(".language-button")
+
+            .setAttribute("aria-expanded", "false");
+
+    }
+
+});
+
 </script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 
