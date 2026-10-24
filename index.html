@@ -8,885 +8,187 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#f5f9fb">
+<title>Parfüm und Düfte Perez | Cremas & Cosméticos</title>
 
-<meta name="description" content="Parfüm und Düfte Perez: perfumes, Body Mist, cuidado del cabello y cosmética AURODHEA.">
+<meta name="description" content="Parfüm und Düfte Perez: cremas, cosméticos, body mist y cuidado personal.">
 
-<title>Parfüm und Düfte Perez | Cosmética y Belleza</title>
+<meta name="theme-color" content="#b21f2d">
 
 <style>
 
-:root {
+*{box-sizing:border-box}
 
-  --celeste: #168fc4;
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 
-  --celeste-claro: #e6f6ff;
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff8ef;color:#333;line-height:1.6}
 
-  --verde: #42632e;
+header{position:relative;background:#fff8ef;text-align:center;padding:28px 55px 20px 15px;border-bottom:1px solid #ead8ca}
 
-  --verde-claro: #f2f6e8;
+header h1{margin:0;color:#b21f2d;font-size:32px}
 
-  --dorado: #c6a15b;
+header p{margin:8px 0 0;color:#7a5a50;font-size:18px}
 
-  --texto: #292929;
+nav{background:transparent;padding:0;text-align:right;position:absolute;top:15px;right:15px;z-index:1000}
 
-  --blanco: #ffffff;
+nav a{display:none}
 
-  --sombra: 0 8px 24px rgba(0,0,0,.09);
+.language-area{display:block;position:relative;margin:0}
 
-}
+.language-button{background:#fff8ef;color:#b21f2d;border:2px solid #ead8ca;border-radius:50%;width:45px;height:45px;font-size:22px;font-weight:bold;cursor:pointer}
 
-* { box-sizing: border-box; }
+.language-menu{display:none;position:absolute;right:0;top:calc(100% + 10px);width:190px;padding:12px;background:white;border:1px solid #ead8ca;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,.18);text-align:left;z-index:200}
 
-html { scroll-behavior: smooth; }
+.language-menu.open{display:block}
 
-body {
+.language-menu p{margin:0 0 8px;font-size:13px;color:#705b51}
 
-  margin: 0;
+.language-menu button{display:block;width:100%;border:none;background:white;color:#333;padding:9px;text-align:left;border-radius:8px;font-size:15px;cursor:pointer}
 
-  font-family: Arial, Helvetica, sans-serif;
+.language-menu button:hover{background:#fff0e6;color:#b21f2d}
 
-  color: var(--texto);
+#google_translate_element{display:none}
 
-  background: #fffdf9;
+.goog-te-banner-frame,.goog-te-banner-frame.skiptranslate{display:none!important}
 
-  line-height: 1.6;
+body{top:0!important}
 
-}
+.skiptranslate{font-size:12px}
 
-img, video {
+.hero{text-align:center;padding:55px 20px}
 
-  max-width: 100%;
+.hero h2{color:#b21f2d;font-size:36px;margin-bottom:12px}
 
-}
+.hero p{max-width:700px;margin:0 auto 25px;font-size:19px}
 
-img {
+.button{display:inline-block;background:#b21f2d;color:white;padding:13px 20px;border-radius:30px;text-decoration:none;font-weight:bold;margin:6px;border:none;cursor:pointer;font-size:15px;text-align:center}
 
-  display: block;
+.button:hover{background:#8e1723}
 
-}
+section{max-width:1100px;margin:auto;padding:45px 20px}
 
-a {
+section h2{text-align:center;color:#b21f2d;margin-bottom:30px;font-size:30px}
 
-  color: inherit;
+.intro{text-align:center;max-width:800px;margin:auto;font-size:18px}
 
-}
+.video-container{max-width:850px;margin:auto;text-align:center}
 
-header {
+.video-container video{width:100%;max-height:600px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,.15);background:#000}
 
-  position: sticky;
+.products-button-area{text-align:center;padding:20px 15px 35px}
 
-  top: 0;
+.products-button{display:inline-block;background:#b21f2d;color:white;padding:17px 30px;border-radius:35px;font-weight:bold;font-size:19px;border:none;cursor:pointer;box-shadow:0 5px 15px rgba(178,31,45,.25)}
 
-  z-index: 100;
+.products-button:hover{background:#8e1723}
 
-  background: rgba(255,255,255,.97);
+.product-modal{display:none;position:fixed;inset:0;z-index:3000;background:rgba(20,15,12,.78);padding:18px;overflow-y:auto}
 
-  border-bottom: 1px solid #eee;
+.product-modal.open{display:block}
 
-  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+.modal-content{position:relative;max-width:1050px;margin:20px auto;padding:25px;background:#fff8ef;border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.3)}
 
-}
+.modal-close{position:sticky;top:0;float:right;z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:#b21f2d;color:white;font-size:28px;line-height:1;cursor:pointer}
 
-.header-inner {
+.modal-content h2{padding-right:45px}
 
-  max-width: 1150px;
+body.modal-open{overflow:hidden}
 
-  margin: auto;
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}
 
-  padding: 12px 18px;
+.gallery-item{min-width:0;background:white;padding:12px;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,.10);border:1px solid #ead8ca;text-align:center}
 
-  display: flex;
+.gallery-item img{display:block;width:100%;height:auto;max-height:620px;object-fit:contain;object-position:center;border-radius:10px;background:#fff8ef}
 
-  align-items: center;
+.product-info{padding:12px 4px 5px}
 
-  justify-content: space-between;
+.product-info h3{color:#b21f2d;font-size:21px;margin:4px 0 8px}
 
-  gap: 12px;
+.article{font-size:14px;color:#705b51;margin:4px 0}
 
-}
+.price{font-size:25px;font-weight:bold;color:#9d752b;margin:8px 0 12px}
 
-.brand {
+.order-buttons{display:flex;flex-direction:column;gap:8px;margin-top:12px}
 
-  font-weight: 800;
+.order-buttons .button{display:block;margin:0;width:100%;border-radius:10px;padding:13px 10px}
 
-  font-size: 1.05rem;
+.chogan-button{background:#b21f2d}
 
-  color: #443525;
+.whatsapp-button{background:#168b48}
 
-  text-decoration: none;
+.whatsapp-button:hover{background:#116d38}
 
-}
+/* BODY MIST: CELESTE */
 
-.language {
+.bodymist-section{background:linear-gradient(180deg,#e6f6ff,#f8fcff);border-radius:24px;margin-top:12px;margin-bottom:12px}
 
-  display: flex;
+.bodymist-section h2{color:#1678a8}
 
-  align-items: center;
+.bodymist-section .products-button{background:#168fc4;box-shadow:0 5px 15px rgba(22,143,196,.22)}
 
-  gap: 8px;
+.bodymist-section .products-button:hover{background:#116f99}
 
-}
+/* AURODHEA NEEM: VERDE */
 
-.language select {
+.neem-section{background:linear-gradient(180deg,#f2f6e8,#fff8ef);border-radius:24px;margin-top:12px;margin-bottom:12px}
 
-  max-width: 155px;
+.neem-section h2{color:#42632e}
 
-  padding: 9px;
+.neem-section .products-button{background:#36552b;box-shadow:0 5px 15px rgba(54,85,43,.22)}
 
-  border: 1px solid #ddd;
+.neem-section .products-button:hover{background:#294321}
 
-  border-radius: 20px;
+.neem-modal .modal-content{background:#f7f9ef}
 
-  background: white;
+.neem-modal .gallery-item{border-color:#dce5c9}
 
-  font-size: .9rem;
+.neem-modal .product-info h3{color:#36552b}
 
-}
+.neem-modal .price{color:#36552b}
 
-.hero {
+/* CONTACTO, AVISOS LEGALES Y PIE CREMA */
 
-  text-align: center;
+.contact{text-align:center;background:#f6e8dc;border-radius:20px}
 
-  padding: 48px 18px 35px;
+.contact p{font-size:18px}
 
-  background: linear-gradient(135deg,#fff9ef,#f8f3e9,#fff);
+.contact a:not(.button){color:#b21f2d;overflow-wrap:anywhere}
 
-}
+.legal{background:#fff;border-top:1px solid #ead8ca}
 
-.hero h1 {
+.legal h3{color:#b21f2d;margin-top:30px}
 
-  margin: 0 0 12px;
+.legal p{font-size:14px}
 
-  font-family: Georgia, "Times New Roman", serif;
+footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font-size:14px;border-top:1px solid #ead8ca}
 
-  font-size: clamp(2rem,5vw,3.5rem);
+@media(max-width:600px){
 
-  color: #4b3b28;
+header h1{font-size:24px}
 
-  line-height: 1.2;
+header p{font-size:15px}
 
-}
+nav{top:10px;right:10px}
 
-.hero p {
+.language-button{width:40px;height:40px}
 
-  max-width: 720px;
+.hero h2{font-size:28px}
 
-  margin: 12px auto;
+.hero p{font-size:17px}
 
-  color: #645c51;
+section{padding:35px 15px}
 
-}
+section h2{font-size:25px}
 
-.hero-line {
+.gallery{grid-template-columns:1fr;gap:20px}
 
-  width: 90px;
+.gallery-item{padding:10px}
 
-  height: 3px;
+.products-button{width:95%;font-size:17px}
 
-  background: var(--dorado);
+.product-modal{padding:8px}
 
-  margin: 20px auto;
+.modal-content{margin:8px auto;padding:14px 10px}
 
-  border-radius: 5px;
-
-}
-
-main {
-
-  width: min(1150px,100%);
-
-  padding: 18px;
-
-  margin: auto;
-
-}
-
-.catalog-section {
-
-  padding: 25px 18px;
-
-  margin: 25px 0;
-
-  border-radius: 24px;
-
-}
-
-.bodymist-section {
-
-  background: linear-gradient(180deg,#e6f6ff,#f8fcff);
-
-  border-radius: 24px;
-
-  margin-top: 12px;
-
-  margin-bottom: 12px;
-
-}
-
-.bodymist-section h2 {
-
-  color: #1678a8;
-
-}
-
-.bodymist-section .products-button {
-
-  background: #168fc4;
-
-  box-shadow: 0 5px 15px rgba(22,143,196,.22);
-
-}
-
-.bodymist-section .products-button:hover {
-
-  background: #116f99;
-
-}
-
-.lush-section {
-
-  background: linear-gradient(180deg,#fff7ed,#fffdf9);
-
-}
-
-.neem-section {
-
-  background: linear-gradient(180deg,#f2f6e8,#fff8ef);
-
-  border-radius: 24px;
-
-  margin-top: 12px;
-
-  margin-bottom: 12px;
-
-}
-
-.neem-section h2 {
-
-  color: #42632e;
-
-}
-
-.section-heading {
-
-  text-align: center;
-
-  margin: 0 auto 22px;
-
-}
-
-.section-heading h2 {
-
-  margin: 0 0 8px;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(1.65rem,4vw,2.5rem);
-
-  line-height: 1.25;
-
-}
-
-.section-heading p {
-
-  max-width: 680px;
-
-  margin: 8px auto;
-
-  color: #666;
-
-}
-
-.video-frame {
-
-  width: min(520px,100%);
-
-  margin: 22px auto;
-
-  overflow: hidden;
-
-  border-radius: 18px;
-
-  background: #171717;
-
-  box-shadow: var(--sombra);
-
-}
-
-.video-frame video {
-
-  width: 100%;
-
-  max-height: 720px;
-
-  display: block;
-
-  object-fit: contain;
-
-  background: #111;
-
-}
-
-.products-button {
-
-  display: block;
-
-  width: fit-content;
-
-  min-width: 200px;
-
-  max-width: 100%;
-
-  margin: 22px auto 8px;
-
-  padding: 14px 28px;
-
-  border: 0;
-
-  border-radius: 30px;
-
-  background: #876c3e;
-
-  color: white;
-
-  font-size: 1rem;
-
-  font-weight: 800;
-
-  text-align: center;
-
-  cursor: pointer;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,.12);
-
-  transition: transform .2s, background .2s;
-
-}
-
-.products-button:hover {
-
-  background: #6d542f;
-
-  transform: translateY(-2px);
-
-}
-
-.neem-section .products-button {
-
-  background: #52783b;
-
-}
-
-.neem-section .products-button:hover {
-
-  background: #395a28;
-
-}
-
-.modal {
-
-  display: none;
-
-  position: fixed;
-
-  inset: 0;
-
-  z-index: 1000;
-
-  padding: 18px;
-
-  overflow-y: auto;
-
-  background: rgba(22,22,22,.78);
-
-}
-
-.modal.open {
-
-  display: block;
-
-}
-
-.modal-content {
-
-  position: relative;
-
-  width: min(1050px,100%);
-
-  margin: 24px auto;
-
-  padding: 24px;
-
-  border-radius: 22px;
-
-  background: white;
-
-  box-shadow: 0 12px 45px rgba(0,0,0,.2);
-
-}
-
-.modal-bodymist .modal-content {
-
-  background: #f5fbff;
-
-}
-
-.modal-cabello .modal-content {
-
-  background: #fffaf3;
-
-}
-
-.modal-neem .modal-content {
-
-  background: #f7f9f0;
-
-}
-
-.modal-title {
-
-  margin: 0 45px 8px 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(1.5rem,4vw,2.2rem);
-
-  text-align: center;
-
-}
-
-.modal-description {
-
-  margin: 0 auto 24px;
-
-  text-align: center;
-
-  color: #666;
-
-}
-
-.close-modal {
-
-  position: sticky;
-
-  float: right;
-
-  top: 0;
-
-  z-index: 5;
-
-  width: 42px;
-
-  height: 42px;
-
-  margin-top: -5px;
-
-  margin-right: -5px;
-
-  border: 0;
-
-  border-radius: 50%;
-
-  background: #252525;
-
-  color: white;
-
-  font-size: 25px;
-
-  line-height: 1;
-
-  cursor: pointer;
-
-}
-
-.product-grid {
-
-  display: grid;
-
-  grid-template-columns: repeat(3,minmax(0,1fr));
-
-  gap: 20px;
-
-  clear: both;
-
-}
-
-.product-card {
-
-  display: flex;
-
-  flex-direction: column;
-
-  overflow: hidden;
-
-  border-radius: 17px;
-
-  background: white;
-
-  box-shadow: 0 4px 18px rgba(0,0,0,.08);
-
-  border: 1px solid rgba(0,0,0,.04);
-
-}
-
-.product-card img {
-
-  width: 100%;
-
-  height: 235px;
-
-  padding: 10px;
-
-  object-fit: contain;
-
-  background: #fff;
-
-}
-
-.product-info {
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: stretch;
-
-  flex: 1;
-
-  padding: 15px;
-
-}
-
-.product-info h3 {
-
-  margin: 0 0 8px;
-
-  font-size: 1.05rem;
-
-  line-height: 1.35;
-
-}
-
-.product-info p {
-
-  margin: 4px 0;
-
-  font-size: .93rem;
-
-  overflow-wrap: anywhere;
-
-}
-
-.product-code {
-
-  color: #777;
-
-  font-size: .86rem !important;
-
-}
-
-.product-price {
-
-  margin: 10px 0 !important;
-
-  color: #795b2b;
-
-  font-size: 1.35rem !important;
-
-  font-weight: 800;
-
-}
-
-.neem-section .product-price {
-
-  color: #42632e;
-
-}
-
-.order-button {
-
-  display: block;
-
-  width: 100%;
-
-  margin-top: 10px;
-
-  padding: 12px 10px;
-
-  border: 0;
-
-  border-radius: 10px;
-
-  background: #237d47;
-
-  color: white;
-
-  font-weight: 800;
-
-  font-size: .95rem;
-
-  text-align: center;
-
-  text-decoration: none;
-
-  cursor: pointer;
-
-}
-
-.order-button:hover {
-
-  background: #195e34;
-
-}
-
-.whatsapp-button {
-
-  background: #25a85a;
-
-}
-
-.whatsapp-button:hover {
-
-  background: #168843;
-
-}
-
-.modal-note {
-
-  padding: 12px;
-
-  margin: 20px 0 0;
-
-  border-radius: 10px;
-
-  background: #fff;
-
-  font-size: .9rem;
-
-  text-align: center;
-
-  color: #555;
-
-}
-
-.contact {
-
-  padding: 35px 18px;
-
-  margin-top: 30px;
-
-  border-radius: 20px;
-
-  text-align: center;
-
-  background: #f8f3e9;
-
-}
-
-.contact h2 {
-
-  margin-top: 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-}
-
-.contact p {
-
-  overflow-wrap: anywhere;
-
-}
-
-.contact-buttons {
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  flex-wrap: wrap;
-
-  gap: 12px;
-
-  margin-top: 20px;
-
-}
-
-.contact-buttons a {
-
-  display: inline-block;
-
-  padding: 12px 18px;
-
-  border-radius: 24px;
-
-  color: white;
-
-  background: #237d47;
-
-  font-weight: 700;
-
-  text-decoration: none;
-
-}
-
-.contact-buttons a.whatsapp {
-
-  background: #25a85a;
-
-}
-
-footer {
-
-  padding: 25px 18px;
-
-  text-align: center;
-
-  font-size: .85rem;
-
-  color: #777;
-
-  background: #fff;
-
-}
-
-footer a {
-
-  margin: 0 5px;
-
-}
-
-@media(max-width:800px) {
-
-  .product-grid {
-
-    grid-template-columns: repeat(2,minmax(0,1fr));
-
-    gap: 14px;
-
-  }
-
-  .product-card img {
-
-    height: 190px;
-
-  }
-
-  .modal-content {
-
-    padding: 16px;
-
-  }
-
-}
-
-@media(max-width:480px) {
-
-  .header-inner {
-
-    padding: 10px 12px;
-
-  }
-
-  .brand {
-
-    max-width: 58%;
-
-    font-size: .88rem;
-
-    line-height: 1.3;
-
-  }
-
-  .language select {
-
-    max-width: 125px;
-
-    padding: 8px 5px;
-
-    font-size: .8rem;
-
-  }
-
-  main {
-
-    padding: 10px;
-
-  }
-
-  .catalog-section {
-
-    padding: 20px 12px;
-
-    margin: 18px 0;
-
-  }
-
-  .product-grid {
-
-    grid-template-columns: repeat(2,minmax(0,1fr));
-
-    gap: 10px;
-
-  }
-
-  .product-card img {
-
-    height: 150px;
-
-    padding: 5px;
-
-  }
-
-  .product-info {
-
-    padding: 10px;
-
-  }
-
-  .product-info h3 {
-
-    font-size: .91rem;
-
-  }
-
-  .product-info p {
-
-    font-size: .83rem;
-
-  }
-
-  .product-price {
-
-    font-size: 1.12rem !important;
-
-  }
-
-  .order-button {
-
-    padding: 10px 5px;
-
-    font-size: .82rem;
-
-  }
-
-  .modal {
-
-    padding: 7px;
-
-  }
-
-  .modal-content {
-
-    margin: 8px auto;
-
-    padding: 12px;
-
-    border-radius: 15px;
-
-  }
+.modal-content .gallery{grid-template-columns:1fr}
 
 }
 
@@ -898,313 +200,259 @@ footer a {
 
 <header>
 
-  <div class="header-inner">
+  <h1>Parfüm und Düfte Perez</h1>
 
-    <a class="brand" href="#inicio">Parfüm und Düfte Perez</a>
+  <p>✨ Cremas · Cosméticos · Cuidado Personal ✨</p>
 
-    <div class="language">
+</header>
 
-      <span aria-hidden="true">🌐</span>
+<nav aria-label="Selector de idioma">
 
-      <select id="language-select" aria-label="Seleccionar idioma">
+  <div class="language-area">
 
-        <option value="de">Deutsch</option>
+    <button type="button" class="language-button" aria-label="Cambiar idioma" aria-expanded="false" onclick="alternarIdiomas()">🌐</button>
 
-        <option value="es" selected>Español</option>
+    <div class="language-menu" id="language-menu">
 
-        <option value="it">Italiano</option>
+      <p>🌍 Elige tu idioma</p>
 
-        <option value="tr">Türkçe</option>
+      <button type="button" onclick="cambiarIdioma('de')">🇩🇪 Deutsch</button>
 
-        <option value="ru">Русский</option>
+      <button type="button" onclick="cambiarIdioma('es')">🇪🇸 Español</button>
 
-        <option value="pt">Português</option>
+      <button type="button" onclick="cambiarIdioma('it')">🇮🇹 Italiano</button>
 
-        <option value="sq">Shqip</option>
+      <button type="button" onclick="cambiarIdioma('tr')">🇹🇷 Türkçe</button>
 
-      </select>
+      <button type="button" onclick="cambiarIdioma('ru')">🇷🇺 Русский</button>
+
+      <button type="button" onclick="cambiarIdioma('pt')">🇵🇹 Português</button>
+
+      <button type="button" onclick="cambiarIdioma('sq')">🇦🇱 Shqip</button>
 
     </div>
 
   </div>
 
-</header>
+</nav>
 
-<div id="google_translate_element" style="display:none"></div>
+<div id="google_translate_element"></div>
 
 <section class="hero" id="inicio">
 
-  <h1>Parfüm und Düfte Perez</h1>
+  <h2>Cuida tu piel, disfruta tu belleza</h2>
 
-  <div class="hero-line"></div>
-
-  <p>Descubre un mundo de fragancias, belleza y cuidado personal. Elegancia y bienestar para cada día.</p>
-
-  <p>Explora nuestras gamas y encuentra tus productos favoritos.</p>
+  <p>Descubre nuestra selección de cremas, cosméticos y productos de cuidado personal.</p>
 
 </section>
 
-<main>
+<section id="video" class="bodymist-section">
 
-  <!-- BODY MIST: SECCIÓN CELESTE -->
+  <h2>✨ Aurodhea Body Mist · Brumas perfumadas</h2>
 
-  <section id="video" class="catalog-section bodymist-section">
+  <p class="intro">Descubre nuestra colección Body Mist: cinco brumas perfumadas con aromas irresistibles para disfrutar de una sensación fresca y agradable cada día.</p>
 
-    <div class="section-heading">
+  <div class="video-container">
 
-      <h2>Aurodhea Body Mist · Brumas perfumadas</h2>
+    <video controls playsinline preload="metadata">
 
-      <p>Frescura, suavidad y un toque perfumado para acompañarte cada día.</p>
+      <source src="c5f3bebc-231d-47a0-b61f-2b49c24ab1ca.mov" type="video/quicktime">
 
-    </div>
+      Tu navegador no puede reproducir este vídeo.
 
-    <div class="video-frame">
+    </video>
 
-      <video controls playsinline preload="metadata"
+  </div>
 
-        poster="Tropical_Breeze_SBM001.jpeg">
+  <div class="products-button-area">
 
-        <source src="c5f3bebc-231d-47a0-b61f-2b49c24ab1ca.mov" type="video/quicktime">
+    <button class="products-button" type="button" onclick="abrirVentana('modal-body')">🛍️ VER PRODUCTOS</button>
 
-        Tu navegador no puede reproducir este vídeo.
+  </div>
 
-      </video>
+</section>
 
-    </div>
+<section id="video-lush-cloud">
 
-    <button class="products-button" type="button" onclick="openModal('modal-body')">
+  <h2>✨ Aurodhea Lush Cloud · Perfumes para el cabello</h2>
 
-      VER PRODUCTOS
+  <p class="intro">Descubre la colección Lush Cloud: cinco perfumes para el cabello con una presentación elegante y aromas especiales.</p>
 
-    </button>
+  <div class="video-container">
 
-  </section>
+    <video controls playsinline preload="metadata" poster="01-Juicy-Bliss-SHM001.jpg">
 
-  <!-- AURODHEA LUSH CLOUD: CUIDADO DEL CABELLO -->
+      <source src="Aurodhea_Lush_Cloud_5_productos_con_musica.mov" type="video/quicktime">
 
-  <section id="video-lush-cloud" class="catalog-section lush-section">
+      Tu navegador no puede reproducir este vídeo. Puedes ver los productos con el botón inferior.
 
-    <div class="section-heading">
+    </video>
 
-      <h2>Aurodhea Lush Cloud · Perfumes para el cabello</h2>
+  </div>
 
-      <p>Una delicada estela perfumada para completar tu rutina de belleza.</p>
+  <div class="products-button-area">
 
-    </div>
+    <button class="products-button" type="button" onclick="abrirVentana('modal-cabello')">🛍️ VER PRODUCTOS</button>
 
-    <div class="video-frame">
+  </div>
 
-      <video controls playsinline preload="metadata"
+</section>
 
-        poster="01-Juicy-Bliss-SHM001.jpg">
+<section id="video-neem" class="neem-section">
 
-        <source src="Aurodhea_Lush_Cloud_5_productos_con_musica.mov" type="video/quicktime">
+  <h2>🌿 AURODHEA · Gama Aceite de Neem</h2>
 
-        Tu navegador no puede reproducir este vídeo.
+  <p class="intro">Descubre nuestra gama de cuidado personal con Aceite de Neem: limpieza, cuidado facial y corporal en formatos grandes y pequeños.</p>
 
-      </video>
+  <div class="video-container">
 
-    </div>
+    <video controls playsinline preload="metadata" poster="01_NM02B.jpg">
 
-    <button class="products-button" type="button" onclick="openModal('modal-cabello')">
+      <source src="Video_Gama_Aceite_de_Neem_CON_MUSICA.mov" type="video/quicktime">
 
-      VER PRODUCTOS
+      Tu navegador no puede reproducir este vídeo. Puedes consultar los productos con el botón inferior.
 
-    </button>
+    </video>
 
-  </section>
+  </div>
 
-  <!-- AURODHEA NEEM: SECCIÓN VERDE -->
+  <div class="products-button-area">
 
-  <section id="video-neem" class="catalog-section neem-section">
+    <button class="products-button" type="button" onclick="abrirVentana('modal-neem')">🌿 VER PRODUCTO</button>
 
-    <div class="section-heading">
+  </div>
 
-      <h2>🌿 AURODHEA · Gama Aceite de Neem</h2>
-
-      <p>Descubre la gama de cuidado personal Aurodhea con aceite de Neem.</p>
-
-    </div>
-
-    <div class="video-frame">
-
-      <video controls playsinline preload="metadata"
-
-        poster="01_NM02B.jpg">
-
-        <source src="Video_Gama_Aceite_de_Neem_CON_MUSICA.mov" type="video/quicktime">
-
-        Tu navegador no puede reproducir este vídeo.
-
-      </video>
-
-    </div>
-
-    <button class="products-button" type="button" onclick="openModal('modal-neem')">
-
-      🌿 VER PRODUCTO
-
-    </button>
-
-  </section>
-
-  <!-- CONTACTO -->
-
-  <section class="contact" id="contacto">
-
-    <h2>¿Quieres hacer un pedido?</h2>
-
-    <p>Contacta con nosotros para consultar productos y realizar tu pedido.</p>
-
-    <p><strong>Parfüm und Düfte Perez</strong></p>
-
-    <div class="contact-buttons">
-
-      <a class="whatsapp"
-
-        href="https://wa.me/491745201068"
-
-        target="_blank" rel="noopener noreferrer">
-
-        💬 Pedir por WhatsApp
-
-      </a>
-
-      <a
-
-        href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES"
-
-        target="_blank" rel="noopener noreferrer">
-
-        🛍️ Tienda Chogan
-
-      </a>
-
-    </div>
-
-  </section>
-
-</main>
+</section>
 
 <!-- CATÁLOGO BODY MIST -->
 
-<div class="modal modal-bodymist" id="modal-body" role="dialog" aria-modal="true" aria-label="Catálogo Body Mist">
+<div class="product-modal" id="modal-body" role="dialog" aria-modal="true" aria-labelledby="titulo-body" onclick="cerrarSiFondo(event,'modal-body')">
 
   <div class="modal-content">
 
-    <button class="close-modal" type="button" aria-label="Cerrar" onclick="closeModal('modal-body')">×</button>
+    <button class="modal-close" type="button" aria-label="Cerrar productos" onclick="cerrarVentana('modal-body')">&times;</button>
 
-    <h2 class="modal-title">Aurodhea Body Mist</h2>
+    <h2 id="titulo-body">🧴 Body Mist · Nuestros productos</h2>
 
-    <p class="modal-description">Brumas perfumadas · Precio por producto: 19,90 €</p>
+    <p class="intro">Elige tu producto y pide directamente a Chogan o por WhatsApp.</p>
 
-    <div class="product-grid">
+    <div class="gallery">
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="Golden_Hour_SBM003.jpg" alt="Golden Hour Body Mist" loading="lazy">
+        <img src="3003EA1B-7744-46A9-9A4E-27DFED53A707.png" alt="Golden Hour / Goldene Stunde" loading="lazy">
 
         <div class="product-info">
 
-          <h3>Golden Hour</h3>
+          <h3>Golden Hour · Goldene Stunde</h3>
 
-          <p>Bruma perfumada</p>
+          <p class="article">Artículo: SBM003</p>
 
-          <p class="product-code">Artículo: SBM003</p>
+          <p class="price">19,90 €</p>
 
-          <p class="product-price">19,90 €</p>
+          <div class="order-buttons">
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Golden%20Hour%20SBM003" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Golden%20Hour%20%28SBM003%29%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="Tropical_Breeze_SBM001.jpeg" alt="Tropical Breeze Body Mist" loading="lazy">
+        <img src="Tropical_Breeze_SBM001.jpeg" alt="Tropical Breeze" loading="lazy">
 
         <div class="product-info">
 
           <h3>Tropical Breeze</h3>
 
-          <p>Bruma perfumada</p>
+          <p class="article">Artículo: SBM001</p>
 
-          <p class="product-code">Artículo: SBM001</p>
+          <p class="price">19,90 €</p>
 
-          <p class="product-price">19,90 €</p>
+          <div class="order-buttons">
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Tropical%20Breeze%20SBM001" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Tropical%20Breeze%20%28SBM001%29%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="Brazilian_Sunset_SBM005.jpeg" alt="Brazilian Sunset Body Mist" loading="lazy">
+        <img src="Brazilian_Sunset_SBM005.jpeg" alt="Brazilian Sunset" loading="lazy">
 
         <div class="product-info">
 
           <h3>Brazilian Sunset</h3>
 
-          <p>Bruma perfumada</p>
+          <p class="article">Artículo: SBM005</p>
 
-          <p class="product-code">Artículo: SBM005</p>
+          <p class="price">19,90 €</p>
 
-          <p class="product-price">19,90 €</p>
+          <div class="order-buttons">
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Brazilian%20Sunset%20SBM005" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Brazilian%20Sunset%20%28SBM005%29%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="Pacific_Aura_SBM002.jpeg" alt="Pacific Aura Body Mist" loading="lazy">
+        <img src="Pacific_Aura_SBM002.jpeg" alt="Pacific Aura" loading="lazy">
 
         <div class="product-info">
 
           <h3>Pacific Aura</h3>
 
-          <p>Bruma perfumada</p>
+          <p class="article">Artículo: SBM002</p>
 
-          <p class="product-code">Artículo: SBM002</p>
+          <p class="price">19,90 €</p>
 
-          <p class="product-price">19,90 €</p>
+          <div class="order-buttons">
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Pacific%20Aura%20SBM002" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Pacific%20Aura%20%28SBM002%29%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="Summer_Dream_SBM004.jpeg" alt="Summer Dream Body Mist" loading="lazy">
+        <img src="Summer_Dream_SBM004.jpeg" alt="Summer Dream" loading="lazy">
 
         <div class="product-info">
 
           <h3>Summer Dream</h3>
 
-          <p>Bruma perfumada</p>
+          <p class="article">Artículo: SBM004</p>
 
-          <p class="product-code">Artículo: SBM004</p>
+          <p class="price">19,90 €</p>
 
-          <p class="product-price">19,90 €</p>
+          <div class="order-buttons">
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Summer%20Dream%20SBM004" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20pedir%20Summer%20Dream%20%28SBM004%29%20por%2019%2C90%20%E2%82%AC." target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+
+          </div>
 
         </div>
 
@@ -1212,7 +460,11 @@ footer a {
 
     </div>
 
-    <p class="modal-note">Si necesitas ayuda con tu pedido, puedes contactar con nosotros por WhatsApp.</p>
+    <div class="products-button-area">
+
+      <button class="button" type="button" onclick="cerrarVentana('modal-body')">✕ CERRAR Y SEGUIR VIENDO LA PÁGINA</button>
+
+    </div>
 
   </div>
 
@@ -1220,123 +472,113 @@ footer a {
 
 <!-- CATÁLOGO LUSH CLOUD -->
 
-<div class="modal modal-cabello" id="modal-cabello" role="dialog" aria-modal="true" aria-label="Catálogo perfumes para el cabello">
+<div class="product-modal" id="modal-cabello" role="dialog" aria-modal="true" aria-labelledby="titulo-cabello" onclick="cerrarSiFondo(event,'modal-cabello')">
 
   <div class="modal-content">
 
-    <button class="close-modal" type="button" aria-label="Cerrar" onclick="closeModal('modal-cabello')">×</button>
+    <button class="modal-close" type="button" aria-label="Cerrar productos" onclick="cerrarVentana('modal-cabello')">&times;</button>
 
-    <h2 class="modal-title">Aurodhea Lush Cloud</h2>
+    <h2 id="titulo-cabello">✨ Aurodhea Lush Cloud · Perfumes para el cabello</h2>
 
-    <p class="modal-description">Perfumes para el cabello · 100 ml · 19,90 € cada uno</p>
+    <p class="intro">Perfumes para el cabello · 100 ml · 19,90 € cada uno</p>
 
-    <div class="product-grid">
+    <div class="gallery">
 
-      <article class="product-card">
+      <article class="gallery-item">
 
         <img src="01-Juicy-Bliss-SHM001.jpg" alt="Juicy Bliss" loading="lazy">
 
         <div class="product-info">
 
-          <h3>Juicy Bliss</h3>
+          <h3>Juicy Bliss</h3><p class="article">Artículo: SHM001 · 100 ml</p><p class="price">19,90 €</p>
 
-          <p>Perfume para el cabello · 100 ml</p>
+          <div class="order-buttons">
 
-          <p class="product-code">Artículo: SHM001</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-price">19,90 €</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Juicy%20Bliss%20SHM001" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Juicy%20Bliss%20SHM001" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
         <img src="02-Blooming-Musk-SHM002.jpg" alt="Blooming Musk" loading="lazy">
 
         <div class="product-info">
 
-          <h3>Blooming Musk</h3>
+          <h3>Blooming Musk</h3><p class="article">Artículo: SHM002 · 100 ml</p><p class="price">19,90 €</p>
 
-          <p>Perfume para el cabello · 100 ml</p>
+          <div class="order-buttons">
 
-          <p class="product-code">Artículo: SHM002</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-price">19,90 €</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Blooming%20Musk%20SHM002" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Blooming%20Musk%20SHM002" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
         <img src="03-White-Petals-SHM003.jpg" alt="White Petals" loading="lazy">
 
         <div class="product-info">
 
-          <h3>White Petals</h3>
+          <h3>White Petals</h3><p class="article">Artículo: SHM003 · 100 ml</p><p class="price">19,90 €</p>
 
-          <p>Perfume para el cabello · 100 ml</p>
+          <div class="order-buttons">
 
-          <p class="product-code">Artículo: SHM003</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-price">19,90 €</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20White%20Petals%20SHM003" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20White%20Petals%20SHM003" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
         <img src="04-Golden-Essence-SHM004.jpg" alt="Golden Essence" loading="lazy">
 
         <div class="product-info">
 
-          <h3>Golden Essence</h3>
+          <h3>Golden Essence</h3><p class="article">Artículo: SHM004 · 100 ml</p><p class="price">19,90 €</p>
 
-          <p>Perfume para el cabello · 100 ml</p>
+          <div class="order-buttons">
 
-          <p class="product-code">Artículo: SHM004</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-price">19,90 €</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Golden%20Essence%20SHM004" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Golden%20Essence%20SHM004" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
         <img src="05-Oriental-Seduction-SHM005.jpg" alt="Oriental Seduction" loading="lazy">
 
         <div class="product-info">
 
-          <h3>Oriental Seduction</h3>
+          <h3>Oriental Seduction</h3><p class="article">Artículo: SHM005 · 100 ml</p><p class="price">19,90 €</p>
 
-          <p>Perfume para el cabello · 100 ml</p>
+          <div class="order-buttons">
 
-          <p class="product-code">Artículo: SHM005</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-price">19,90 €</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Oriental%20Seduction%20SHM005" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Oriental%20Seduction%20SHM005" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
@@ -1344,307 +586,259 @@ footer a {
 
     </div>
 
-    <p class="modal-note">Consulta por WhatsApp si necesitas ayuda para realizar tu pedido.</p>
+    <div class="products-button-area">
+
+      <button class="button" type="button" onclick="cerrarVentana('modal-cabello')">✕ CERRAR Y SEGUIR VIENDO LA PÁGINA</button>
+
+    </div>
 
   </div>
 
 </div>
 
-<!-- CATÁLOGO AURODHEA NEEM -->
+<!-- CATÁLOGO AURODHEA NEEM: 13 PRODUCTOS -->
 
-<div class="modal modal-neem" id="modal-neem" role="dialog" aria-modal="true" aria-label="Catálogo gama aceite de Neem">
+<div class="product-modal neem-modal" id="modal-neem" role="dialog" aria-modal="true" aria-labelledby="titulo-neem" onclick="cerrarSiFondo(event,'modal-neem')">
 
   <div class="modal-content">
 
-    <button class="close-modal" type="button" aria-label="Cerrar" onclick="closeModal('modal-neem')">×</button>
+    <button class="modal-close" type="button" aria-label="Cerrar productos" onclick="cerrarVentana('modal-neem')">&times;</button>
 
-    <h2 class="modal-title">🌿 AURODHEA · Gama Aceite de Neem</h2>
+    <h2 id="titulo-neem">🌿 AURODHEA · Gama Aceite de Neem</h2>
 
-    <p class="modal-description">Descubre los productos de la gama y elige el que necesitas.</p>
+    <p class="intro">Selecciona el producto y realiza tu pedido mediante Chogan o WhatsApp.</p>
 
-    <div class="product-grid">
+    <div class="gallery">
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="01_NM02B.jpg" alt="Gel de baño con aceite de Neem" loading="lazy">
+        <img src="01_NM02B.jpg" alt="Gel de Baño con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Gel de Baño con Aceite de Neem</h3><p class="article">Artículo: NM02B · 250 ml</p><p class="price">19,90 €</p>
 
-          <h3>Gel de Baño con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>250 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM02B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Gel%20de%20Ba%C3%B1o%20Neem%20NM02B%20250%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">19,90 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Gel%20de%20Ba%C3%B1o%20Neem%20NM02B%20250%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="02_NM06C.jpg" alt="Crema facial con aceite de Neem" loading="lazy">
+        <img src="02_NM06C.jpg" alt="Crema Facial con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Crema Facial con Aceite de Neem</h3><p class="article">Artículo: NM06C · 50 ml</p><p class="price">39,90 €</p>
 
-          <h3>Crema Facial con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>50 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM06C</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Facial%20Neem%20NM06C%2050%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">39,90 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Facial%20Neem%20NM06C%2050%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="03_NM09B.jpg" alt="Mascarilla facial dermopurificante con aceite de Neem" loading="lazy">
+        <img src="03_NM09B.jpg" alt="Mascarilla Facial Dermopurificante con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Mascarilla Facial Dermopurificante con Aceite de Neem</h3><p class="article">Artículo: NM09B · 50 ml</p><p class="price">18,90 €</p>
 
-          <h3>Mascarilla Facial Dermopurificante con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>50 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM09B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Mascarilla%20Facial%20Neem%20NM09B%2050%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">18,90 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Mascarilla%20Facial%20Neem%20NM09B%2050%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="04_NM08B.jpg" alt="Limpiador íntimo con aceite de Neem" loading="lazy">
+        <img src="04_NM08B.jpg" alt="Limpiador Íntimo con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Limpiador Íntimo con Aceite de Neem</h3><p class="article">Artículo: NM08B · 260 ml</p><p class="price">7,99 €</p>
 
-          <h3>Limpiador Íntimo con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>260 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM08B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Limpiador%20Intimo%20Neem%20NM08B%20260%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">7,99 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Limpiador%20%C3%8Dntimo%20Neem%20NM08B%20260%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="05_NM07B.jpg" alt="Jabón líquido con aceite de Neem 260 ml" loading="lazy">
+        <img src="05_NM07B.jpg" alt="Jabón Líquido con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Jabón Líquido con Aceite de Neem</h3><p class="article">Artículo: NM07B · 260 ml</p><p class="price">3,99 €</p>
 
-          <h3>Jabón Líquido con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>260 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM07B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Jabon%20Liquido%20Neem%20NM07B%20260%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">3,99 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Jab%C3%B3n%20L%C3%ADquido%20Neem%20NM07B%20260%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="06_RSNM07B.jpg" alt="Jabón líquido con aceite de Neem 1000 ml" loading="lazy">
+        <img src="06_RSNM07B.jpg" alt="Jabón Líquido con Aceite de Neem 1000 ml" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Jabón Líquido con Aceite de Neem</h3><p class="article">Artículo: RSNM07B · 1000 ml</p><p class="price">8,90 €</p>
 
-          <h3>Jabón Líquido con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>1000 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: RSNM07B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Jabon%20Liquido%20Neem%20RSNM07B%201000%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">8,90 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Jab%C3%B3n%20L%C3%ADquido%20Neem%20RSNM07B%201000%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="07_NM03B.jpg" alt="Crema corporal con aceite de Neem 150 ml" loading="lazy">
+        <img src="07_NM03B.jpg" alt="Crema Corporal con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Crema Corporal con Aceite de Neem</h3><p class="article">Artículo: NM03B · 150 ml</p><p class="price">24,90 €</p>
 
-          <h3>Crema Corporal con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>150 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM03B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Corporal%20Neem%20NM03B%20150%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">24,90 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Corporal%20Neem%20NM03B%20150%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="08_CU39B.jpg" alt="Crema corporal con aceite de Neem 10 ml" loading="lazy">
+        <img src="08_CU39B.jpg" alt="Crema Corporal con Aceite de Neem 10 ml" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Crema Corporal con Aceite de Neem</h3><p class="article">Artículo: CU39B · 10 ml</p><p class="price">2,50 €</p>
 
-          <h3>Crema Corporal con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>10 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: CU39B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Corporal%20Neem%20CU39B%2010%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">2,50 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Corporal%20Neem%20CU39B%2010%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="09_NM01B.jpg" alt="Champú con aceite de Neem" loading="lazy">
+        <img src="09_NM01B.jpg" alt="Champú con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Champú con Aceite de Neem</h3><p class="article">Artículo: NM01B · 250 ml</p><p class="price">19,90 €</p>
 
-          <h3>Champú con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>250 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM01B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Champu%20Neem%20NM01B%20250%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">19,90 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Champ%C3%BA%20Neem%20NM01B%20250%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="10_NM04.jpg" alt="Crema de manos y uñas con aceite de Neem 75 ml" loading="lazy">
+        <img src="10_NM04.jpg" alt="Crema de Manos y Uñas con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Crema de Manos y Uñas con Aceite de Neem</h3><p class="article">Artículo: NM04 · 75 ml</p><p class="price">12,90 €</p>
 
-          <h3>Crema de Manos y Uñas con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>75 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM04</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20Manos%20Neem%20NM04%2075%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">12,90 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Manos%20Neem%20NM04%2075%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="11_CU40B.jpg" alt="Crema de manos y uñas con aceite de Neem 10 ml" loading="lazy">
+        <img src="11_CU40B.jpg" alt="Crema de Manos y Uñas con Aceite de Neem 10 ml" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Crema de Manos y Uñas con Aceite de Neem</h3><p class="article">Artículo: CU40B · 10 ml</p><p class="price">2,50 €</p>
 
-          <h3>Crema de Manos y Uñas con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>10 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: CU40B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20Manos%20Neem%20CU40B%2010%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">2,50 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Manos%20Neem%20CU40B%2010%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="12_NM05B.jpg" alt="Crema de pies con aceite de Neem 75 ml" loading="lazy">
+        <img src="12_NM05B.jpg" alt="Crema de Pies con Aceite de Neem" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Crema de Pies con Aceite de Neem</h3><p class="article">Artículo: NM05B · 75 ml</p><p class="price">13,90 €</p>
 
-          <h3>Crema de Pies con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>75 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: NM05B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20Pies%20Neem%20NM05B%2075%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">13,90 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20Pies%20Neem%20NM05B%2075%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
       </article>
 
-      <article class="product-card">
+      <article class="gallery-item">
 
-        <img src="13_CU41B.jpg" alt="Crema de pies con aceite de Neem 10 ml" loading="lazy">
+        <img src="13_CU41B.jpg" alt="Crema de Pies con Aceite de Neem 10 ml" loading="lazy">
 
-        <div class="product-info">
+        <div class="product-info"><h3>Crema de Pies con Aceite de Neem</h3><p class="article">Artículo: CU41B · 10 ml</p><p class="price">2,50 €</p>
 
-          <h3>Crema de Pies con Aceite de Neem</h3>
+          <div class="order-buttons">
 
-          <p>10 ml</p>
+            <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR EN CHOGAN</a>
 
-          <p class="product-code">Artículo: CU41B</p>
+            <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20Pies%20Neem%20CU41B%2010%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
 
-          <p class="product-price">2,50 €</p>
-
-          <a class="order-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 PEDIR PRODUCTO</a>
-
-          <a class="order-button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20Pies%20Neem%20CU41B%2010%20ml" target="_blank" rel="noopener noreferrer">💬 PEDIR POR WHATSAPP</a>
+          </div>
 
         </div>
 
@@ -1652,139 +846,217 @@ footer a {
 
     </div>
 
-    <p class="modal-note">Para realizar un pedido o consultar disponibilidad, utiliza el botón de WhatsApp.</p>
+    <div class="products-button-area">
+
+      <button class="button" type="button" onclick="cerrarVentana('modal-neem')">✕ CERRAR Y SEGUIR VIENDO LA PÁGINA</button>
+
+    </div>
 
   </div>
 
 </div>
 
+<!-- CONTACTO -->
+
+<section id="contacto" class="contact">
+
+  <h2>📞 Contacto</h2>
+
+  <p>¿Tienes alguna pregunta o necesitas ayuda con tu pedido?</p>
+
+  <p>📧 E-Mail: <a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a></p>
+
+  <p>📞 Telefon / WhatsApp: <a href="tel:+491745201068">+49 174 5201068</a></p>
+
+  <a class="button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">🛒 Pedir directamente</a>
+
+  <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20tengo%20una%20consulta." target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+
+</section>
+
+<!-- AVISOS LEGALES -->
+
+<section id="legal" class="legal">
+
+  <h2>📄 Avisos legales</h2>
+
+  <h3>1. Información del responsable</h3>
+
+  <p>Este sitio web es operado por Salvador Pérez, como afiliado independiente de Chogan.</p>
+
+  <p>Nombre comercial: Parfüm und Düfte Perez</p>
+
+  <p>Correo electrónico: info@parfuemperez.com</p>
+
+  <p>Teléfono: +49 174 5201068</p>
+
+  <p>Dirección postal: Steinstraße 57, 34385 Bad Karlshafen, Alemania.</p>
+
+  <h3>2. Afiliación a Chogan</h3>
+
+  <p>Este sitio web es independiente y está gestionado por un afiliado independiente de Chogan.</p>
+
+  <p>Las compras se realizan a través de la plataforma oficial de Chogan mediante enlaces de afiliación. Este sitio puede recibir una comisión por las ventas realizadas mediante dichos enlaces.</p>
+
+  <p>“Chogan” es una marca registrada de su correspondiente titular. Los productos y las marcas mencionadas pertenecen a sus respectivos propietarios.</p>
+
+  <h3>3. Pedidos</h3>
+
+  <p>Los pedidos y las compras se realizan directamente en la plataforma oficial de Chogan. Este sitio web no procesa directamente pagos ni almacena datos bancarios de los clientes.</p>
+
+  <h3>4. Protección de datos</h3>
+
+  <p>Los datos de contacto enviados voluntariamente por correo electrónico o teléfono se utilizarán únicamente para responder a las consultas del usuario y gestionar la comunicación relacionada con sus pedidos.</p>
+
+  <p>No se solicitarán ni almacenarán datos bancarios a través de este sitio web.</p>
+
+  <h3>5. Cookies</h3>
+
+  <p>Esta página está diseñada para funcionar sin utilizar cookies propias de seguimiento. Los servicios externos enlazados desde esta página pueden aplicar sus propias políticas de privacidad y cookies. El traductor externo de Google puede aplicar sus propias condiciones y tecnologías.</p>
+
+  <h3>6. Responsabilidad</h3>
+
+  <p>La información publicada en este sitio tiene carácter informativo. Las características, disponibilidad, precios y condiciones de los productos pueden cambiar. Para la información definitiva sobre un producto o pedido, debe consultarse la plataforma oficial de Chogan.</p>
+
+  <h3>7. Derechos de autor</h3>
+
+  <p>El contenido propio de esta página no podrá reproducirse o utilizarse con fines comerciales sin autorización previa.</p>
+
+</section>
+
+<!-- PIE DE PÁGINA COLOR CREMA -->
+
 <footer>
 
-  <p><strong>Parfüm und Düfte Perez</strong></p>
+  <p>© 2026 Parfüm und Düfte Perez – Unabhängiger Vertriebspartner von Chogan.</p>
 
-  <p>Perfumes, belleza y cuidado personal.</p>
-
-  <p>
-
-    <a href="#inicio">Inicio</a> |
-
-    <a href="#contacto">Contacto</a>
-
-  </p>
-
-  <p>Los nombres de marcas y fragancias de referencia pertenecen a sus respectivos propietarios.</p>
-
-  <p>Los productos se ofrecen mediante los canales de venta correspondientes.</p>
+  <p>Cremes · Kosmetik · Körperpflege</p>
 
 </footer>
 
 <script>
 
-function openModal(id) {
+function abrirVentana(id){
 
-  const modal = document.getElementById(id);
+  const modal=document.getElementById(id);
 
-  if (!modal) return;
+  if(!modal)return;
 
-  modal.classList.add('open');
+  modal.classList.add("open");
 
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add("modal-open");
+
+  const closeButton=modal.querySelector(".modal-close");
+
+  if(closeButton)closeButton.focus();
 
 }
 
-function closeModal(id) {
+function cerrarVentana(id){
 
-  const modal = document.getElementById(id);
+  const modal=document.getElementById(id);
 
-  if (!modal) return;
+  if(!modal)return;
 
-  modal.classList.remove('open');
+  modal.classList.remove("open");
 
-  if (!document.querySelector('.modal.open')) {
+  if(!document.querySelector(".product-modal.open")){
 
-    document.body.style.overflow = '';
+    document.body.classList.remove("modal-open");
 
   }
 
 }
 
-document.querySelectorAll('.modal').forEach(function(modal) {
+function cerrarSiFondo(event,id){
 
-  modal.addEventListener('click', function(event) {
+  if(event.target===document.getElementById(id)){
 
-    if (event.target === modal) {
+    cerrarVentana(id);
 
-      modal.classList.remove('open');
+  }
 
-      if (!document.querySelector('.modal.open')) {
+}
 
-        document.body.style.overflow = '';
+document.addEventListener("keydown",function(event){
 
-      }
+  if(event.key==="Escape"){
 
-    }
+    document.querySelectorAll(".product-modal.open").forEach(function(modal){
 
-  });
-
-});
-
-document.addEventListener('keydown', function(event) {
-
-  if (event.key === 'Escape') {
-
-    document.querySelectorAll('.modal.open').forEach(function(modal) {
-
-      modal.classList.remove('open');
+      cerrarVentana(modal.id);
 
     });
 
-    document.body.style.overflow = '';
-
   }
 
 });
 
-/* Selector de idiomas con Google Translate */
+function alternarIdiomas(){
 
-function googleTranslateElementInit() {
+  const menu=document.getElementById("language-menu");
 
-  if (window.google && google.translate) {
+  const boton=document.querySelector(".language-button");
 
-    new google.translate.TranslateElement({
+  const abierto=menu.classList.toggle("open");
 
-      pageLanguage: 'es',
+  boton.setAttribute("aria-expanded",String(abierto));
 
-      includedLanguages: 'de,es,it,tr,ru,pt,sq',
+}
 
-      autoDisplay: false
+function cambiarIdioma(idioma){
 
-    }, 'google_translate_element');
+  const menu=document.getElementById("language-menu");
+
+  menu.classList.remove("open");
+
+  document.querySelector(".language-button").setAttribute("aria-expanded","false");
+
+  const selector=document.querySelector(".goog-te-combo");
+
+  if(selector){
+
+    selector.value=idioma;
+
+    selector.dispatchEvent(new Event("change"));
+
+  }else{
+
+    document.cookie="googtrans=/auto/"+idioma+"; path=/; SameSite=Lax";
+
+    document.cookie="googtrans=/auto/"+idioma+"; path=/; domain="+location.hostname+"; SameSite=Lax";
+
+    location.reload();
 
   }
 
 }
 
-document.getElementById('language-select').addEventListener('change', function() {
+function googleTranslateElementInit(){
 
-  const language = this.value;
+  new google.translate.TranslateElement({
 
-  function applyLanguage() {
+    pageLanguage:"es",
 
-    const combo = document.querySelector('.goog-te-combo');
+    includedLanguages:"de,es,it,tr,ru,pt,sq",
 
-    if (combo) {
+    autoDisplay:false
 
-      combo.value = language;
+  },"google_translate_element");
 
-      combo.dispatchEvent(new Event('change'));
+}
 
-    }
+document.addEventListener("click",function(event){
+
+  const area=document.querySelector(".language-area");
+
+  if(area&&!area.contains(event.target)){
+
+    document.getElementById("language-menu").classList.remove("open");
+
+    document.querySelector(".language-button").setAttribute("aria-expanded","false");
 
   }
-
-  applyLanguage();
-
-  setTimeout(applyLanguage, 500);
 
 });
 
