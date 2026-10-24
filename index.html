@@ -158,6 +158,22 @@ body.modal-open{overflow:hidden}
 
 .argan-modal .product-info h3,.argan-modal .price{color:#9d752b}
 
+/* NUEVA GAMA BEBÉ */
+
+.bebe-section{background:linear-gradient(180deg,#dff3ff,#f7fcff);border-radius:24px;margin-top:12px;margin-bottom:12px}
+
+.bebe-section h2{color:#287eaf}
+
+.bebe-section .products-button{background:#329bd3;box-shadow:0 5px 15px rgba(50,155,211,.25)}
+
+.bebe-section .products-button:hover{background:#217eaf}
+
+.bebe-modal .modal-content{background:#f3faff}
+
+.bebe-modal .gallery-item{border-color:#c8e7f8}
+
+.bebe-modal .product-info h3,.bebe-modal .price{color:#287eaf}
+
 /* CONTACTO, AVISOS LEGALES Y PIE */
 
 .contact{text-align:center;background:#f6e8dc;border-radius:20px}
@@ -372,6 +388,33 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
 </section>
 
+<!-- NUEVA GAMA BEBÉ -->
+
+<section id="video-bebe" class="bebe-section">
+
+ <h2>🧸 AURODHEA · Gama Bebé</h2>
+
+ <p class="intro">Descubre nuestra gama de cuidado infantil: productos para el baño, la higiene y el cuidado diario del bebé.</p>
+
+ <div class="video-container">
+
+  <video controls playsinline preload="metadata" poster="Catálogo de cuidado infantil AURODHEA.png">
+
+   <source src="gama_bebe_video_piano_relajante.mp4" type="video/mp4">
+
+   Tu navegador no puede reproducir este vídeo. Puedes consultar los productos con el botón inferior.
+
+  </video>
+
+ </div>
+
+ <div class="products-button-area">
+
+  <button class="products-button" type="button" onclick="abrirVentana('modal-bebe')">VER PRODUCTO</button>
+
+ </div>
+
+</section>
 <!-- CATÁLOGO BODY MIST -->
 
 <div class="product-modal" id="modal-body" role="dialog" aria-modal="true" aria-labelledby="titulo-body" onclick="cerrarSiFondo(event,'modal-body')">
@@ -595,7 +638,6 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
  </div>
 
 </div>
-
 <!-- CATÁLOGO NEEM: 13 PRODUCTOS -->
 
 <div class="product-modal neem-modal" id="modal-neem" role="dialog" aria-modal="true" aria-labelledby="titulo-neem" onclick="cerrarSiFondo(event,'modal-neem')">
@@ -851,7 +893,6 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
  </div>
 
 </div>
-
 <!-- CATÁLOGO ARGÁN: 13 PRODUCTOS -->
 
 <div class="product-modal argan-modal" id="modal-argan" role="dialog" aria-modal="true" aria-labelledby="titulo-argan" onclick="cerrarSiFondo(event,'modal-argan')">
@@ -872,13 +913,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Mascarilla Facial Antiedad con Aceite de Argán</h3><p class="article">Artículo: AR07B · 50 ml</p><p class="price">19,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Mascarilla%20Facial%20Antiedad%20con%20Aceite%20de%20Argan%20AR07B%2050%20ml%2019%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Mascarilla%20Facial%20Antiedad%20con%20Aceite%20de%20Argan%20AR07B%2050%20ml%2019%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -890,13 +925,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Crema Facial con Aceite de Argán, NUTRISILK™</h3><p class="article">Artículo: AR10C · 50 ml</p><p class="price">44,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Facial%20Argan%20AR10C%2050%20ml%2044%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20Facial%20Argan%20AR10C%2050%20ml%2044%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -908,13 +937,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Champú reestructurante con Aceite de Argán</h3><p class="article">Artículo: AR02B · 250 ml</p><p class="price">16,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Champu%20Argan%20AR02B%20250%20ml%2016%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Champu%20Argan%20AR02B%20250%20ml%2016%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -926,13 +949,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Champú reestructurante con Aceite de Argán</h3><p class="article">Artículo: AR14B · 50 ml</p><p class="price">4,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Champu%20Argan%20AR14B%2050%20ml%204%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Champu%20Argan%20AR14B%2050%20ml%204%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -944,13 +961,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Acondicionador capilar ecológico con Aceite de Argán</h3><p class="article">Artículo: AR03B · 250 ml</p><p class="price">17,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Acondicionador%20Argan%20AR03B%20250%20ml%2017%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Acondicionador%20Argan%20AR03B%20250%20ml%2017%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -962,13 +973,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Acondicionador capilar ecológico con Aceite de Argán</h3><p class="article">Artículo: AR15B · 50 ml</p><p class="price">3,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Acondicionador%20Argan%20AR15B%2050%20ml%203%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Acondicionador%20Argan%20AR15B%2050%20ml%203%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -980,13 +985,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Gel de baño con Aceite de Argán</h3><p class="article">Artículo: BS07B · 250 ml</p><p class="price">12,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Gel%20de%20bano%20Argan%20BS07B%20250%20ml%2012%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Gel%20de%20bano%20Argan%20BS07B%20250%20ml%2012%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -998,13 +997,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Crema de pies bio con Aceite de Argán</h3><p class="article">Artículo: AR04B · 75 ml</p><p class="price">15,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20pies%20Argan%20AR04B%2075%20ml%2015%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20pies%20Argan%20AR04B%2075%20ml%2015%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -1016,13 +1009,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Crema corporal BIO con Aceite de Argán</h3><p class="article">Artículo: AR01B · 150 ml</p><p class="price">19,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20corporal%20Argan%20AR01B%20150%20ml%2019%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20corporal%20Argan%20AR01B%20150%20ml%2019%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -1034,13 +1021,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Suero Capilar Reestructurante con Aceite de Argán</h3><p class="article">Artículo: CAP25B · 30 ml</p><p class="price">36,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Suero%20Capilar%20Argan%20CAP25B%2030%20ml%2036%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Suero%20Capilar%20Argan%20CAP25B%2030%20ml%2036%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -1052,13 +1033,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Mascarilla capilar nutritiva con Aceite de Argán</h3><p class="article">Artículo: AR06B · 150 ml</p><p class="price">16,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Mascarilla%20capilar%20Argan%20AR06B%20150%20ml%2016%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Mascarilla%20capilar%20Argan%20AR06B%20150%20ml%2016%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -1070,13 +1045,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Limpiador Íntimo con Aceite de Argán</h3><p class="article">Artículo: AR09B · 260 ml</p><p class="price">7,99 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Limpiador%20Intimo%20Argan%20AR09B%20260%20ml%207%2C99%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Limpiador%20Intimo%20Argan%20AR09B%20260%20ml%207%2C99%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -1088,13 +1057,7 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
     <div class="product-info"><h3>Crema de manos BIO con Aceite de Argán</h3><p class="article">Artículo: AR05B · 75 ml</p><p class="price">16,90 €</p>
 
-     <div class="order-buttons">
-
-      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
-
-      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20manos%20Argan%20AR05B%2075%20ml%2016%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
-
-     </div>
+     <div class="order-buttons"><a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a><a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Crema%20de%20manos%20Argan%20AR05B%2075%20ml%2016%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a></div>
 
     </div>
 
@@ -1108,6 +1071,117 @@ footer{background:#fff8ef;color:#705b51;text-align:center;padding:25px 15px;font
 
 </div>
 
+<!-- NUEVO CATÁLOGO BEBÉ: 5 PRODUCTOS -->
+
+<div class="product-modal bebe-modal" id="modal-bebe" role="dialog" aria-modal="true" aria-labelledby="titulo-bebe" onclick="cerrarSiFondo(event,'modal-bebe')">
+
+ <div class="modal-content">
+
+  <button class="modal-close" type="button" aria-label="Cerrar productos" onclick="cerrarVentana('modal-bebe')">&times;</button>
+
+  <h2 id="titulo-bebe">🧸 AURODHEA · Gama Bebé</h2>
+
+  <p class="intro">Descubre nuestra selección de cuidado infantil. Elige tu producto y pide directamente a Chogan o por WhatsApp.</p>
+
+  <div class="gallery">
+
+   <article class="gallery-item">
+
+    <img src="Leche corporal para bebé en azul y dorado.png" alt="Leche corporal para bebé" loading="lazy">
+
+    <div class="product-info"><h3>Leche corporal para bebé</h3><p class="article">Artículo: BB03B · 150 ml</p><p class="price">22,90 €</p>
+
+     <div class="order-buttons">
+
+      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
+
+      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Leche%20corporal%20para%20bebe%20BB03B%20150%20ml%2022%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
+
+     </div>
+
+    </div>
+
+   </article>
+
+   <article class="gallery-item">
+
+    <img src="Espuma de Baño para Bebé Premium.png" alt="Espuma de baño para bebé" loading="lazy">
+
+    <div class="product-info"><h3>Espuma de baño para bebé</h3><p class="article">Artículo: BB01B · 200 ml</p><p class="price">19,90 €</p>
+
+     <div class="order-buttons">
+
+      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
+
+      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Espuma%20de%20bano%20para%20bebe%20BB01B%20200%20ml%2019%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
+
+     </div>
+
+    </div>
+
+   </article>
+
+   <article class="gallery-item">
+
+    <img src="Champú para Bebés con Aloe Vera y Macadamia.png" alt="Champú para bebés" loading="lazy">
+
+    <div class="product-info"><h3>Champú para bebés</h3><p class="article">Artículo: BB02B · 200 ml</p><p class="price">18,90 €</p>
+
+     <div class="order-buttons">
+
+      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
+
+      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Champu%20para%20bebes%20BB02B%20200%20ml%2018%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
+
+     </div>
+
+    </div>
+
+   </article>
+
+   <article class="gallery-item">
+
+    <img src="Limpiador Suave para Bebé con Ingredientes Naturales.png" alt="Limpiador ultrasuave para bebé" loading="lazy">
+
+    <div class="product-info"><h3>Limpiador ultrasuave para bebé</h3><p class="article">Artículo: SP06B · 260 ml</p><p class="price">21,90 €</p>
+
+     <div class="order-buttons">
+
+      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
+
+      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Limpiador%20ultrasuave%20para%20bebe%20SP06B%20260%20ml%2021%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
+
+     </div>
+
+    </div>
+
+   </article>
+
+   <article class="gallery-item">
+
+    <img src="Champú Bebé Natural y Suave.png" alt="Champú biológico contra piojos y liendres" loading="lazy">
+
+    <div class="product-info"><h3>Champú biológico contra piojos y liendres</h3><p class="article">Artículo: SHPDB · 200 ml</p><p class="price">21,90 €</p>
+
+     <div class="order-buttons">
+
+      <a class="button chogan-button" href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES" target="_blank" rel="noopener noreferrer">PEDIR EN CHOGAN</a>
+
+      <a class="button whatsapp-button" href="https://wa.me/491745201068?text=Hola%2C%20quiero%20Champu%20biologico%20contra%20piojos%20y%20liendres%20SHPDB%20200%20ml%2021%2C90%20EUR" target="_blank" rel="noopener noreferrer">PEDIR POR WHATSAPP</a>
+
+     </div>
+
+    </div>
+
+   </article>
+
+  </div>
+
+  <div class="products-button-area"><button class="button" type="button" onclick="cerrarVentana('modal-bebe')">CERRAR Y SEGUIR VIENDO LA PÁGINA</button></div>
+
+ </div>
+
+</div>
 <!-- CONTACTO -->
 
 <section id="contacto" class="contact">
@@ -1220,7 +1294,11 @@ function cerrarVentana(id){
 
 function cerrarSiFondo(event,id){
 
- if(event.target===document.getElementById(id))cerrarVentana(id);
+ if(event.target===document.getElementById(id)){
+
+  cerrarVentana(id);
+
+ }
 
 }
 
@@ -1312,4 +1390,5 @@ document.addEventListener("click",function(event){
 
 </body>
 
-</html>
+</html> 
+ 
