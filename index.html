@@ -136,7 +136,7 @@ nav {
 
 }
 
-nav a {text-decoration:none}
+nav a {text-decoration:none;color:var(--ink)}
 
 .lang {
 
@@ -294,6 +294,8 @@ h1 {
 
   box-shadow:0 7px 24px #49351a0a;
 
+  min-width:0;
+
 }
 
 .media {
@@ -387,6 +389,54 @@ h1 {
 }
 
 .products.open {display:block}
+
+.gallery {
+
+  display:grid;
+
+  grid-template-columns:repeat(2,minmax(0,1fr));
+
+  gap:12px;
+
+}
+
+.gallery figure {
+
+  margin:0;
+
+  padding:7px;
+
+  background:var(--cream);
+
+  border:1px solid var(--line);
+
+}
+
+.gallery img {
+
+  display:block;
+
+  width:100%;
+
+  height:190px;
+
+  object-fit:contain;
+
+  background:white;
+
+}
+
+.gallery figcaption {
+
+  font:12px/1.5 Arial;
+
+  text-align:center;
+
+  padding:8px 2px;
+
+  color:var(--ink);
+
+}
 
 .notice {
 
@@ -526,6 +576,8 @@ footer p {
 
   .media {height:220px}
 
+  .gallery img {height:170px}
+
   .section {padding:48px 16px}
 
   .whatsapp {right:12px;bottom:12px;padding:13px 16px}
@@ -535,7 +587,6 @@ footer p {
 </style>
 
 </head>
-
 <body>
 
 <div class="topbar">
@@ -641,14 +692,17 @@ KOLLEKTIONEN ENTDECKEN
 </div>
 
 <div class="grid">
-
-<!-- 01 BODY MIST -->
+ <!-- 01 BODY MIST -->
 
 <article class="card">
 
 <div class="media">
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>01 · BODY MIST</div>
+<video controls playsinline preload="metadata">
+
+<source src="01_Body_Mist/video-lush-cloud-cuerpo.mp4" type="video/mp4">
+
+</video>
 
 </div>
 
@@ -658,7 +712,23 @@ KOLLEKTIONEN ENTDECKEN
 
 <button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
 
-<div class="products">Produktgalerie wird ergänzt.</div>
+<div class="products">
+
+<div class="gallery">
+
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/brazilian-sunset-lush-cloud-100ml.png"><figcaption>Brazilian Sunset · 100 ml</figcaption></figure>
+
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/golden-hour-lush-cloud-100ml.png"><figcaption>Golden Hour · 100 ml</figcaption></figure>
+
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/pacific-aura-lush-cloud-100ml.png"><figcaption>Pacific Aura · 100 ml</figcaption></figure>
+
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/summer-dream-lush-cloud-100ml.png"><figcaption>Summer Dream · 100 ml</figcaption></figure>
+
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/tropical-breeze-lush-cloud-100ml.png"><figcaption>Tropical Breeze · 100 ml</figcaption></figure>
+
+</div>
+
+</div>
 
 </article>
 
@@ -668,7 +738,7 @@ KOLLEKTIONEN ENTDECKEN
 
 <div class="media">
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>02 · NEEM</div>
+<div class="placeholder">VÍDEO MOV · PENDIENTE DE CONVERSIÓN A MP4</div>
 
 </div>
 
@@ -678,413 +748,645 @@ KOLLEKTIONEN ENTDECKEN
 
 <button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
 
-<div class="products">Produktgalerie und bestätigte Kundenpreise werden ergänzt.</div>
+<div class="products">
 
-</article>
+<div class="gallery">
 
-<!-- 03 ARGÁN -->
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/champu-neem-250ml.png"><figcaption>Champú Neem 250 ml · NM01B · 19,90 €</figcaption></figure>
 
-<article class="card">
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-corporal-neem-10ml.png"><figcaption>Crema corporal 10 ml · CU39B · 2,50 €</figcaption></figure>
 
-<div class="media">
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-corporal-neem-150ml.png"><figcaption>Crema corporal 150 ml · NM03B · 24,90 €</figcaption></figure>
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>03 · ARGÁN</div>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-de-pie-neem-75ml.png"><figcaption>Crema de pies 75 ml · NM05B · 13,90 €</figcaption></figure>
 
-</div>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-facial-neem-10ml.png"><figcaption>Crema facial 10 ml · Precio pendiente de confirmar</figcaption></figure>
 
-<h3>Argán</h3>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-facial-neem-50ml.png"><figcaption>Crema facial 50 ml · NM06C · 39,90 €</figcaption></figure>
 
-<p>Pflegeserie mit Arganöl.</p>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-manos-neem-75ml.png"><figcaption>Crema manos 75 ml · NM04 · 12,90 €</figcaption></figure>
 
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-manos-y-unas-neem-10ml.png"><figcaption>Crema manos 10 ml · CU40B · 2,50 €</figcaption></figure>
 
-<div class="products">Produktgalerie wird ergänzt.</div>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-manos-y-unas-neem-75ml.png"><figcaption>Crema manos y uñas 75 ml · NM04 · 12,90 €</figcaption></figure>
 
-</article>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-pie-neem-10ml.png"><figcaption>Crema pies 10 ml · CU41B · 2,50 €</figcaption></figure>
 
-<!-- 04 HYALURONSÄURE -->
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/jabon-liquido-neem-1000ml.png"><figcaption>Jabón líquido 1000 ml · RSNM07B · 8,90 €</figcaption></figure>
 
-<article class="card">
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/jabon-liquido-neem-260ml.png"><figcaption>Jabón líquido 260 ml · NM07B · 3,99 €</figcaption></figure>
 
-<div class="media">
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/limpiador-interno-neem-260ml.png"><figcaption>Limpiador íntimo 260 ml · NM08B · 7,99 €</figcaption></figure>
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>04 · HYALURONSÄURE</div>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/mascarilla-fácil-neem-50ml.png"><figcaption>Mascarilla facial 50 ml · NM09B · 18,90 €</figcaption></figure>
 
-</div>
-
-<h3>Ácido Hialurónico</h3>
-
-<p>Gesichtspflege mit Hyaluronsäure.</p>
-
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">Produktgalerie wird ergänzt.</div>
-
-</article>
-
-<!-- 05 SCHNECKENSCHLEIM -->
-
-<article class="card">
-
-<div class="media">
-
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>05 · SCHNECKENSCHLEIM</div>
+<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/set-bustitas-neem.png"><figcaption>Set de bustitas Neem</figcaption></figure>
 
 </div>
 
-<h3>Baba de Caracol</h3>
-
-<p>Pflegekollektion mit Schneckenschleim.</p>
-
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">Produktgalerie wird ergänzt.</div>
+</div>
 
 </article>
-
-<!-- 06 PURIFICANTE -->
+ <!-- 03. ACEITE DE ARGÁN -->
 
 <article class="card">
 
-<div class="media">
+  <div class="media">
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>06 · PURIFICANTE</div>
+    <div class="placeholder">
 
-</div>
+      <span>03</span>
 
-<h3>Purificante Salicílico</h3>
+      <strong>ACEITE DE ARGÁN</strong>
 
-<p>Reinigende Pflege mit Salicylsäure.</p>
+      <p>Nutrición y cuidado para piel y cabello</p>
 
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
+      <small>Vídeo pendiente de conversión a MP4</small>
 
-<div class="products">Produktgalerie wird ergänzt.</div>
+    </div>
 
-</article>
+  </div>
 
-<!-- 07 REMEDIOS -->
+  <h3>Gama Aceite de Argán</h3>
 
-<article class="card">
+  <p>Una colección para el cuidado corporal, facial y capilar.</p>
 
-<div class="media">
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>07 · REMEDIOS</div>
+  <div class="products">
 
-</div>
+    <div class="gallery">
 
-<h3>Remedios y Ungüentos</h3>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/acondicionador-capilar-argan-250ml.png" alt="Acondicionador capilar Argán 250 ml">
 
-<p>Salben und ausgewählte Pflegeprodukte.</p>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/acondicionador-capilar-argan-50ml.png" alt="Acondicionador capilar Argán 50 ml">
 
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/champu-reestructurante-argan-250ml.png" alt="Champú reestructurante Argán 250 ml">
 
-<div class="products">Produktgalerie wird ergänzt.</div>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/champu-reestructurante-argan-50ml.png" alt="Champú reestructurante Argán 50 ml">
 
-</article>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-corporal-bio-argan-150ml.png" alt="Crema corporal Bio Argán">
 
-<!-- 08 LECHE DE BURRA -->
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-de-manos-bio-argan-75ml.png" alt="Crema de manos Bio Argán">
 
-<article class="card">
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-de-pies-bio-argan-75ml.png" alt="Crema de pies Bio Argán">
 
-<div class="media">
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-facial-argan-10ml.png" alt="Crema facial Argán 10 ml">
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>08 · LECHE DE BURRA</div>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-facial-argan-50ml.png" alt="Crema facial Argán 50 ml">
 
-</div>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/jabon-liquido-argan-1000ml.png" alt="Jabón líquido Argán 1000 ml">
 
-<h3>Leche de Burra</h3>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/jabon-liquido-argan-260ml.png" alt="Jabón líquido Argán 260 ml">
 
-<p>Pflegekollektion mit Eselsmilch.</p>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/limpiador-intimo-argan-260ml.png" alt="Limpiador íntimo Argán">
 
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-antiedad-argan-50ml.png" alt="Mascarilla antiedad Argán">
 
-<div class="products">Produktgalerie wird ergänzt.</div>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-capilar-argan-150ml.png" alt="Mascarilla capilar Argán 150 ml">
 
-</article>
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-capilar-argan-30ml.png" alt="Mascarilla capilar Argán 30 ml">
 
-<!-- 09 SOLARES -->
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-capilar-argan-500ml.png" alt="Mascarilla capilar Argán 500 ml">
 
-<article class="card">
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-desenredante-argan-150ml.png" alt="Mascarilla desenredante Argán">
 
-<div class="media">
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/set-de-bustitas-argan.png" alt="Set de bustitas Argán">
 
-<video controls playsinline preload="metadata">
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/suero-reestructurante-argan-30ml.png" alt="Suero reestructurante Argán">
 
-<source src="12_Solares/Gama_Solares_55_segundos.mp4" type="video/mp4">
+    </div>
 
-Ihr Browser unterstützt dieses Video nicht.
-
-</video>
-
-</div>
-
-<h3>Solares</h3>
-
-<p>Sonnenschutz und Pflege für sonnige Tage.</p>
-
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">Produktgalerie wird mit den bestätigten Solarprodukten ergänzt.</div>
+  </div>
 
 </article>
 
-<!-- 10 -->
+<!-- 04. PURIFICANTE ÁCIDO SALICÍLICO -->
 
 <article class="card">
 
-<div class="media">
+  <div class="media">
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>10 · KOLLEKTION</div>
+    <video controls playsinline preload="metadata">
 
-</div>
+      <source src="04_Purificante_Acido_Salicilico/Video_Gama_Acido_Salicilico.mp4" type="video/mp4">
 
-<h3>Kollektion 10</h3>
+    </video>
 
-<p>Weitere Pflegeserie – Inhalt folgt.</p>
+  </div>
 
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
+  <h3>Gama Purificante con Ácido Salicílico</h3>
 
-<div class="products">Kategorie und Produktdaten werden ergänzt.</div>
+  <p>Cuidado purificante para la piel y el cabello.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/04_Purificante_Acido_Salicilico/champu-anticaspa-acido-salicilico-250ml.png" alt="Champú anticaspa Ácido Salicílico">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/04_Purificante_Acido_Salicilico/gel-facial-acido-salicilico-100ml.png" alt="Gel facial Ácido Salicílico">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/04_Purificante_Acido_Salicilico/limpiador-anti-acne-acido-salicilico-260ml.png" alt="Limpiador antiacné Ácido Salicílico">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/04_Purificante_Acido_Salicilico/mascarilla-facial-acido-salicilico-50ml.png" alt="Mascarilla facial Ácido Salicílico">
+
+    </div>
+
+  </div>
+
+</article>
+ <!-- 05. BABA DE CARACOL -->
+
+<article class="card">
+
+  <div class="media">
+
+    <div class="placeholder">
+
+      <span>05</span>
+
+      <strong>BABA DE CARACOL</strong>
+
+      <p>Cuidado facial y corporal</p>
+
+      <small>Galería pendiente de imágenes</small>
+
+    </div>
+
+  </div>
+
+  <h3>Gama Baba de Caracol</h3>
+
+  <p>Cuidado y belleza para tu piel.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <p>Próximamente disponibles los productos de esta gama.</p>
+
+    </div>
+
+  </div>
 
 </article>
 
-<!-- 11 -->
+<!-- 06. ALOE VERA -->
 
 <article class="card">
 
-<div class="media">
+  <div class="media">
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>11 · KOLLEKTION</div>
+    <div class="placeholder">
 
-</div>
+      <span>06</span>
 
-<h3>Kollektion 11</h3>
+      <strong>ALOE VERA</strong>
 
-<p>Weitere Pflegeserie – Inhalt folgt.</p>
+      <p>Cuidado natural para toda la familia</p>
 
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
+      <small>Vídeo MOV pendiente de conversión a MP4</small>
 
-<div class="products">Kategorie und Produktdaten werden ergänzt.</div>
+    </div>
+
+  </div>
+
+  <h3>Gama Aloe Vera</h3>
+
+  <p>Productos para el cuidado facial, corporal, capilar e higiene.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/champu-lavado-aloe-vera-250ml.png" alt="Champú Aloe Vera 250 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/champu-lavado-aloe-vera-50ml.png" alt="Champú Aloe Vera 50 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-contorno-ojos-aloe-vera.png" alt="Crema contorno de ojos Aloe Vera">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-corporal-aloe-vera-10ml.png" alt="Crema corporal Aloe Vera 10 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-corporal-aloe-vera-150ml.png" alt="Crema corporal Aloe Vera 150 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-corporal-aloe-vera-30ml.png" alt="Crema corporal Aloe Vera 30 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-de-manos-aloe-vera-10ml.png" alt="Crema de manos Aloe Vera 10 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-de-manos-aloe-vera-75ml.png" alt="Crema de manos Aloe Vera 75 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-facial-aloe-vera-10ml.png" alt="Crema facial Aloe Vera 10 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-facial-aloe-vera-50ml.png" alt="Crema facial Aloe Vera 50 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-facil-aloe-vera-50ml.png" alt="Crema facial Aloe Vera">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/enjuague-bucal-aloe-vera-250ml.png" alt="Enjuague bucal Aloe Vera 250 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/enjuague-bucal-aloe-vera-80ml.png" alt="Enjuague bucal Aloe Vera 80 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/gel-bio-aloe-vera-10ml.png" alt="Gel Bio Aloe Vera 10 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/gel-bio-aloe-vera-150ml.png" alt="Gel Bio Aloe Vera 150 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/gel-de-bano-aloe-vera-250ml.png" alt="Gel de baño Aloe Vera 250 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/gel-de-bano-aloe-vera-50ml.png" alt="Gel de baño Aloe Vera 50 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/limpiador-intimo-aloe-vera-260ml.png" alt="Limpiador íntimo Aloe Vera 260 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/limpiador-intimo-aloe-vera-50ml.png" alt="Limpiador íntimo Aloe Vera 50 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/mascarilla-capilar-aloe-vera-150ml.png" alt="Mascarilla capilar Aloe Vera">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/mascarilla-exfoliante-aloe-vera-75ml.png" alt="Mascarilla exfoliante Aloe Vera">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/pasta-dentifrica-aloe-vera-115g.png" alt="Pasta dentífrica Aloe Vera">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/set-bustine-aloe-vera.png" alt="Set Aloe Vera">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/spray-de-auxilios-aloe-vera-150ml.png" alt="Spray de auxilios Aloe Vera">
+
+    </div>
+
+  </div>
 
 </article>
 
-<!-- 12 -->
+<!-- 07. REMEDIOS Y UNGÜENTOS -->
 
 <article class="card">
 
-<div class="media">
+  <div class="media">
 
-<div class="placeholder">VIDEO / PRODUKTBILDER<br>12 · KOLLEKTION</div>
+    <div class="placeholder">
 
-</div>
+      <span>07</span>
 
-<h3>Kollektion 12</h3>
+      <strong>REMEDIOS Y UNGÜENTOS</strong>
 
-<p>Weitere Pflegeserie – Inhalt folgt.</p>
+      <p>Cuidado especializado</p>
 
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
+      <small>Vídeo e imágenes pendientes</small>
 
-<div class="products">Kategorie und Produktdaten werden ergänzt.</div>
+    </div>
+
+  </div>
+
+  <h3>Gama Remedios y Ungüentos</h3>
+
+  <p>Descubre próximamente esta selección de productos.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <p>Próximamente disponibles los productos de esta gama.</p>
+
+    </div>
+
+  </div>
+
+</article>
+ <!-- 08. BEBÉ -->
+
+<article class="card">
+
+  <div class="media">
+
+    <div class="placeholder">
+
+      <span>08</span>
+
+      <strong>BEBÉ</strong>
+
+      <p>Cuidado delicado para los más pequeños</p>
+
+      <small>Vídeo MOV pendiente de conversión a MP4</small>
+
+    </div>
+
+  </div>
+
+  <h3>Gama Bebé</h3>
+
+  <p>Productos para la higiene y el cuidado diario del bebé.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/champu-biologico-bebe-200ml.png" alt="Champú biológico bebé 200 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/champu-para-bebe-200ml.png" alt="Champú para bebé 200 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/espuma-bano-bebe-200ml.png" alt="Espuma de baño bebé 200 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/leche-corporal-bebe-150ml.png" alt="Leche corporal bebé 150 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/limpiador-suave-bebe-260ml.png" alt="Limpiador suave bebé 260 ml">
+
+    </div>
+
+  </div>
+
+</article>
+
+<!-- 09. LECHE DE BURRA -->
+
+<article class="card">
+
+  <div class="media">
+
+    <video controls playsinline preload="metadata">
+
+      <source src="09_Leche_de_Burra/Leche_de_Burra_Todas_las_Imagenes_35s.mp4" type="video/mp4">
+
+    </video>
+
+  </div>
+
+  <h3>Gama Leche de Burra</h3>
+
+  <p>Una presentación elegante para el cuidado facial y corporal.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/2B699E4B-491A-4D91-8DBE-AC4CCED4CBCC.png" alt="Producto Leche de Burra">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/420B2369-9BA3-4BB2-A808-4726663EF591.png" alt="Producto Leche de Burra">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/5A1E6BAE-5A1B-4082-B90B-0FC22F43FB7E.png" alt="Producto Leche de Burra">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/5B89DEAE-FB25-4B01-AED3-E24FCC50B897.png" alt="Producto Leche de Burra">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/6A8309CD-583F-451E-8B39-012A5C0ED9F5.png" alt="Producto Leche de Burra">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/7BC33463-2567-46FC-8AA7-069DFE445592.png" alt="Producto Leche de Burra">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/C09224C6-8401-45E0-953B-134EC75347AB.png" alt="Producto Leche de Burra">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/D944FD2D-C446-427B-9159-7AEAFFEEF9ED.png" alt="Producto Leche de Burra">
+
+    </div>
+
+  </div>
+
+</article>
+
+<!-- 10. ÁCIDO HIALURÓNICO Y COLÁGENO -->
+
+<article class="card">
+
+  <div class="media">
+
+    <div class="placeholder">
+
+      <span>10</span>
+
+      <strong>ÁCIDO HIALURÓNICO Y COLÁGENO</strong>
+
+      <p>Cuidado facial e hidratación</p>
+
+      <small>Vídeo pendiente de añadir</small>
+
+    </div>
+
+  </div>
+
+  <h3>Gama Ácido Hialurónico y Colágeno</h3>
+
+  <p>Productos para el cuidado y la hidratación facial.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/crema-facial-acido-hialuronico-10ml.png" alt="Crema facial Ácido Hialurónico 10 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/crema-facial-acido-hialuronico-50ml.png" alt="Crema facial Ácido Hialurónico 50 ml">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/mascarilla-facial-acido-hialuronico-75ml.png" alt="Mascarilla facial Ácido Hialurónico">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/serum-gel-acido-hialuronico.png" alt="Sérum gel Ácido Hialurónico">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/set-bustine-acido-hialuronico.png" alt="Set Ácido Hialurónico">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/suero-gel-acido-hialuronico-10ml.png" alt="Suero gel Ácido Hialurónico 10 ml">
+
+    </div>
+
+  </div>
+
+</article>
+  <!-- 11. AURODHEA LUSH CLOUD -->
+
+<article class="card">
+
+  <div class="media">
+
+    <video controls playsinline preload="metadata">
+
+      <source src="11_Aurodhea_Lush_Cloud/LUSH_CLOUD_Hair_Mist_IPHONE.mp4" type="video/mp4">
+
+    </video>
+
+  </div>
+
+  <h3>Gama Aurodhea Lush Cloud</h3>
+
+  <p>Una colección de aromas delicados para el cuidado del cabello.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/blooming-musk-lush-cloud.png" alt="Blooming Musk">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/golden-essence-lush-cloud.png" alt="Golden Essence">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/juicy-bliss-lush-cloud.png" alt="Juicy Bliss">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/oriental-seduction-lush-cloud.png" alt="Oriental Seduction">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/white-petals-lush-cloud.png" alt="White Petals">
+
+    </div>
+
+  </div>
+
+</article>
+
+<!-- 12. SOLARES -->
+
+<article class="card">
+
+  <div class="media">
+
+    <video controls playsinline preload="metadata">
+
+      <source src="12_Solares/Gama_Solares_55_segundos.mp4" type="video/mp4">
+
+    </video>
+
+  </div>
+
+  <h3>Gama Solares</h3>
+
+  <p>Protección solar con Hamamelis, Aloe Vera, Pantenol y Vitamina E.</p>
+
+  <button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
+
+  <div class="products">
+
+    <div class="gallery">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/103D2EAB-4B41-479A-AC9A-0A87DB2AF0D.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/1FA355BA-28B8-4D81-B9BE-1832E87C7E64.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/5DB621D8-4173-4A26-9BED-CC3F684C1C0B.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/6FEC24CE-8F02-4861-8DA6-4FC891B9BD98.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/904E890F-6AC3-4448-905C-1BEC3478AA22.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/AC563675-B470-434D-AAA0-05D7B6FD3460.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/ADCE1C7F-19CF-4A7C-BD71-D98C8F042E2B.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/B08A560F-75BE-4DD4-846E-FC2692B214B7.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/C27B162E-6CB8-4755-BE1E-8364651DD66D.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/D9320639-681C-414C-876F-7B483C9DE902.png" alt="Producto solar">
+
+      <img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/FF488A1F-4E0A-4F3D-A870-B3AA216C9077.png" alt="Producto solar">
+
+    </div>
+
+  </div>
 
 </article>
 
 </div>
 
 </section>
+
+<!-- CONTACTO -->
 
 <section class="section" id="kontakt">
 
-<div class="section-head">
+  <div class="section-head">
 
-<div class="eyebrow">Persönlicher Service</div>
+    <span class="eyebrow">PARFÜM UND DÜFTE PEREZ</span>
 
-<h2>Kontakt &amp; Bestellung</h2>
+    <h2>Kontakt</h2>
 
-</div>
+    <p>Wir freuen uns auf deine Nachricht.</p>
 
-<div class="notice">
+  </div>
 
-Für Fragen zu Produkten und Bestellungen kontaktieren Sie uns bitte per WhatsApp.
+  <div class="card">
 
-Persönliche Abholung nach Terminvereinbarung.
+    <h3>Persönliche Bestellung</h3>
 
-Bitte Verfügbarkeit und Lieferbedingungen vor der Bestellung erfragen.
+    <p>Bestellungen und Abholung nach Vereinbarung.</p>
 
-</div>
+    <a class="btn" href="https://wa.me/491745201068" target="_blank" rel="noopener">
+
+      PEDIR POR WHATSAPP
+
+    </a>
+
+  </div>
 
 </section>
 
-</main>
+<!-- FOOTER -->
 
 <footer>
 
-<div class="brand">Parfüm und Düfte Perez</div>
+  <div class="footlinks">
 
-<p>Kosmetik &amp; Pflege · Deutschland</p>
+    <a href="#start">Startseite</a>
 
-<div class="footlinks">
+    <a href="#produkte">Produkte</a>
 
-<a href="#impressum">Impressum</a>
+    <a href="#kontakt">Kontakt</a>
 
-<a href="#datenschutz">Datenschutzerklärung</a>
+  </div>
 
-<a href="#cookies">Cookie-Hinweise</a>
+  <p>© <span id="year"></span> Parfüm und Düfte Perez</p>
 
-<a href="#agb">AGB</a>
+  <div class="legal">
 
-<a href="#widerruf">Widerruf</a>
+    <p>Parfüm und Düfte Perez</p>
 
-<a href="#versand">Versand &amp; Rückgabe</a>
+    <p>Deutschland</p>
 
-</div>
-
-<div class="legal">
-
-<details id="impressum">
-
-<summary>Impressum – vor Veröffentlichung vervollständigen</summary>
-
-<p>
-
-Parfüm und Düfte Perez<br>
-
-Inhaber: [vollständiger rechtlicher Name]<br>
-
-Geschäftsanschrift: [vollständige Anschrift]<br>
-
-E-Mail: [geschäftliche E-Mail-Adresse]<br>
-
-Telefon: +49 174 5201068<br>
-
-Umsatzsteuer-ID: [falls vorhanden]
-
-</p>
-
-</details>
-
-<details id="datenschutz">
-
-<summary>Datenschutzerklärung – Entwurf</summary>
-
-<p>
-
-Vor Veröffentlichung müssen Hosting, Server-Logs,
-
-WhatsApp-Kontakt, eingebundene Medien und weitere
-
-tatsächlich eingesetzte Dienste geprüft und ergänzt werden.
-
-</p>
-
-</details>
-
-<details id="cookies">
-
-<summary>Cookie-Hinweise – Entwurf</summary>
-
-<p>
-
-Falls nicht notwendige Cookies oder vergleichbare Technologien
-
-eingesetzt werden, ist vor deren Aktivierung eine passende
-
-Einwilligungslösung einzurichten.
-
-</p>
-
-</details>
-
-<details id="agb">
-
-<summary>AGB – noch zu ergänzen</summary>
-
-<p>
-
-Die Verkaufsbedingungen müssen zum tatsächlichen
-
-Bestellablauf, Zahlungsweg und Vertragsschluss passen.
-
-</p>
-
-</details>
-
-<details id="widerruf">
-
-<summary>Widerrufsbelehrung – noch zu ergänzen</summary>
-
-<p>
-
-Die Widerrufsbelehrung und das Muster-Widerrufsformular
-
-müssen auf die konkrete Verkaufssituation abgestimmt werden.
-
-</p>
-
-</details>
-
-<details id="versand">
-
-<summary>Versand &amp; Rückgabe – noch zu ergänzen</summary>
-
-<p>
-
-Liefergebiet, Versandkosten, Lieferzeiten und Rückgabeablauf
-
-müssen vor Veröffentlichung bestätigt werden.
-
-</p>
-
-</details>
-
-</div>
-
-<p>© <span id="year"></span> Parfüm und Düfte Perez</p>
+  </div>
 
 </footer>
 
+<!-- WHATSAPP BUTTON -->
+
 <a class="whatsapp"
 
-href="https://wa.me/491745201068"
+   href="https://wa.me/491745201068"
 
-target="_blank"
+   target="_blank"
 
-rel="noopener">
+   rel="noopener"
 
-PEDIR POR WHATSAPP
+   aria-label="WhatsApp">
+
+  PEDIR POR WHATSAPP
 
 </a>
+
+<!-- JAVASCRIPT -->
 
 <script>
 
 function toggleProducts(button) {
 
-  const panel = button.nextElementSibling;
+  const products = button.nextElementSibling;
 
-  panel.classList.toggle("open");
+  products.classList.toggle("open");
 
-}
+  if (products.classList.contains("open")) {
 
-document.getElementById("year").textContent =
+    button.textContent = "OCULTAR PRODUCTOS";
 
-new Date().getFullYear();
+  } else {
 
-document.getElementById("language").addEventListener("change",function(){
-
-  if(this.value.startsWith("pending")) {
-
-    alert("Diese Sprache wird noch ergänzt.");
-
-    this.value="de";
-
-  } else if(this.value!=="de") {
-
-    alert("Die vollständige Übersetzung wird noch ergänzt.");
-
-    this.value="de";
+    button.textContent = "VER PRODUCTO";
 
   }
 
-});
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
 
 </script>
 
