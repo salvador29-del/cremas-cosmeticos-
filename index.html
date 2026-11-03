@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="de">
@@ -16,571 +18,333 @@
 
 <style>
 
-:root {
+:root{
 
-  --ivory:#f7f2e9;
+ --ivory:#f7f2e9;
 
-  --cream:#fffdf8;
+ --cream:#fffdf8;
 
-  --gold:#b89455;
+ --gold:#b89455;
 
-  --gold2:#dfc99d;
+ --gold2:#dfc99d;
 
-  --ink:#332b2b;
+ --ink:#332b2b;
 
-  --muted:#766d65;
+ --muted:#766d65;
 
-  --green:#23834b;
+ --green:#23834b;
 
-  --line:#e8ddca;
-
-}
-
-* {box-sizing:border-box}
-
-html {scroll-behavior:smooth}
-
-body {
-
-  margin:0;
-
-  background:var(--ivory);
-
-  color:var(--ink);
-
-  font-family:Georgia,"Times New Roman",serif;
+ --line:#e8ddca;
 
 }
 
-.topbar {
+*{box-sizing:border-box}
 
-  background:#332b2b;
+html{scroll-behavior:smooth}
 
-  color:white;
+body{
 
-  text-align:center;
+ margin:0;background:var(--ivory);color:var(--ink);
 
-  padding:9px;
-
-  font:12px Arial;
-
-  letter-spacing:2px;
+ font-family:Georgia,"Times New Roman",serif;
 
 }
 
-header {
+.topbar{
 
-  position:sticky;
+ background:#332b2b;color:white;text-align:center;
 
-  top:0;
-
-  z-index:20;
-
-  background:rgba(255,253,248,.97);
-
-  border-bottom:1px solid var(--line);
+ padding:10px;font:11px Arial;letter-spacing:3px;
 
 }
 
-.head {
+header{
 
-  max-width:1180px;
+ position:sticky;top:0;z-index:20;
 
-  margin:auto;
+ background:rgba(255,253,248,.97);
 
-  padding:15px 22px;
+ border-bottom:1px solid var(--line);
 
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  gap:16px;
+ backdrop-filter:blur(10px);
 
 }
 
-.brand {
+.head{
 
-  font-size:25px;
+ max-width:1200px;margin:auto;padding:14px 22px;
 
-  letter-spacing:1px;
-
-}
-
-.brand small {
-
-  display:block;
-
-  text-align:center;
-
-  font:10px Arial;
-
-  letter-spacing:4px;
-
-  color:var(--gold);
-
-  margin-top:5px;
+ display:flex;align-items:center;justify-content:space-between;gap:15px;
 
 }
 
-nav {
+.brand{font-size:23px;letter-spacing:1px}
 
-  display:flex;
+.brand small{
 
-  gap:18px;
+ display:block;text-align:center;font:10px Arial;
 
-  align-items:center;
-
-  font:13px Arial;
+ letter-spacing:4px;color:var(--gold);margin-top:5px;
 
 }
 
-nav a {text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:18px;align-items:center;font:13px Arial}
 
-.lang {
+nav a{text-decoration:none;color:var(--ink)}
 
-  border:1px solid var(--gold2);
+.lang{
 
-  border-radius:30px;
+ border:1px solid var(--gold2);border-radius:30px;
 
-  background:white;
+ background:white;padding:10px;font:13px Arial;
 
-  padding:9px;
-
-}
-
-.hero {
-
-  min-height:450px;
-
-  display:grid;
-
-  place-items:center;
-
-  text-align:center;
-
-  padding:70px 20px;
-
-  background:linear-gradient(135deg,#f4ead8,#fffdf8,#eee1cc);
+ color:var(--ink);max-width:155px;
 
 }
 
-.hero-inner {max-width:800px}
+.hero{
 
-.eyebrow {
+ min-height:440px;display:grid;place-items:center;text-align:center;
 
-  font:11px Arial;
+ padding:65px 20px;
 
-  letter-spacing:4px;
-
-  color:var(--gold);
-
-  text-transform:uppercase;
+ background:linear-gradient(135deg,#eee1cc,#fffdf8,#e6d4b8);
 
 }
 
-h1 {
+.hero-inner{max-width:800px}
 
-  font-size:clamp(38px,7vw,68px);
+.eyebrow{
 
-  font-weight:400;
+ font:11px Arial;letter-spacing:4px;color:var(--gold);
 
-  line-height:1.06;
-
-  margin:18px 0;
+ text-transform:uppercase;
 
 }
 
-.hero p {
+h1{
 
-  font-size:18px;
+ font-size:clamp(38px,7vw,68px);font-weight:400;
 
-  line-height:1.7;
-
-  color:var(--muted);
-
-  max-width:650px;
-
-  margin:0 auto 26px;
+ line-height:1.08;margin:20px 0;
 
 }
 
-.btn {
+.hero p{
 
-  display:inline-block;
+ font-size:17px;line-height:1.8;color:var(--muted);
 
-  border:1px solid var(--gold);
-
-  background:var(--gold);
-
-  color:white;
-
-  padding:13px 24px;
-
-  text-decoration:none;
-
-  font:12px Arial;
-
-  letter-spacing:2px;
-
-  border-radius:2px;
-
-  cursor:pointer;
+ max-width:660px;margin:0 auto 28px;
 
 }
 
-.btn-outline {
+.btn{
 
-  background:transparent;
+ display:inline-block;border:1px solid var(--gold);
 
-  color:var(--ink);
+ background:var(--gold);color:white;padding:14px 22px;
 
-}
+ text-decoration:none;font:12px Arial;letter-spacing:2px;
 
-.section {
-
-  max-width:1180px;
-
-  margin:auto;
-
-  padding:65px 22px;
+ border-radius:2px;cursor:pointer;
 
 }
 
-.section-head {
+.btn-outline{background:transparent;color:var(--ink)}
 
-  text-align:center;
+.section{max-width:1200px;margin:auto;padding:65px 22px}
 
-  margin-bottom:35px;
+.section-head{text-align:center;margin-bottom:38px}
 
-}
+.section-head h2{font-size:36px;font-weight:400;margin:12px 0}
 
-.section-head h2 {
+.section-head p{font:14px/1.7 Arial;color:var(--muted)}
 
-  font-size:36px;
+.grid{
 
-  font-weight:400;
-
-  margin:10px 0;
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px;
 
 }
 
-.section-head p {
+.card{
 
-  font:14px Arial;
+ background:var(--cream);border:1px solid var(--line);
 
-  color:var(--muted);
+ padding:14px;box-shadow:0 7px 24px #49351a0a;
 
-}
-
-.grid {
-
-  display:grid;
-
-  grid-template-columns:repeat(3,minmax(0,1fr));
-
-  gap:22px;
+ min-width:0;display:flex;flex-direction:column;
 
 }
 
-.card {
+.media{
 
-  background:var(--cream);
+ height:225px;background:linear-gradient(145deg,#eee3d1,#fffdf8,#e7d8bd);
 
-  border:1px solid var(--line);
-
-  padding:14px;
-
-  box-shadow:0 7px 24px #49351a0a;
-
-  min-width:0;
+ overflow:hidden;display:grid;place-items:center;
 
 }
 
-.media {
+.media video{width:100%;height:100%;object-fit:cover}
 
-  height:210px;
+.placeholder{
 
-  background:linear-gradient(145deg,#eee3d1,#fffdf8,#e7d8bd);
+ text-align:center;color:#9b835b;font:12px Arial;
 
-  display:grid;
-
-  place-items:center;
-
-  overflow:hidden;
+ letter-spacing:2px;padding:20px;line-height:2;
 
 }
 
-.media video {
+.card h3{
 
-  width:100%;
-
-  height:100%;
-
-  object-fit:cover;
+ font-size:22px;font-weight:400;text-align:center;margin:19px 0 8px;
 
 }
 
-.placeholder {
+.card>p{
 
-  text-align:center;
+ font:13px/1.7 Arial;color:var(--muted);
 
-  color:#9b835b;
-
-  font:11px Arial;
-
-  letter-spacing:2px;
-
-  padding:20px;
+ text-align:center;min-height:42px;
 
 }
 
-.card h3 {
+.card>.btn{width:100%;text-align:center;margin-top:auto}
 
-  font-size:23px;
+.products{
 
-  font-weight:400;
+ display:none;margin-top:15px;padding:12px;
 
-  text-align:center;
-
-  margin:18px 0 8px;
+ background:var(--ivory);border:1px solid var(--line);
 
 }
 
-.card p {
+.products.open{display:block}
 
-  font:13px/1.6 Arial;
+.gallery{
 
-  color:var(--muted);
-
-  text-align:center;
-
-  min-height:40px;
+ display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
 
 }
 
-.card .btn {
+.gallery figure{
 
-  display:block;
+ margin:0;padding:8px;background:var(--cream);
 
-  text-align:center;
-
-  width:100%;
-
-  margin-top:15px;
+ border:1px solid var(--line);min-width:0;
 
 }
 
-.products {
+.gallery img{
 
-  display:none;
+ display:block;width:100%;height:175px;
 
-  margin-top:14px;
-
-  padding:14px;
-
-  background:var(--ivory);
-
-  font:13px/1.6 Arial;
-
-  color:var(--muted);
+ object-fit:contain;background:white;
 
 }
 
-.products.open {display:block}
+.gallery figcaption{
 
-.gallery {
+ font:12px/1.5 Arial;text-align:center;
 
-  display:grid;
+ padding:9px 2px;color:var(--ink);
 
-  grid-template-columns:repeat(2,minmax(0,1fr));
-
-  gap:12px;
+ overflow-wrap:anywhere;
 
 }
 
-.gallery figure {
+.gallery .missing{
 
-  margin:0;
+ text-align:center;font:12px Arial;color:var(--muted);
 
-  padding:7px;
-
-  background:var(--cream);
-
-  border:1px solid var(--line);
+ padding:25px;grid-column:1/-1;
 
 }
 
-.gallery img {
+.notice{
 
-  display:block;
+ max-width:850px;margin:auto;background:white;
 
-  width:100%;
+ border:1px solid var(--line);padding:24px;
 
-  height:190px;
-
-  object-fit:contain;
-
-  background:white;
+ text-align:center;font:13px/1.8 Arial;color:var(--muted);
 
 }
 
-.gallery figcaption {
+footer{
 
-  font:12px/1.5 Arial;
+ background:#332b2b;color:#f8f1e5;
 
-  text-align:center;
-
-  padding:8px 2px;
-
-  color:var(--ink);
+ padding:42px 22px 28px;text-align:center;
 
 }
 
-.notice {
+footer .brand{color:white}
 
-  max-width:850px;
+footer p{font:12px/1.8 Arial;color:#d5cabc}
 
-  margin:auto;
+.footlinks{
 
-  background:white;
+ display:flex;flex-wrap:wrap;gap:20px;
 
-  border:1px solid var(--line);
-
-  padding:24px;
-
-  text-align:center;
-
-  font:13px/1.7 Arial;
-
-  color:var(--muted);
+ justify-content:center;margin:20px 0;font:12px Arial;
 
 }
 
-footer {
+.footlinks a{color:#f8f1e5}
 
-  background:#332b2b;
+.legal{
 
-  color:#f8f1e5;
+ max-width:900px;margin:25px auto 0;text-align:left;
 
-  padding:42px 22px 28px;
-
-  text-align:center;
+ border-top:1px solid #685b50;padding-top:20px;
 
 }
 
-footer .brand {color:white}
+.whatsapp{
 
-footer p {
+ position:fixed;right:18px;bottom:18px;z-index:30;
 
-  font:12px/1.7 Arial;
+ background:var(--green);color:white;text-decoration:none;
 
-  color:#d5cabc;
+ border-radius:30px;padding:15px 20px;
 
-}
+ font:12px Arial;letter-spacing:1px;
 
-.footlinks {
-
-  display:flex;
-
-  flex-wrap:wrap;
-
-  gap:18px;
-
-  justify-content:center;
-
-  margin:20px 0;
-
-  font:12px Arial;
+ box-shadow:0 6px 22px #0002;
 
 }
 
-.footlinks a {color:#f8f1e5}
+@media(max-width:850px){
 
-.legal {
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 
-  max-width:900px;
+ nav{gap:10px}
 
-  margin:25px auto 0;
-
-  text-align:left;
-
-  border-top:1px solid #685b50;
-
-  padding-top:20px;
+ nav a{display:none}
 
 }
 
-.legal details {
+@media(max-width:550px){
 
-  margin:9px 0;
+ .grid{grid-template-columns:1fr}
 
-  font:12px/1.6 Arial;
+ .head{padding:12px 14px}
 
-}
+ .brand{font-size:19px}
 
-.legal summary {
+ .brand small{font-size:9px;letter-spacing:3px}
 
-  cursor:pointer;
+ .hero{min-height:380px}
 
-  color:#ead7b4;
+ .media{height:230px}
 
-}
+ .gallery img{height:180px}
 
-.whatsapp {
+ .section{padding:48px 15px}
 
-  position:fixed;
+ .section-head h2{font-size:30px}
 
-  right:18px;
-
-  bottom:18px;
-
-  z-index:30;
-
-  background:var(--green);
-
-  color:white;
-
-  text-decoration:none;
-
-  border-radius:30px;
-
-  padding:15px 20px;
-
-  font:12px Arial;
-
-  letter-spacing:1px;
-
-  box-shadow:0 6px 22px #0002;
-
-}
-
-@media(max-width:800px) {
-
-  .grid {grid-template-columns:repeat(2,minmax(0,1fr))}
-
-  nav {gap:10px}
-
-  nav a {display:none}
-
-}
-
-@media(max-width:520px) {
-
-  .grid {grid-template-columns:1fr}
-
-  .head {padding:12px 14px}
-
-  .hero {min-height:390px}
-
-  .media {height:220px}
-
-  .gallery img {height:170px}
-
-  .section {padding:48px 16px}
-
-  .whatsapp {right:12px;bottom:12px;padding:13px 16px}
+ .whatsapp{right:12px;bottom:12px;padding:13px 16px}
 
 }
 
@@ -590,57 +354,51 @@ footer p {
 
 <body>
 
-<div class="topbar">
+<div class="topbar" data-i18n="topbar">
 
-KOSMETIK · PFLEGE · SCHÖNHEIT
+ KOSMETIK · PFLEGE · SCHÖNHEIT
 
 </div>
 
 <header>
 
-<div class="head">
+ <div class="head">
 
-<div class="brand">
+  <div class="brand">
 
-Parfüm und Düfte Perez
+   Parfüm und Düfte Perez
 
-<small>KOSMETIK &amp; PFLEGE</small>
+   <small>KOSMETIK &amp; PFLEGE</small>
 
-</div>
+  </div>
 
-<nav>
+  <nav>
 
-<a href="#gamas">Kollektionen</a>
+   <a href="#gamas" data-i18n="navCollections">Kollektionen</a>
 
-<a href="#kontakt">Kontakt</a>
+   <a href="#kontakt" data-i18n="navContact">Kontakt</a>
 
-<select class="lang" id="language" aria-label="Sprache wählen">
+   <select class="lang" id="language" aria-label="Sprache wählen">
 
-<option value="de">🌐 Deutsch</option>
+    <option value="de">🌐 Deutsch</option>
 
-<option value="es">🇪🇸 Español</option>
+    <option value="es">🇪🇸 Español</option>
 
-<option value="it">🇮🇹 Italiano</option>
+    <option value="it">🇮🇹 Italiano</option>
 
-<option value="tr">🇹🇷 Türkçe</option>
+    <option value="tr">🇹🇷 Türkçe</option>
 
-<option value="ru">🇷🇺 Русский</option>
+    <option value="ru">🇷🇺 Русский</option>
 
-<option value="pt">🇵🇹 Português</option>
+    <option value="pt">🇵🇹 Português</option>
 
-<option value="sq">🇦🇱 Shqip</option>
+    <option value="sq">🇦🇱 Shqip</option>
 
-<option value="pending8">Sprache 8 – ausstehend</option>
+   </select>
 
-<option value="pending9">Sprache 9 – ausstehend</option>
+  </nav>
 
-<option value="pending10">Sprache 10 – ausstehend</option>
-
-</select>
-
-</nav>
-
-</div>
+ </div>
 
 </header>
 
@@ -648,719 +406,995 @@ Parfüm und Düfte Perez
 
 <section class="hero">
 
-<div class="hero-inner">
+ <div class="hero-inner">
 
-<div class="eyebrow">Schönheit in ihrer schönsten Form</div>
+  <div class="eyebrow" data-i18n="eyebrow">Schönheit in ihrer schönsten Form</div>
 
-<h1>Pflege, die sich besonders anfühlt</h1>
+  <h1 data-i18n="heroTitle">Pflege, die sich besonders anfühlt</h1>
 
-<p>Entdecken Sie unsere Kosmetik- und Körperpflegekollektionen. Elegante Präsentationen, ausgewählte Produkte und persönliche Beratung.</p>
+  <p data-i18n="heroText">
 
-<a class="btn" href="#gamas">KOLLEKTIONEN ENTDECKEN</a>
+   Entdecken Sie unsere Kosmetik- und Körperpflegekollektionen.
 
-</div>
+   Elegante Präsentationen, ausgewählte Produkte und persönliche Beratung.
+
+  </p>
+
+  <a class="btn" href="#gamas" data-i18n="discover">KOLLEKTIONEN ENTDECKEN</a>
+
+ </div>
 
 </section>
 
 <section class="section" id="gamas">
 
-<div class="section-head">
+ <div class="section-head">
 
-<div class="eyebrow">Unsere Auswahl</div>
+  <div class="eyebrow" data-i18n="selection">Unsere Auswahl</div>
 
-<h2>Kollektionen</h2>
+  <h2 data-i18n="collections">Kollektionen</h2>
 
-<p>Wählen Sie eine Pflegeserie und entdecken Sie die Produkte.</p>
+  <p data-i18n="collectionText">Wählen Sie eine Pflegeserie und entdecken Sie die Produkte.</p>
 
-</div>
+ </div>
 
-<div class="grid">
-
-<!-- 01 BODY MIST -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="01_Body_Mist/video-lush-cloud-cuerpo.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<h3>Body Mist</h3>
-
-<p>Duftende Pflege für jeden Tag.</p>
-
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/brazilian-sunset-lush-cloud-100ml.png"><figcaption>Brazilian Sunset · 100 ml</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/golden-hour-lush-cloud-100ml.png"><figcaption>Golden Hour · 100 ml</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/pacific-aura-lush-cloud-100ml.png"><figcaption>Pacific Aura · 100 ml</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/summer-dream-lush-cloud-100ml.png"><figcaption>Summer Dream · 100 ml</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/01_Body_Mist/tropical-breeze-lush-cloud-100ml.png"><figcaption>Tropical Breeze · 100 ml</figcaption></figure>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 02 NEEM -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="02_Aceite_de_Neem/Video_Gama_Aceite_de_Neem_Guitarra_Flamenca_ligero.mov" type="video/quicktime">
-
-Tu navegador no puede reproducir este vídeo.
-
-</video>
-
-</div>
-
-<h3>Aceite de Neem</h3>
-
-<p>Körper- und Gesichtspflege mit Neem.</p>
-
-<button class="btn btn-outline" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/champu-neem-250ml.png"><figcaption>Champú Neem 250 ml · NM01B · 19,90 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-corporal-neem-10ml.png"><figcaption>Crema corporal 10 ml · CU39B · 2,50 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-corporal-neem-150ml.png"><figcaption>Crema corporal 150 ml · NM03B · 24,90 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-de-pie-neem-75ml.png"><figcaption>Crema de pies 75 ml · NM05B · 13,90 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-facial-neem-10ml.png"><figcaption>Crema facial 10 ml · Precio pendiente de confirmar</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-facial-neem-50ml.png"><figcaption>Crema facial 50 ml · NM06C · 39,90 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-manos-neem-75ml.png"><figcaption>Crema manos 75 ml · NM04 · 12,90 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-manos-y-unas-neem-10ml.png"><figcaption>Crema manos 10 ml · CU40B · 2,50 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-manos-y-unas-neem-75ml.png"><figcaption>Crema manos y uñas 75 ml · NM04 · 12,90 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/crema-pie-neem-10ml.png"><figcaption>Crema pies 10 ml · CU41B · 2,50 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/jabon-liquido-neem-1000ml.png"><figcaption>Jabón líquido 1000 ml · RSNM07B · 8,90 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/jabon-liquido-neem-260ml.png"><figcaption>Jabón líquido 260 ml · NM07B · 3,99 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/limpiador-interno-neem-260ml.png"><figcaption>Limpiador íntimo 260 ml · NM08B · 7,99 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/mascarilla-fácil-neem-50ml.png"><figcaption>Mascarilla facial 50 ml · NM09B · 18,90 €</figcaption></figure>
-
-<figure><img loading="lazy" src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/02_Aceite_de_Neem/set-bustitas-neem.png"><figcaption>Set de bustitas Neem</figcaption></figure>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 03. ACEITE DE ARGÁN -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="03_Aceite_de_Argan/Video_Argan_10_Imagenes_Enviadas_Audio_Original.mov" type="video/quicktime">
-
-Tu navegador no puede reproducir este vídeo.
-
-</video>
-
-</div>
-
-<h3>Gama Aceite de Argán</h3>
-
-<p>Una colección para el cuidado corporal, facial y capilar.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/acondicionador-capilar-argan-250ml.png" alt="Acondicionador capilar Argán 250 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/acondicionador-capilar-argan-50ml.png" alt="Acondicionador capilar Argán 50 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/champu-reestructurante-argan-250ml.png" alt="Champú reestructurante Argán 250 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/champu-reestructurante-argan-50ml.png" alt="Champú reestructurante Argán 50 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-corporal-bio-argan-150ml.png" alt="Crema corporal Bio Argán">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-de-manos-bio-argan-75ml.png" alt="Crema de manos Bio Argán">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-de-pies-bio-argan-75ml.png" alt="Crema de pies Bio Argán">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-facial-argan-10ml.png" alt="Crema facial Argán 10 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/crema-facial-argan-50ml.png" alt="Crema facial Argán 50 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/jabon-liquido-argan-1000ml.png" alt="Jabón líquido Argán 1000 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/jabon-liquido-argan-260ml.png" alt="Jabón líquido Argán 260 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/limpiador-intimo-argan-260ml.png" alt="Limpiador íntimo Argán">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-antiedad-argan-50ml.png" alt="Mascarilla antiedad Argán">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-capilar-argan-150ml.png" alt="Mascarilla capilar Argán 150 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-capilar-argan-30ml.png" alt="Mascarilla capilar Argán 30 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-capilar-argan-500ml.png" alt="Mascarilla capilar Argán 500 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/mascarilla-desenredante-argan-150ml.png" alt="Mascarilla desenredante Argán">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/set-de-bustitas-argan.png" alt="Set de bustitas Argán">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/03_Aceite_de_Argan/suero-reestructurante-argan-30ml.png" alt="Suero reestructurante Argán">
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 04. PURIFICANTE ÁCIDO SALICÍLICO -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="04_Purificante_Acido_Salicilico/Video_Gama_Acido_Salicilico.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<h3>Gama Purificante con Ácido Salicílico</h3>
-
-<p>Cuidado purificante para la piel y el cabello.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/04_Purificante_Acido_Salicilico/champu-anticaspa-acido-salicilico-250ml.png" alt="Champú anticaspa Ácido Salicílico">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/04_Purificante_Acido_Salicilico/gel-facial-acido-salicilico-100ml.png" alt="Gel facial Ácido Salicílico">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/04_Purificante_Acido_Salicilico/limpiador-anti-acne-acido-salicilico-260ml.png" alt="Limpiador antiacné Ácido Salicílico">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/04_Purificante_Acido_Salicilico/mascarilla-facial-acido-salicilico-50ml.png" alt="Mascarilla facial Ácido Salicílico">
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 05. BABA DE CARACOL -->
-
-<article class="card">
-
-<div class="media">
-
-<div class="placeholder">
-
-<span>05</span>
-
-<strong>BABA DE CARACOL</strong>
-
-<p>Cuidado facial y corporal</p>
-
-<small>Galería pendiente de imágenes</small>
-
-</div>
-
-</div>
-
-<h3>Gama Baba de Caracol</h3>
-
-<p>Cuidado y belleza para tu piel.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<p>Próximamente disponibles los productos de esta gama.</p>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 06. ALOE VERA -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="06_Aloe_Vera/Parfuem_Perez_AloeVera_iPhone_MP4.mov" type="video/quicktime">
-
-Tu navegador no puede reproducir este vídeo.
-
-</video>
-
-</div>
-
-<h3>Gama Aloe Vera</h3>
-
-<p>Productos para el cuidado facial, corporal, capilar e higiene.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/champu-lavado-aloe-vera-250ml.png" alt="Champú Aloe Vera 250 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/champu-lavado-aloe-vera-50ml.png" alt="Champú Aloe Vera 50 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-contorno-ojos-aloe-vera.png" alt="Crema contorno de ojos Aloe Vera">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-corporal-aloe-vera-10ml.png" alt="Crema corporal Aloe Vera 10 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-corporal-aloe-vera-150ml.png" alt="Crema corporal Aloe Vera 150 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-corporal-aloe-vera-30ml.png" alt="Crema corporal Aloe Vera 30 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-de-manos-aloe-vera-10ml.png" alt="Crema de manos Aloe Vera 10 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-de-manos-aloe-vera-75ml.png" alt="Crema de manos Aloe Vera 75 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-facial-aloe-vera-10ml.png" alt="Crema facial Aloe Vera 10 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-facial-aloe-vera-50ml.png" alt="Crema facial Aloe Vera 50 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/crema-facil-aloe-vera-50ml.png" alt="Crema facial Aloe Vera">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/enjuague-bucal-aloe-vera-250ml.png" alt="Enjuague bucal Aloe Vera 250 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/enjuague-bucal-aloe-vera-80ml.png" alt="Enjuague bucal Aloe Vera 80 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/gel-bio-aloe-vera-10ml.png" alt="Gel Bio Aloe Vera 10 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/gel-bio-aloe-vera-150ml.png" alt="Gel Bio Aloe Vera 150 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/gel-de-bano-aloe-vera-250ml.png" alt="Gel de baño Aloe Vera 250 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/gel-de-bano-aloe-vera-50ml.png" alt="Gel de baño Aloe Vera 50 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/limpiador-intimo-aloe-vera-260ml.png" alt="Limpiador íntimo Aloe Vera 260 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/limpiador-intimo-aloe-vera-50ml.png" alt="Limpiador íntimo Aloe Vera 50 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/mascarilla-capilar-aloe-vera-150ml.png" alt="Mascarilla capilar Aloe Vera">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/mascarilla-exfoliante-aloe-vera-75ml.png" alt="Mascarilla exfoliante Aloe Vera">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/pasta-dentifrica-aloe-vera-115g.png" alt="Pasta dentífrica Aloe Vera">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/set-bustine-aloe-vera.png" alt="Set Aloe Vera">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/06_Aloe_Vera/spray-de-auxilios-aloe-vera-150ml.png" alt="Spray de auxilios Aloe Vera">
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 07. REMEDIOS Y UNGÜENTOS -->
-
-<article class="card">
-
-<div class="media">
-
-<div class="placeholder">
-
-<span>07</span>
-
-<strong>REMEDIOS Y UNGÜENTOS</strong>
-
-<p>Cuidado especializado</p>
-
-<small>Vídeo e imágenes pendientes</small>
-
-</div>
-
-</div>
-
-<h3>Gama Remedios y Ungüentos</h3>
-
-<p>Descubre próximamente esta selección de productos.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<p>Próximamente disponibles los productos de esta gama.</p>
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 08. BEBÉ -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="08_Bebe/video_gama_babycare_sin_precio_articulo.mov" type="video/quicktime">
-
-Tu navegador no puede reproducir este vídeo.
-
-</video>
-
-</div>
-
-<h3>Gama Bebé</h3>
-
-<p>Productos para la higiene y el cuidado diario del bebé.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/champu-biologico-bebe-200ml.png" alt="Champú biológico bebé 200 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/champu-para-bebe-200ml.png" alt="Champú para bebé 200 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/espuma-bano-bebe-200ml.png" alt="Espuma de baño bebé 200 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/leche-corporal-bebe-150ml.png" alt="Leche corporal bebé 150 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/08_Bebe/limpiador-suave-bebe-260ml.png" alt="Limpiador suave bebé 260 ml">
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 09. LECHE DE BURRA -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="09_Leche_de_Burra/Leche_de_Burra_Todas_las_Imagenes_35s.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<h3>Gama Leche de Burra</h3>
-
-<p>Una presentación elegante para el cuidado facial y corporal.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/2B699E4B-491A-4D91-8DBE-AC4CCED4CBCC.png" alt="Producto Leche de Burra">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/420B2369-9BA3-4BB2-A808-4726663EF591.png" alt="Producto Leche de Burra">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/5A1E6BAE-5A1B-4082-B90B-0FC22F43FB7E.png" alt="Producto Leche de Burra">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/5B89DEAE-FB25-4B01-AED3-E24FCC50B897.png" alt="Producto Leche de Burra">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/6A8309CD-583F-451E-8B39-012A5C0ED9F5.png" alt="Producto Leche de Burra">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/7BC33463-2567-46FC-8AA7-069DFE445592.png" alt="Producto Leche de Burra">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/C09224C6-8401-45E0-953B-134EC75347AB.png" alt="Producto Leche de Burra">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/09_Leche_de_Burra/D944FD2D-C446-427B-9159-7AEAFFEEF9ED.png" alt="Producto Leche de Burra">
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 10. ÁCIDO HIALURÓNICO Y COLÁGENO -->
-
-<article class="card">
-
-<div class="media">
-
-<div class="placeholder">
-
-<span>10</span>
-
-<strong>ÁCIDO HIALURÓNICO Y COLÁGENO</strong>
-
-<p>Cuidado facial e hidratación</p>
-
-<small>Vídeo pendiente de añadir</small>
-
-</div>
-
-</div>
-
-<h3>Gama Ácido Hialurónico y Colágeno</h3>
-
-<p>Productos para el cuidado y la hidratación facial.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/crema-facial-acido-hialuronico-10ml.png" alt="Crema facial Ácido Hialurónico 10 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/crema-facial-acido-hialuronico-50ml.png" alt="Crema facial Ácido Hialurónico 50 ml">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/mascarilla-facial-acido-hialuronico-75ml.png" alt="Mascarilla facial Ácido Hialurónico">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/serum-gel-acido-hialuronico.png" alt="Sérum gel Ácido Hialurónico">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/set-bustine-acido-hialuronico.png" alt="Set Ácido Hialurónico">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/10_Acido_Hialuronico_Colageno/suero-gel-acido-hialuronico-10ml.png" alt="Suero gel Ácido Hialurónico 10 ml">
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 11. AURODHEA LUSH CLOUD -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="11_Aurodhea_Lush_Cloud/LUSH_CLOUD_Hair_Mist_IPHONE.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<h3>Gama Aurodhea Lush Cloud</h3>
-
-<p>Una colección de aromas delicados para el cuidado del cabello.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/blooming-musk-lush-cloud.png" alt="Blooming Musk">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/golden-essence-lush-cloud.png" alt="Golden Essence">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/juicy-bliss-lush-cloud.png" alt="Juicy Bliss">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/oriental-seduction-lush-cloud.png" alt="Oriental Seduction">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/11_Aurodhea_Lush_Cloud/white-petals-lush-cloud.png" alt="White Petals">
-
-</div>
-
-</div>
-
-</article>
-
-<!-- 12. SOLARES -->
-
-<article class="card">
-
-<div class="media">
-
-<video controls playsinline preload="metadata">
-
-<source src="12_Solares/Gama_Solares_55_segundos.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-<h3>Gama Solares</h3>
-
-<p>Protección solar con Hamamelis, Aloe Vera, Pantenol y Vitamina E.</p>
-
-<button class="btn" onclick="toggleProducts(this)">VER PRODUCTO</button>
-
-<div class="products">
-
-<div class="gallery">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/103D2EAB-4B41-479A-AC9A-0A87DB2AF0D.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/1FA355BA-28B8-4D81-B9BE-1832E87C7E64.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/5DB621D8-4173-4A26-9BED-CC3F684C1C0B.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/6FEC24CE-8F02-4861-8DA6-4FC891B9BD98.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/904E890F-6AC3-4448-905C-1BEC3478AA22.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/AC563675-B470-434D-AAA0-05D7B6FD3460.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/ADCE1C7F-19CF-4A7C-BD71-D98C8F042E2B.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/B08A560F-75BE-4DD4-846E-FC2692B214B7.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/C27B162E-6CB8-4755-BE1E-8364651DD66D.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/D9320639-681C-414C-876F-7B483C9DE902.png" alt="Producto solar">
-
-<img src="https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/12_Solares/FF488A1F-4E0A-4F3D-A870-B3AA216C9077.png" alt="Producto solar">
-
-</div>
-
-</div>
-
-</article>
-
-</div>
+ <div class="grid" id="collectionGrid"></div>
 
 </section>
-
-<!-- CONTACTO -->
 
 <section class="section" id="kontakt">
 
-<div class="section-head">
+ <div class="section-head">
 
-<span class="eyebrow">PARFÜM UND DÜFTE PEREZ</span>
+  <div class="eyebrow">PARFÜM UND DÜFTE PEREZ</div>
 
-<h2>Kontakt</h2>
+  <h2 data-i18n="contact">Kontakt</h2>
 
-<p>Wir freuen uns auf deine Nachricht.</p>
+  <p data-i18n="contactText">Wir freuen uns auf deine Nachricht.</p>
 
-</div>
+ </div>
 
-<div class="card">
+ <div class="notice">
 
-<h3>Persönliche Bestellung</h3>
+  <h3 data-i18n="personalOrder">Persönliche Bestellung</h3>
 
-<p>Bestellungen und Abholung nach Vereinbarung.</p>
+  <p data-i18n="orderText">Bestellungen und Abholung nach Vereinbarung.</p>
 
-<a class="btn" href="https://wa.me/491745201068" target="_blank" rel="noopener">
+  <a class="btn" href="https://wa.me/491745201068"
 
-PEDIR POR WHATSAPP
+     target="_blank" rel="noopener" data-i18n="whatsapp">
 
-</a>
+   PEDIR POR WHATSAPP
 
-</div>
+  </a>
+
+ </div>
 
 </section>
 
-<!-- FOOTER -->
+</main>
 
 <footer>
 
-<div class="footlinks">
+ <div class="brand">
 
-<a href="#start">Startseite</a>
+  Parfüm und Düfte Perez
 
-<a href="#produkte">Produkte</a>
+  <small>KOSMETIK &amp; PFLEGE</small>
 
-<a href="#kontakt">Kontakt</a>
+ </div>
 
-</div>
+ <div class="footlinks">
 
-<p>© <span id="year"></span> Parfüm und Düfte Perez</p>
+  <a href="#" data-i18n="home">Startseite</a>
 
-<div class="legal">
+  <a href="#gamas" data-i18n="navCollections">Kollektionen</a>
 
-<p>Parfüm und Düfte Perez</p>
+  <a href="#kontakt" data-i18n="navContact">Kontakt</a>
 
-<p>Deutschland</p>
+ </div>
 
-</div>
+ <p>© <span id="year"></span> Parfüm und Düfte Perez</p>
+
+ <div class="legal">
+
+  <p>Parfüm und Düfte Perez</p>
+
+  <p>Deutschland</p>
+
+ </div>
 
 </footer>
 
-<!-- WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/491745201068"
 
-<a class="whatsapp" href="https://wa.me/491745201068" target="_blank" rel="noopener" aria-label="WhatsApp">
+ target="_blank" rel="noopener" data-i18n="whatsapp">
 
-PEDIR POR WHATSAPP
+ PEDIR POR WHATSAPP
 
 </a>
 
-<!-- JAVASCRIPT -->
-
 <script>
 
-function toggleProducts(button) {
+const REPO = "https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/";
 
-  const products = button.nextElementSibling;
+const languages = {
 
-  products.classList.toggle("open");
+ de:{
 
-  if (products.classList.contains("open")) {
+  topbar:"KOSMETIK · PFLEGE · SCHÖNHEIT",
 
-    button.textContent = "OCULTAR PRODUCTOS";
+  navCollections:"Kollektionen",navContact:"Kontakt",
 
-  } else {
+  eyebrow:"Schönheit in ihrer schönsten Form",
 
-    button.textContent = "VER PRODUCTO";
+  heroTitle:"Pflege, die sich besonders anfühlt",
 
-  }
+  heroText:"Entdecken Sie unsere Kosmetik- und Körperpflegekollektionen. Elegante Präsentationen, ausgewählte Produkte und persönliche Beratung.",
+
+  discover:"KOLLEKTIONEN ENTDECKEN",selection:"Unsere Auswahl",
+
+  collections:"Kollektionen",collectionText:"Wählen Sie eine Pflegeserie und entdecken Sie die Produkte.",
+
+  contact:"Kontakt",contactText:"Wir freuen uns auf deine Nachricht.",
+
+  personalOrder:"Persönliche Bestellung",orderText:"Bestellungen und Abholung nach Vereinbarung.",
+
+  whatsapp:"PEDIR POR WHATSAPP",home:"Startseite",
+
+  view:"PRODUKTE ANSEHEN",hide:"PRODUKTE AUSBLENDEN",
+
+  soon:"Produkte folgen in Kürze.",
+
+  descriptions:[
+
+   "Duftende Körperpflege für jeden Tag.",
+
+   "Körper- und Gesichtspflege mit Neem.",
+
+   "Pflege für Körper, Gesicht und Haare.",
+
+   "Reinigende Pflege mit Salicylsäure.",
+
+   "Gesichtspflege mit Schneckenschleim.",
+
+   "Pflege für Gesicht, Körper, Haare und Hygiene.",
+
+   "Ausgewählte Pflegeprodukte und Salben.",
+
+   "Sanfte Pflege für die tägliche Babyroutine.",
+
+   "Elegante Pflege für Gesicht und Körper.",
+
+   "Gesichtspflege und intensive Feuchtigkeit.",
+
+   "Zarte Düfte für die Haarpflege.",
+
+   "Produkte für Sonne und Sommer."
+
+  ]
+
+ },
+
+ es:{
+
+  topbar:"COSMÉTICA · CUIDADO · BELLEZA",
+
+  navCollections:"Colecciones",navContact:"Contacto",
+
+  eyebrow:"La belleza en su forma más especial",
+
+  heroTitle:"Cuidados que te hacen sentir especial",
+
+  heroText:"Descubre nuestras colecciones de cosmética y cuidado corporal. Presentaciones elegantes, productos seleccionados y atención personalizada.",
+
+  discover:"DESCUBRIR COLECCIONES",selection:"Nuestra selección",
+
+  collections:"Colecciones",collectionText:"Elige una gama y descubre sus productos.",
+
+  contact:"Contacto",contactText:"Estaremos encantados de recibir tu mensaje.",
+
+  personalOrder:"Pedido personalizado",orderText:"Pedidos y recogida con cita previa.",
+
+  whatsapp:"PEDIR POR WHATSAPP",home:"Inicio",
+
+  view:"VER PRODUCTO",hide:"OCULTAR PRODUCTOS",
+
+  soon:"Productos próximamente disponibles.",
+
+  descriptions:[
+
+   "Cuidado perfumado para cada día.",
+
+   "Cuidado corporal y facial con aceite de Neem.",
+
+   "Cuidado corporal, facial y capilar.",
+
+   "Cuidado purificante con ácido salicílico.",
+
+   "Cuidado facial con baba de caracol.",
+
+   "Cuidado facial, corporal, capilar e higiene.",
+
+   "Selección de productos de cuidado y ungüentos.",
+
+   "Cuidado suave para el bebé cada día.",
+
+   "Cuidado elegante para el rostro y el cuerpo.",
+
+   "Cuidado facial e hidratación.",
+
+   "Aromas delicados para el cuidado del cabello.",
+
+   "Productos para el sol y el verano."
+
+  ]
+
+ },
+
+ it:{
+
+  topbar:"COSMETICA · CURA · BELLEZZA",
+
+  navCollections:"Collezioni",navContact:"Contatti",
+
+  eyebrow:"La bellezza nella sua forma più speciale",
+
+  heroTitle:"La cura che ti fa sentire speciale",
+
+  heroText:"Scopri le nostre collezioni di cosmetici e cura del corpo. Presentazioni eleganti, prodotti selezionati e assistenza personalizzata.",
+
+  discover:"SCOPRI LE COLLEZIONI",selection:"La nostra selezione",
+
+  collections:"Collezioni",collectionText:"Scegli una linea e scopri i prodotti.",
+
+  contact:"Contatti",contactText:"Saremo felici di ricevere il tuo messaggio.",
+
+  personalOrder:"Ordine personalizzato",orderText:"Ordini e ritiro su appuntamento.",
+
+  whatsapp:"ORDINA SU WHATSAPP",home:"Home",
+
+  view:"VEDI PRODOTTI",hide:"NASCONDI PRODOTTI",soon:"Prodotti disponibili prossimamente.",
+
+  descriptions:[
+
+   "Cura profumata per ogni giorno.","Cura del corpo e del viso con Neem.",
+
+   "Cura del corpo, del viso e dei capelli.","Cura purificante con acido salicilico.",
+
+   "Cura del viso con bava di lumaca.","Cura del viso, del corpo, dei capelli e igiene.",
+
+   "Selezione di prodotti per la cura e unguenti.","Cura delicata quotidiana per il bambino.",
+
+   "Cura elegante per viso e corpo.","Cura del viso e idratazione.",
+
+   "Fragranze delicate per la cura dei capelli.","Prodotti per il sole e l'estate."
+
+  ]
+
+ },
+
+ tr:{
+
+  topbar:"KOZMETİK · BAKIM · GÜZELLİK",
+
+  navCollections:"Koleksiyonlar",navContact:"İletişim",
+
+  eyebrow:"En özel haliyle güzellik",
+
+  heroTitle:"Kendinizi özel hissettiren bakım",
+
+  heroText:"Kozmetik ve vücut bakım koleksiyonlarımızı keşfedin. Zarif sunumlar, seçilmiş ürünler ve kişisel danışmanlık.",
+
+  discover:"KOLEKSİYONLARI KEŞFET",selection:"Seçimimiz",
+
+  collections:"Koleksiyonlar",collectionText:"Bir bakım serisi seçin ve ürünleri keşfedin.",
+
+  contact:"İletişim",contactText:"Mesajınızı bekliyoruz.",
+
+  personalOrder:"Kişisel sipariş",orderText:"Sipariş ve teslimat randevu ile yapılır.",
+
+  whatsapp:"WHATSAPP'TAN SİPARİŞ",home:"Ana sayfa",
+
+  view:"ÜRÜNLERİ GÖR",hide:"ÜRÜNLERİ GİZLE",soon:"Ürünler yakında satışta.",
+
+  descriptions:[
+
+   "Her gün için hoş kokulu bakım.","Neem yağı ile yüz ve vücut bakımı.",
+
+   "Vücut, yüz ve saç bakımı.","Salisilik asit ile arındırıcı bakım.",
+
+   "Salyangoz özü ile yüz bakımı.","Yüz, vücut, saç ve hijyen bakımı.",
+
+   "Bakım ürünleri ve merhemler seçkisi.","Bebekler için günlük nazik bakım.",
+
+   "Yüz ve vücut için zarif bakım.","Yüz bakımı ve nemlendirme.",
+
+   "Saç bakımı için narin kokular.","Güneş ve yaz ürünleri."
+
+  ]
+
+ },
+
+ ru:{
+
+  topbar:"КОСМЕТИКА · УХОД · КРАСОТА",
+
+  navCollections:"Коллекции",navContact:"Контакты",
+
+  eyebrow:"Красота в её особенном проявлении",
+
+  heroTitle:"Уход, который дарит особенные ощущения",
+
+  heroText:"Откройте наши коллекции косметики и средств по уходу за телом. Элегантная презентация, тщательно подобранные продукты и индивидуальная консультация.",
+
+  discover:"ОТКРЫТЬ КОЛЛЕКЦИИ",selection:"Наш выбор",
+
+  collections:"Коллекции",collectionText:"Выберите серию и откройте для себя продукты.",
+
+  contact:"Контакты",contactText:"Будем рады вашему сообщению.",
+
+  personalOrder:"Индивидуальный заказ",orderText:"Заказы и получение по предварительной договорённости.",
+
+  whatsapp:"ЗАКАЗАТЬ В WHATSAPP",home:"Главная",
+
+  view:"ПОСМОТРЕТЬ ПРОДУКТЫ",hide:"СКРЫТЬ ПРОДУКТЫ",soon:"Скоро в продаже.",
+
+  descriptions:[
+
+   "Ароматный уход на каждый день.","Уход за лицом и телом с маслом нима.",
+
+   "Уход за телом, лицом и волосами.","Очищающий уход с салициловой кислотой.",
+
+   "Уход за лицом с муцином улитки.","Уход за лицом, телом, волосами и гигиена.",
+
+   "Подборка средств ухода и мазей.","Нежный ежедневный уход за малышом.",
+
+   "Элегантный уход за лицом и телом.","Уход за лицом и увлажнение.",
+
+   "Нежные ароматы для ухода за волосами.","Средства для солнца и лета."
+
+  ]
+
+ },
+
+ pt:{
+
+  topbar:"COSMÉTICA · CUIDADO · BELEZA",
+
+  navCollections:"Coleções",navContact:"Contacto",
+
+  eyebrow:"A beleza na sua forma mais especial",
+
+  heroTitle:"Cuidados que fazem sentir-se especial",
+
+  heroText:"Descubra as nossas coleções de cosmética e cuidados corporais. Apresentações elegantes, produtos selecionados e aconselhamento personalizado.",
+
+  discover:"DESCOBRIR COLEÇÕES",selection:"A nossa seleção",
+
+  collections:"Coleções",collectionText:"Escolha uma gama e descubra os produtos.",
+
+  contact:"Contacto",contactText:"Teremos todo o gosto em receber a sua mensagem.",
+
+  personalOrder:"Encomenda personalizada",orderText:"Encomendas e recolha mediante marcação.",
+
+  whatsapp:"ENCOMENDAR POR WHATSAPP",home:"Início",
+
+  view:"VER PRODUTOS",hide:"OCULTAR PRODUTOS",soon:"Produtos disponíveis em breve.",
+
+  descriptions:[
+
+   "Cuidado perfumado para todos os dias.","Cuidado corporal e facial com óleo de Neem.",
+
+   "Cuidado corporal, facial e capilar.","Cuidado purificante com ácido salicílico.",
+
+   "Cuidado facial com baba de caracol.","Cuidado facial, corporal, capilar e higiene.",
+
+   "Seleção de produtos de cuidado e pomadas.","Cuidado suave diário para o bebé.",
+
+   "Cuidado elegante para o rosto e o corpo.","Cuidado facial e hidratação.",
+
+   "Aromas delicados para o cuidado do cabelo.","Produtos para o sol e o verão."
+
+  ]
+
+ },
+
+ sq:{
+
+  topbar:"KOZMETIKË · KUJDES · BUKURI",
+
+  navCollections:"Koleksionet",navContact:"Kontakt",
+
+  eyebrow:"Bukuria në formën e saj më të veçantë",
+
+  heroTitle:"Kujdes që ju bën të ndiheni të veçantë",
+
+  heroText:"Zbuloni koleksionet tona të kozmetikës dhe kujdesit për trupin. Prezantime elegante, produkte të përzgjedhura dhe këshillim personal.",
+
+  discover:"ZBULONI KOLEKSIONET",selection:"Përzgjedhja jonë",
+
+  collections:"Koleksionet",collectionText:"Zgjidhni një gamë dhe zbuloni produktet.",
+
+  contact:"Kontakt",contactText:"Do të jemi të lumtur të marrim mesazhin tuaj.",
+
+  personalOrder:"Porosi personale",orderText:"Porositë dhe marrja bëhen me takim.",
+
+  whatsapp:"POROSIT NË WHATSAPP",home:"Kryefaqja",
+
+  view:"SHIKO PRODUKTET",hide:"FSHIH PRODUKTET",soon:"Produktet do të jenë së shpejti në dispozicion.",
+
+  descriptions:[
+
+   "Kujdes aromatik për çdo ditë.","Kujdes për trupin dhe fytyrën me vaj Neem.",
+
+   "Kujdes për trupin, fytyrën dhe flokët.","Kujdes pastrues me acid salicilik.",
+
+   "Kujdes për fytyrën me sekrecion kërmilli.","Kujdes për fytyrën, trupin, flokët dhe higjienën.",
+
+   "Përzgjedhje produktesh kujdesi dhe pomadash.","Kujdes i butë për foshnjën çdo ditë.",
+
+   "Kujdes elegant për fytyrën dhe trupin.","Kujdes dhe hidratim për fytyrën.",
+
+   "Aroma delikate për kujdesin e flokëve.","Produkte për diellin dhe verën."
+
+  ]
+
+ }
+
+};
+
+const collections = [
+
+{
+
+ folder:"01_Body_Mist",title:"Body Mist",
+
+ video:"video-lush-cloud-cuerpo.mp4",
+
+ images:[
+
+ "brazilian-sunset-lush-cloud-100ml.png",
+
+ "golden-hour-lush-cloud-100ml.png",
+
+ "pacific-aura-lush-cloud-100ml.png",
+
+ "summer-dream-lush-cloud-100ml.png",
+
+ "tropical-breeze-lush-cloud-100ml.png"
+
+ ]
+
+},
+
+{
+
+ folder:"02_Aceite_de_Neem",title:"Aceite de Neem",
+
+ video:"Video_Gama_Aceite_de_Neem_Guitarra_Flamenca_ligero.mp4",
+
+ images:[
+
+ "champu-neem-250ml.png",
+
+ "crema-corporal-neem-10ml.png",
+
+ "crema-corporal-neem-150ml.png",
+
+ "crema-de-pie-neem-75ml.png",
+
+ "crema-facial-neem-10ml.png",
+
+ "crema-facial-neem-50ml.png",
+
+ "crema-manos-neem-75ml.png",
+
+ "crema-manos-y-unas-neem-10ml.png",
+
+ "crema-manos-y-unas-neem-75ml.png",
+
+ "crema-pie-neem-10ml.png",
+
+ "jabon-liquido-neem-1000ml.png",
+
+ "jabon-liquido-neem-260ml.png",
+
+ "limpiador-interno-neem-260ml.png",
+
+ "mascarilla-facil-neem-50ml.png",
+
+ "set-bustitas-neem.png"
+
+ ]
+
+},
+
+{
+
+ folder:"03_Aceite_de_Argan",title:"Aceite de Argán",
+
+ video:"Video_Argan_MP4_compatible.mp4",
+
+ images:[
+
+ "acondicionador-capilar-argan-250ml.png",
+
+ "acondicionador-capilar-argan-50ml.png",
+
+ "champu-reestructurante-argan-250ml.png",
+
+ "champu-reestructurante-argan-50ml.png",
+
+ "crema-corporal-bio-argan-150ml.png",
+
+ "crema-de-manos-bio-argan-75ml.png",
+
+ "crema-de-pies-bio-argan-75ml.png",
+
+ "crema-facial-argan-10ml.png",
+
+ "crema-facial-argan-50ml.png",
+
+ "jabon-liquido-argan-1000ml.png",
+
+ "jabon-liquido-argan-260ml.png",
+
+ "limpiador-intimo-argan-260ml.png",
+
+ "mascarilla-antiedad-argan-50ml.png",
+
+ "mascarilla-capilar-argan-150ml.png",
+
+ "mascarilla-capilar-argan-30ml.png",
+
+ "mascarilla-capilar-argan-500ml.png",
+
+ "mascarilla-desenredante-argan-150ml.png",
+
+ "set-de-bustitas-argan.png",
+
+ "suero-reestructurante-argan-30ml.png"
+
+ ]
+
+},
+
+{
+
+ folder:"04_Purificante_Acido_Salicilico",
+
+ title:"Ácido Salicílico",
+
+ video:"Video_Gama_Acido_Salicilico.mp4",
+
+ images:[
+
+ "champu-anticaspa-acido-salicilico-250ml.png",
+
+ "gel-facial-acido-salicilico-100ml.png",
+
+ "limpiador-anti-acne-acido-salicilico-260ml.png",
+
+ "mascarilla-facial-acido-salicilico-50ml.png"
+
+ ]
+
+},
+
+{
+
+ folder:"05_Baba_de_Caracol",title:"Baba de Caracol",
+
+ video:null,images:[]
+
+},
+
+{
+
+ folder:"06_Aloe_Vera",title:"Aloe Vera",
+
+ video:"Parfuem_Perez_AloeVera_iPhone.mp4",
+
+ images:[
+
+ "champu-lavado-aloe-vera-250ml.png",
+
+ "champu-lavado-aloe-vera-50ml.png",
+
+ "crema-contorno-ojos-aloe-vera.png",
+
+ "crema-corporal-aloe-vera-10ml.png",
+
+ "crema-corporal-aloe-vera-150ml.png",
+
+ "crema-corporal-aloe-vera-30ml.png",
+
+ "crema-de-manos-aloe-vera-10ml.png",
+
+ "crema-de-manos-aloe-vera-75ml.png",
+
+ "crema-facial-aloe-vera-10ml.png",
+
+ "crema-facial-dia-aloe-50ml.png",
+
+ "crema-facial-noche-aloe-vera-50ml.png",
+
+ "enjuague-bucal-aloe-vera-250ml.png",
+
+ "enjuague-bucal-aloe-vera-80ml.png",
+
+ "gel-bio-aloe-vera-10ml.png",
+
+ "gel-bio-aloe-vera-150ml.png",
+
+ "gel-de-bano-aloe-vera-250ml.png",
+
+ "gel-de-bano-aloe-vera-50ml.png",
+
+ "limpiador-intimo-aloe-vera-260ml.png",
+
+ "limpiador-intimo-aloe-vera-50ml.png",
+
+ "mascarilla-capilar-aloe-vera-150ml.png",
+
+ "mascarilla-exfoliante-aloe-vera-75ml.png",
+
+ "pasta-dentifrica-aloe-vera-115g.png",
+
+ "set-bustine-aloe-vera.png",
+
+ "spray-de-auxilios-aloe-vera-150ml.png"
+
+ ]
+
+},
+
+{
+
+ folder:"07_Remedios_y_Ungüentos",title:"Remedios y Ungüentos",
+
+ video:"Video_Gama_Remedy_56_segundos_sin_precios_ni_articulos.mp4",
+
+ images:[
+
+ "buzzoff-150ml.png",
+
+ "gel-calmante-para-quemaduras-50ml.png",
+
+ "gel-para-alivio-del-picor-75ml.png",
+
+ "unguento-balsamico-50ml.png",
+
+ "unguento-con-garra-del-diablo-150ml.png",
+
+ "unguento-con-ictiol-30ml.png"
+
+ ]
+
+},
+
+{
+
+ folder:"08_Bebe",title:"Bebé",
+
+ video:"video_gama_babycare_sin_precio_articulo_iphone.mp4",
+
+ images:[
+
+ "champu-biologico-bebe-200ml.png",
+
+ "champu-para-bebe-200ml.png",
+
+ "espuma-bano-bebe-200ml.png",
+
+ "leche-corporal-bebe-150ml.png",
+
+ "limpiador-suave-bebe-260ml.png"
+
+ ]
+
+},
+
+{
+
+ folder:"09_Leche_de_Burra",title:"Leche de Burra",
+
+ video:"Leche_de_Burra_Todas_las_Imagenes_35s.mp4",
+
+ images:[
+
+ "champu-con-leche-burra.png",
+
+ "crema-facial-de-dia-burra.png",
+
+ "crema-facial-de-noche-burro.png",
+
+ "gel-de-bano-burra.png",
+
+ "leche-corporal-burra.png",
+
+ "limpiador-intimo-burra.png",
+
+ "set-bustine-burra.png",
+
+ "set-bustine-dia-burra.png"
+
+ ]
+
+},
+
+{
+
+ folder:"10_Acido_Hialuronico_Colageno",
+
+ title:"Ácido Hialurónico y Colágeno",
+
+ video:"video_hialuronico_sin_precios.mp4",
+
+ images:[
+
+ "crema-facial-acido-hialuronico-10ml.png",
+
+ "crema-facial-acido-hialuronico-50ml.png",
+
+ "mascarilla-facial-acido-hialuronico-75ml.png",
+
+ "serum-gel-acido-hialuronico.png",
+
+ "set-bustine-acido-hialuronico.png",
+
+ "suero-gel-acido-hialuronico-10ml.png"
+
+ ]
+
+},
+
+{
+
+ folder:"11_Aurodhea_Lush_Cloud",title:"Aurodhea Lush Cloud",
+
+ video:"LUSH_CLOUD_Hair_Mist_IPHONE.mp4",
+
+ images:[
+
+ "blooming-musk-lush-cloud.png",
+
+ "golden-essence-lush-cloud.png",
+
+ "juicy-bliss-lush-cloud.png",
+
+ "oriental-seduction-lush-cloud.png",
+
+ "white-petals-lush-cloud.png"
+
+ ]
+
+},
+
+{
+
+ folder:"12_Solares",title:"Solares",
+
+ video:"Gama_Solares_55_segundos.mp4",
+
+ images:[
+
+ "aceite-solar-150ml.png",
+
+ "gel-para-despues-150ml.png",
+
+ "glitterain-150ml.png",
+
+ "glitterain-pink-150ml.png",
+
+ "spray-aftersun-150ml.png",
+
+ "spray-capilar-100ml.png",
+
+ "spray-protector-anti-sal-150ml.png",
+
+ "spray-refrescante-150ml.png",
+
+ "spray-solar-spf-15-150ml.png",
+
+ "spray-solar-spf-30-150ml.png",
+
+ "spray-solar-spf-50-150ml.png"
+
+ ]
 
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+];
+
+function humanize(filename){
+
+ return filename.replace(/\.[^.]+$/,"")
+
+  .replace(/[-_]/g," ")
+
+  .replace(/\bml\b/gi,"ml")
+
+  .replace(/\b(\w)/g,c=>c.toUpperCase());
+
+}
+
+function renderCollections(lang){
+
+ const t=languages[lang]||languages.de;
+
+ const grid=document.getElementById("collectionGrid");
+
+ grid.innerHTML="";
+
+ collections.forEach((item,index)=>{
+
+  const card=document.createElement("article");
+
+  card.className="card";
+
+  const media=document.createElement("div");
+
+  media.className="media";
+
+  if(item.video){
+
+   const video=document.createElement("video");
+
+   video.controls=true;
+
+   video.playsInline=true;
+
+   video.preload="metadata";
+
+   video.setAttribute("webkit-playsinline","");
+
+   const source=document.createElement("source");
+
+   source.src=item.folder+"/"+item.video;
+
+   source.type="video/mp4";
+
+   video.appendChild(source);
+
+   video.appendChild(document.createTextNode("Video MP4"));
+
+   media.appendChild(video);
+
+  }else{
+
+   media.innerHTML='<div class="placeholder">05<br><strong>BABA DE CARACOL</strong><br>Galería pendiente</div>';
+
+  }
+
+  const title=document.createElement("h3");
+
+  title.textContent=item.title;
+
+  const description=document.createElement("p");
+
+  description.textContent=t.descriptions[index];
+
+  const button=document.createElement("button");
+
+  button.className="btn btn-outline";
+
+  button.type="button";
+
+  button.textContent=t.view;
+
+  button.setAttribute("aria-expanded","false");
+
+  const products=document.createElement("div");
+
+  products.className="products";
+
+  const gallery=document.createElement("div");
+
+  gallery.className="gallery";
+
+  if(item.images.length){
+
+   item.images.forEach(filename=>{
+
+    const figure=document.createElement("figure");
+
+    const img=document.createElement("img");
+
+    img.loading="lazy";
+
+    img.alt=humanize(filename);
+
+    img.src=REPO+item.folder+"/"+encodeURIComponent(filename);
+
+    img.onerror=()=>{
+
+     img.alt="Imagen no disponible";
+
+     img.style.display="none";
+
+     const error=document.createElement("div");
+
+     error.className="missing";
+
+     error.textContent="Imagen no disponible: "+filename;
+
+     figure.appendChild(error);
+
+    };
+
+    const caption=document.createElement("figcaption");
+
+    caption.textContent=humanize(filename);
+
+    figure.appendChild(img);
+
+    figure.appendChild(caption);
+
+    gallery.appendChild(figure);
+
+   });
+
+  }else{
+
+   const missing=document.createElement("p");
+
+   missing.className="missing";
+
+   missing.textContent=t.soon;
+
+   gallery.appendChild(missing);
+
+  }
+
+  products.appendChild(gallery);
+
+  button.addEventListener("click",()=>{
+
+   const isOpen=products.classList.toggle("open");
+
+   button.textContent=isOpen?t.hide:t.view;
+
+   button.setAttribute("aria-expanded",String(isOpen));
+
+  });
+
+  card.append(media,title,description,button,products);
+
+  grid.appendChild(card);
+
+ });
+
+}
+
+function setLanguage(lang){
+
+ const t=languages[lang]||languages.de;
+
+ document.documentElement.lang=lang;
+
+ document.querySelectorAll("[data-i18n]").forEach(el=>{
+
+  const key=el.dataset.i18n;
+
+  if(t[key]!==undefined)el.textContent=t[key];
+
+ });
+
+ renderCollections(lang);
+
+}
+
+document.getElementById("language").addEventListener("change",event=>{
+
+ setLanguage(event.target.value);
+
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+setLanguage("de");
 
 </script>
 
