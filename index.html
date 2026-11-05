@@ -965,6 +965,7 @@ body{top:0!important}
 </div>
 
 <div id="google_translate_element"></div>
+
 <script>
 
 /* CONFIGURACIÓN GITHUB */
@@ -1021,7 +1022,7 @@ const ranges = [
 
 ];
 
-/* SELECTOR DE 10 IDIOMAS */
+/* SELECTOR DE 10 IDIOMAS CON MEMORIA */
 
 (function(){
 
@@ -1029,13 +1030,233 @@ const ranges = [
 
  const allowed = ["de","es","it","tr","ru","pt","sq","pl","en","fr"];
 
+ const STORAGE_KEY = "parfuemPerez_language";
+
  let ready = false;
 
  let pending = null;
 
+ /* Leer la preferencia guardada */
+
+ function getSavedLanguage(){
+
+  try{
+
+   const saved = localStorage.getItem(STORAGE_KEY);
+
+   if(saved && allowed.includes(saved)){
+
+    return saved;
+
+   }
+
+  }catch(error){
+
+   console.warn("No se pudo leer el idioma guardado.",error);
+
+  }
+
+  /* Si no hay preferencia guardada, comprobar la cookie */
+
+  const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]+)/);
+
+  if(match){
+
+   try{
+
+    const value = decodeURIComponent(match[1]);
+
+    const parts = value.split("/");
+
+    const cookieLanguage = parts[2];
+
+    if(cookieLanguage && allowed.includes(cookieLanguage)){
+
+     return cookieLanguage;
+
+    }
+
+   }catch(error){
+
+    console.warn("No se pudo leer la cookie de idioma.",error);
+
+   }
+
+  }
+
+  return "de";
+
+ }
+
+ /* Guardar la preferencia elegida */
+
+ function saveLanguage(lang){
+
+  try{
+
+   localStorage.setItem(STORAGE_KEY,lang);
+
+  }catch(error){
+
+   console.warn("No se pudo guardar el idioma.",error);
+
+  }
+
+ }
+
+ /* Guardar la cookie que utiliza Google Translate */
+
+ function setTranslateCookie(lang){
+
+  const cookieValue = "/de/" + lang;
+
+  document.cookie =
+
+   "googtrans=" + encodeURIComponent(cookieValue) +
+
+   ";path=/;max-age=31536000;SameSite=Lax";
+
+ }
+
+ /* Eliminar la cookie cuando se vuelve al alemán original */
+
+ function clearTranslateCookie(){
+
+  const expired = "googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;";
+
+  document.cookie = expired;
+
+  document.cookie =
+
+   expired + "domain=" + location.hostname + ";";
+
+  if(location.hostname.indexOf(".") !== -1){
+
+   const rootDomain = location.hostname.split(".").slice(-2).join(".");
+
+   document.cookie =
+
+    expired + "domain=." + rootDomain + ";";
+
+  }
+
+ }
+
+ /* Aplicar el idioma en el selector interno de Google */
+
+ function applyLanguage(lang,attempt){
+
+  attempt = attempt || 0;
+
+  const combo = document.querySelector(".goog-te-combo");
+
+  if(!combo){
+
+   if(attempt < 30){
+
+    setTimeout(function(){
+
+     applyLanguage(lang,attempt + 1);
+
+    },300);
+
+   }
+
+   return;
+
+  }
+
+  /*
+
+   * Alemán es el idioma original de la página.
+
+   * Google Translate utiliza el valor vacío para mostrar el original.
+
+   */
+
+  combo.value = (lang === "de") ? "" : lang;
+
+  combo.dispatchEvent(new Event("change"));
+
+ }
+
+ /* Función central para cambiar y recordar el idioma */
+
+ function changeLanguage(lang){
+
+  if(!allowed.includes(lang)){
+
+   lang = "de";
+
+  }
+
+  pending = lang;
+
+  saveLanguage(lang);
+
+  if(lang === "de"){
+
+   clearTranslateCookie();
+
+  }else{
+
+   setTranslateCookie(lang);
+
+  }
+
+  if(ready){
+
+   applyLanguage(lang);
+
+  }
+
+ }
+
+ /* Recuperar el idioma al abrir o actualizar la página */
+
+ const savedLanguage = getSavedLanguage();
+
+ selector.value = savedLanguage;
+
+ pending = savedLanguage;
+
+ if(savedLanguage === "de"){
+
+  clearTranslateCookie();
+
+ }else{
+
+  setTranslateCookie(savedLanguage);
+
+ }
+
+ /* Detectar cambios del usuario */
+
+ selector.addEventListener("change",function(){
+
+  const selected = this.value;
+
+  if(!allowed.includes(selected)){
+
+   this.value = getSavedLanguage();
+
+   return;
+
+  }
+
+  changeLanguage(selected);
+
+ });
+
+ /* Inicializar Google Translate */
+
  window.googleTranslateElementInit = function(){
 
-  if(!window.google || !google.translate)return;
+  if(!window.google || !google.translate){
+
+   return;
+
+  }
 
   new google.translate.TranslateElement({
 
@@ -1049,57 +1270,25 @@ const ranges = [
 
   ready = true;
 
-  if(pending)changeLanguage(pending);
+  /*
 
- };
+   * Esperar a que Google cree su selector interno
 
- function changeLanguage(lang){
+   * y después aplicar el idioma guardado.
 
-  pending = lang;
+   */
 
-  if(!ready)return;
-
-  const combo = document.querySelector(".goog-te-combo");
-
-  if(combo){
-
-   combo.value = lang;
-
-   combo.dispatchEvent(new Event("change"));
-
-  }else{
+  if(pending){
 
    setTimeout(function(){
 
-    const c = document.querySelector(".goog-te-combo");
+    applyLanguage(pending);
 
-    if(c){
-
-     c.value = lang;
-
-     c.dispatchEvent(new Event("change"));
-
-    }
-
-   },700);
+   },500);
 
   }
 
- }
-
- selector.addEventListener("change",function(){
-
-  if(!allowed.includes(this.value)){
-
-   this.value = "de";
-
-   return;
-
-  }
-
-  changeLanguage(this.value);
-
- });
+ };
 
  const script = document.createElement("script");
 
@@ -1656,7 +1845,8 @@ async function createVideoCard(range){
  }
 
 }
- /* INICIAR LAS 14 GAMAS - CORREGIDO */
+
+/* INICIAR LAS 14 GAMAS */
 
 async function initializePage(){
 
@@ -1668,13 +1858,9 @@ async function initializePage(){
 
   IMPORTANTE:
 
-  Ya no se detiene toda la página si falla la consulta
-
-  inicial del árbol de GitHub.
-
   Cada gama puede utilizar la consulta alternativa
 
-  de su propia carpeta.
+  de su propia carpeta si falla el árbol de GitHub.
 
  */
 
