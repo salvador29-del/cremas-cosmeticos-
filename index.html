@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="de">
@@ -6,33 +8,29 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Parfüm und Düfte Perez - Kosmetik, Körperpflege und Schönheit in Deutschland">
+<meta name="theme-color" content="#090909">
 
-<meta name="theme-color" content="#f7f2e9">
+<meta name="description" content="Parfüm und Düfte Perez – Cremas, cosméticos y cuidado corporal.">
 
-<title>Parfüm und Düfte Perez | Kosmetik & Pflege</title>
+<meta name="robots" content="index,follow">
+
+<title>Parfüm und Düfte Perez | Cremas & Cosméticos</title>
 
 <style>
 
 :root {
 
-  --ivory:#f7f2e9;
+ --gold:#d4af37;
 
-  --cream:#fffdf8;
+ --pale:#f5df91;
 
-  --gold:#b89455;
+ --black:#090909;
 
-  --gold-light:#dfc99d;
+ --panel:#191919;
 
-  --ink:#332b2b;
-
-  --muted:#766d65;
-
-  --green:#23834b;
-
-  --line:#e8ddca;
+ --white:#f7f5ef;
 
 }
 
@@ -42,317 +40,295 @@ html{scroll-behavior:smooth}
 
 body{
 
-  margin:0;background:var(--ivory);color:var(--ink);
+ margin:0;background:var(--black);color:var(--white);
 
-  font-family:Georgia,"Times New Roman",serif;
-
-}
-
-.topbar{
-
-  background:#332b2b;color:white;text-align:center;
-
-  padding:10px;font:11px Arial;letter-spacing:3px;
+ font-family:Arial,Helvetica,sans-serif;line-height:1.6
 
 }
+
+body.modal-active{overflow:hidden}
+
+a{color:var(--pale)}
 
 header{
 
-  position:sticky;top:0;z-index:20;
+ text-align:center;padding:24px 14px;background:#000;
 
-  background:rgba(255,253,248,.97);
-
-  border-bottom:1px solid var(--line);
-
-  backdrop-filter:blur(10px);
+ border-bottom:2px solid var(--gold)
 
 }
 
-.head{
+header h1{
 
-  max-width:1250px;margin:auto;padding:14px 22px;
+ margin:0;color:var(--gold);
 
-  display:flex;align-items:center;justify-content:space-between;gap:15px;
-
-}
-
-.brand{font-size:23px;letter-spacing:1px}
-
-.brand small{
-
-  display:block;text-align:center;font:10px Arial;
-
-  letter-spacing:4px;color:var(--gold);margin-top:5px;
+ font:clamp(27px,5vw,43px) Georgia,serif
 
 }
 
-nav{display:flex;gap:18px;align-items:center;font:13px Arial}
+header p{color:#ddd;font-style:italic;margin:8px 0 14px}
 
-nav a{text-decoration:none;color:var(--ink)}
+.language{
 
-.lang{
+ padding:9px;background:#171717;color:white;
 
-  border:1px solid var(--gold-light);border-radius:30px;
-
-  background:white;padding:10px;font:13px Arial;
-
-  color:var(--ink);max-width:175px;
+ border:1px solid var(--gold);border-radius:8px
 
 }
+
+.container{width:92%;max-width:1120px;margin:auto}
 
 .hero{
 
-  min-height:440px;display:grid;place-items:center;text-align:center;
+ padding:48px 14px;text-align:center;
 
-  padding:65px 20px;
-
-  background:linear-gradient(135deg,#eee1cc,#fffdf8,#e6d4b8);
+ background:radial-gradient(ellipse at center,#3a2b0a,#100e08 55%,#050505)
 
 }
 
-.hero-inner{max-width:800px}
+.hero-box{
 
-.eyebrow{
+ max-width:850px;margin:auto;padding:26px 18px;
 
-  font:11px Arial;letter-spacing:4px;color:var(--gold);
-
-  text-transform:uppercase;
+ border:1px solid var(--gold);border-radius:16px
 
 }
 
-h1{
+h2,h3{font-family:Georgia,"Times New Roman",serif}
 
-  font-size:clamp(38px,7vw,68px);font-weight:400;
+.hero h2{
 
-  line-height:1.08;margin:20px 0;
+ color:var(--gold);font-size:clamp(32px,6vw,54px);
+
+ line-height:1.2;margin:0
+
+}
+
+.hero-box p,.intro{color:#ddd}
+
+.section-title{
+
+ color:var(--gold);text-align:center;
+
+ font-size:clamp(25px,4vw,36px);margin:0 0 14px
 
 }
 
-.hero p{
-
-  font-size:17px;line-height:1.8;color:var(--muted);
-
-  max-width:660px;margin:0 auto 28px;
-
-}
+.intro{max-width:850px;margin:12px auto 25px;text-align:center}
 
 .btn{
 
-  display:inline-block;border:1px solid var(--gold);
+ display:inline-block;margin:7px 4px;padding:12px 20px;
 
-  background:var(--gold);color:white;padding:14px 22px;
+ background:linear-gradient(135deg,#f5df91,#d4af37,#b88625);
 
-  text-decoration:none;font:12px Arial;letter-spacing:2px;
+ color:#090909;border:1px solid var(--pale);
 
-  border-radius:2px;cursor:pointer;
+ border-radius:28px;text-decoration:none;font-weight:bold;
 
-}
-
-.btn-outline{background:transparent;color:var(--ink)}
-
-.section{max-width:1250px;margin:auto;padding:65px 22px}
-
-.section-head{text-align:center;margin-bottom:38px}
-
-.section-head h2{font-size:36px;font-weight:400;margin:12px 0}
-
-.section-head p{font:14px/1.7 Arial;color:var(--muted)}
-
-.grid{
-
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px;
+ text-align:center;cursor:pointer
 
 }
 
-.card{
+.btn:hover{filter:brightness(1.12)}
 
-  background:var(--cream);border:1px solid var(--line);
+.btn-outline{background:transparent;color:var(--pale)}
 
-  padding:14px;box-shadow:0 7px 24px #49351a0a;
+.btn-whatsapp{
 
-  min-width:0;display:flex;flex-direction:column;
+ background:#168b45;color:white;border:1px solid #25b85d;
 
-}
-
-.media{
-
-  height:225px;background:linear-gradient(145deg,#eee3d1,#fffdf8,#e7d8bd);
-
-  overflow:hidden;display:grid;place-items:center;
+ padding:14px 28px;font-size:16px
 
 }
 
-.media video{width:100%;height:100%;object-fit:cover}
+.presentation{
 
-.placeholder{
+ padding:38px 15px;text-align:center;background:#0d0d0d;
 
-  text-align:center;color:#9b835b;font:12px Arial;
-
-  letter-spacing:2px;padding:20px;line-height:2;
+ border-block:1px solid #6a5623
 
 }
 
-.card h3{
+.cosmetics-entry-image{
 
-  font-size:22px;font-weight:400;text-align:center;margin:19px 0 8px;
+ display:block;width:100%;max-width:760px;height:auto;
 
-}
+ margin:22px auto 12px;border:1px solid var(--gold);
 
-.card>p{
-
-  font:13px/1.7 Arial;color:var(--muted);
-
-  text-align:center;min-height:42px;
-
-}
-
-.card>.btn{width:100%;text-align:center;margin-top:auto}
-
-.products{
-
-  display:none;margin-top:15px;padding:12px;
-
-  background:var(--ivory);border:1px solid var(--line);
-
-}
-
-.products.open{display:block}
-
-.gallery{
-
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
-
-}
-
-.gallery figure{
-
-  margin:0;padding:9px;background:var(--cream);
-
-  border:1px solid var(--line);min-width:0;
-
-}
-
-.gallery img{
-
-  display:block;width:100%;height:175px;
-
-  object-fit:contain;background:white;
-
-}
-
-.gallery figcaption{
-
-  font:12px/1.5 Arial;text-align:center;
-
-  padding:9px 2px;color:var(--ink);overflow-wrap:anywhere;
-
-}
-
-.product-info{
-
-  border-top:1px solid var(--line);
-
-  margin-top:7px;padding-top:8px;
-
-  font:12px/1.7 Arial;text-align:center;color:var(--muted);
-
-}
-
-.product-info strong{color:var(--ink)}
-
-.product-order{
-
-  display:block;text-align:center;margin-top:8px;
-
-  color:var(--green);font:bold 11px Arial;text-decoration:none;
+ border-radius:14px;box-shadow:0 8px 28px #0008
 
 }
 
 .notice{
 
-  max-width:850px;margin:auto;background:white;
+ padding:22px 14px;text-align:center;background:#211906;
 
-  border:1px solid var(--line);padding:24px;
-
-  text-align:center;font:13px/1.8 Arial;color:var(--muted);
+ border-bottom:1px solid var(--gold)
 
 }
 
-footer{
+.notice strong{color:var(--pale)}
 
-  background:#332b2b;color:#f8f1e5;
+.videos,.products{
 
-  padding:42px 22px 28px;text-align:center;
-
-}
-
-footer .brand{color:white}
-
-footer p{font:12px/1.8 Arial;color:#d5cabc}
-
-.footlinks{
-
-  display:flex;flex-wrap:wrap;gap:20px;
-
-  justify-content:center;margin:20px 0;font:12px Arial;
+ padding:42px 0;background:#101010;border-top:1px solid #333
 
 }
 
-.footlinks a{color:#f8f1e5}
+.video-grid,.product-grid,.gallery{
 
-.legal{
-
-  max-width:900px;margin:25px auto 0;text-align:left;
-
-  border-top:1px solid #685b50;padding-top:20px;
+ display:grid;grid-template-columns:1fr;gap:20px
 
 }
 
-.whatsapp{
+.video-card,.product-card{
 
-  position:fixed;right:18px;bottom:18px;z-index:30;
+ overflow:hidden;background:var(--panel);
 
-  background:var(--green);color:white;text-decoration:none;
-
-  border-radius:30px;padding:15px 20px;
-
-  font:12px Arial;letter-spacing:1px;
-
-  box-shadow:0 6px 22px #0002;
+ border:1px solid #6a5623;border-radius:13px
 
 }
 
-@media(max-width:850px){
+.video-card{text-align:center}
 
-  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.video-card h3{
 
-  nav{gap:10px}
-
-  nav a{display:none}
+ color:var(--gold);font-size:24px;margin:0;padding:15px 10px
 
 }
 
-@media(max-width:550px){
+.video-card video{
 
-  .grid{grid-template-columns:1fr}
+ display:block;width:100%;background:#000;
 
-  .head{padding:12px 14px}
+ object-fit:contain;aspect-ratio:16/9
 
-  .brand{font-size:19px}
+}
 
-  .brand small{font-size:9px;letter-spacing:3px}
+.video-card p{padding:0 15px;color:#ddd}
 
-  .hero{min-height:380px}
+.product-card{padding:14px;text-align:center}
 
-  .media{height:230px}
+.product-card img,.gallery img{
 
-  .gallery img{height:180px}
+ width:100%;height:auto;display:block;object-fit:contain;
 
-  .section{padding:48px 15px}
+ background:#080808;border:1px solid var(--gold);border-radius:10px
 
-  .section-head h2{font-size:30px}
+}
 
-  .whatsapp{right:12px;bottom:12px;padding:13px 16px}
+.product-card img{max-height:340px}
+
+.product-card h3{color:var(--gold);font-size:21px;margin:12px 0 5px}
+
+.price{color:var(--pale);font-weight:bold}
+
+.contact{
+
+ padding:42px 15px;text-align:center;border-top:1px solid #333;
+
+ background:#050505
+
+}
+
+.contact-box{
+
+ max-width:850px;margin:auto;padding:22px;
+
+ border:1px solid #6a5623;border-radius:14px;background:#151515
+
+}
+
+.legal{padding:32px 15px;background:#0d0d0d;border-top:1px solid var(--gold)}
+
+.legal p{color:#ddd;overflow-wrap:anywhere}
+
+.legal h2,.legal h3{color:var(--gold)}
+
+footer{padding:20px 12px;text-align:center;color:#aaa;font-size:13px;background:#000}
+
+#google_translate_element{
+
+ position:absolute;left:-10000px;top:0;width:1px;height:1px;overflow:hidden
+
+}
+
+.goog-te-banner-frame,.goog-te-balloon-frame{display:none!important}
+
+body{top:0!important}
+
+/* VENTANA INDEPENDIENTE DE PRODUCTOS */
+
+.modal-overlay{
+
+ display:none;position:fixed;inset:0;z-index:9999;
+
+ background:rgba(0,0,0,.95);padding:10px;overflow-y:auto
+
+}
+
+.modal-overlay.is-open{display:block}
+
+.modal-window{
+
+ position:relative;width:100%;max-width:1150px;min-height:70vh;
+
+ margin:10px auto 25px;background:#090909;
+
+ border:1px solid var(--gold);border-radius:16px;padding:16px
+
+}
+
+.modal-close{
+
+ position:sticky;top:0;z-index:3;display:block;margin:0 0 15px auto;
+
+ background:var(--gold);color:#090909;border:0;border-radius:25px;
+
+ padding:11px 19px;font-weight:bold;font-size:16px;cursor:pointer
+
+}
+
+.modal-window .products{
+
+ display:block!important;padding:20px 0;border:0
+
+}
+
+.modal-window .container{width:100%}
+
+.catalog-section{display:none}
+
+.loading-message{
+
+ text-align:center;color:#ddd;padding:25px
+
+}
+
+.error-message{
+
+ text-align:center;color:#f5df91;padding:20px
+
+}
+
+@media(min-width:700px){
+
+ .video-grid{grid-template-columns:1fr 1fr}
+
+ .video-grid .video-card:first-child{grid-column:1/-1}
+
+ .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+ .modal-window{padding:24px}
+
+}
+
+@media(min-width:1000px){
+
+ .gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
 
 }
 
@@ -362,127 +338,325 @@ footer p{font:12px/1.8 Arial;color:#d5cabc}
 
 <body>
 
-<div class="topbar" data-i18n="topbar">
-
-  KOSMETIK · PFLEGE · SCHÖNHEIT
-
-</div>
-
 <header>
 
-  <div class="head">
+<h1>Parfüm und Düfte Perez</h1>
 
-    <div class="brand">
+<p>Deine Schönheit. Dein Stil. Deine Eleganz.</p>
 
-      Parfüm und Düfte Perez
+<label for="language">🌐 Sprache / Idioma:</label>
 
-      <small>KOSMETIK &amp; PFLEGE</small>
+<select class="language" id="language" aria-label="Sprache auswählen">
 
-    </div>
+<option value="de" selected>🇩🇪 Deutsch</option>
 
-    <nav>
+<option value="es">🇪🇸 Español</option>
 
-      <a href="#gamas" data-i18n="navCollections">Kollektionen</a>
+<option value="it">🇮🇹 Italiano</option>
 
-      <a href="#kontakt" data-i18n="navContact">Kontakt</a>
+<option value="tr">🇹🇷 Türkçe</option>
 
-      <select class="lang" id="language" aria-label="Sprache wählen">
+<option value="ru">🇷🇺 Русский</option>
 
-        <option value="de">🌐 Deutsch</option>
+<option value="pt">🇵🇹 Português</option>
 
-        <option value="es">🇪🇸 Español</option>
+<option value="sq">🇦🇱 Shqip</option>
 
-        <option value="it">🇮🇹 Italiano</option>
+<option value="pl">🇵🇱 Polski</option>
 
-        <option value="tr">🇹🇷 Türkçe</option>
+<option value="en">🇬🇧 English</option>
 
-        <option value="ru">🇷🇺 Русский</option>
+<option value="fr">🇫🇷 Français</option>
 
-        <option value="pt">🇵🇹 Português</option>
-
-        <option value="sq">🇦🇱 Shqip</option>
-
-        <option value="en">🇬🇧 English</option>
-
-        <option value="fr">🇫🇷 Français</option>
-
-        <option value="pl">🇵🇱 Polski</option>
-
-      </select>
-
-    </nav>
-
-  </div>
+</select>
 
 </header>
 
 <main>
 
+<!-- PRESENTACIÓN PRINCIPAL -->
+
 <section class="hero">
 
-  <div class="hero-inner">
+<div class="hero-box">
 
-    <div class="eyebrow" data-i18n="eyebrow">Schönheit in ihrer schönsten Form</div>
+<h2>Schönheit und Eleganz</h2>
 
-    <h1 data-i18n="heroTitle">Pflege, die sich besonders anfühlt</h1>
+<p>
 
-    <p data-i18n="heroText">
+Entdecke unsere Welt der Cremes, Kosmetik und Körperpflege.
 
-      Entdecken Sie unsere Kosmetik- und Körperpflegekollektionen.
+Produkte für deine tägliche Schönheitsroutine.
 
-      Elegante Präsentationen, ausgewählte Produkte und persönliche Beratung.
+</p>
 
-    </p>
+<p>
 
-    <a class="btn" href="#gamas" data-i18n="discover">KOLLEKTIONEN ENTDECKEN</a>
+Persönliche Beratung und Bestellanfragen bei
 
-  </div>
+Parfüm und Düfte Perez.
 
-</section>
+</p>
 
-<section class="section" id="gamas">
+<a class="btn" href="#produktwelten">PRODUKTE ENTDECKEN</a>
 
-  <div class="section-head">
+<a class="btn btn-outline" href="#beratung">PERSÖNLICHE BERATUNG</a>
 
-    <div class="eyebrow" data-i18n="selection">Unsere Auswahl</div>
-
-    <h2 data-i18n="collections">Kollektionen</h2>
-
-    <p data-i18n="collectionText">Wählen Sie eine Pflegeserie und entdecken Sie die Produkte.</p>
-
-  </div>
-
-  <div class="grid" id="collectionGrid"></div>
+</div>
 
 </section>
 
-<section class="section" id="kontakt">
+<!-- MAQUILLAJES Y COLORES -->
 
-  <div class="section-head">
+<section class="presentation">
 
-    <div class="eyebrow">PARFÜM UND DÜFTE PEREZ</div>
+<div class="container">
 
-    <h2 data-i18n="contact">Kontakt</h2>
+<h2 class="section-title">Maquillajes y Colores</h2>
 
-    <p data-i18n="contactText">Wir freuen uns auf Ihre Nachricht.</p>
+<p class="intro">
 
-  </div>
+Entdecke auch unsere Welt der Farben und des Make-ups.
 
-  <div class="notice">
+</p>
 
-    <h3 data-i18n="personalOrder">Persönliche Bestellung</h3>
+<a id="makeupLink"
 
-    <p data-i18n="orderText">Bestellungen und Abholung nach Vereinbarung.</p>
+href="https://salvador29-del.github.io/maquillajes-y-colores/"
 
-    <a class="btn" href="https://wa.me/491745201068"
+target="_blank" rel="noopener noreferrer">
 
-       target="_blank" rel="noopener" data-i18n="whatsapp">
+<img class="cosmetics-entry-image"
 
-      PEDIR POR WHATSAPP
+src="maquillajes%20y%20colores.png.png"
 
-    </a>
+alt="Maquillajes y Colores"
 
-  </div>
+loading="eager">
+
+</a>
+
+<a class="btn" id="makeupButton"
+
+href="https://salvador29-del.github.io/maquillajes-y-colores/"
+
+target="_blank" rel="noopener noreferrer">
+
+MAQUILLAJES Y COLORES
+
+</a>
+
+</div>
+
+</section>
+
+<section class="notice">
+
+<div class="container">
+
+<p>
+
+<strong>Willkommen bei Parfüm und Düfte Perez.</strong>
+
+</p>
+
+<p>
+
+Wähle deine gewünschte Produktreihe, sieh dir das Video an
+
+und öffne anschließend den Produktkatalog.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- LAS 14 GAMAS -->
+
+<section class="videos" id="produktwelten">
+
+<div class="container">
+
+<h2 class="section-title">Unsere Produktwelten</h2>
+
+<p class="intro">
+
+Entdecke unsere 14 Produktreihen.
+
+Klicke auf den jeweiligen Button, um die Produktbilder
+
+in einem separaten Fenster anzusehen.
+
+</p>
+
+<div class="video-grid" id="videoGrid">
+
+<p class="loading-message">Produktwelten werden geladen...</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AQUÍ SE COLOCAN LOS CATÁLOGOS -->
+
+<div id="catalogStorage">
+
+</div>
+
+<!-- CONTACTO -->
+
+<section class="contact" id="beratung">
+
+<div class="container">
+
+<div class="contact-box">
+
+<h2 class="section-title">Persönliche Beratung und Bestellung</h2>
+
+<p>
+
+Du hast Fragen zu unseren Cremes und Kosmetikprodukten?
+
+Kontaktiere mich direkt über WhatsApp.
+
+</p>
+
+<p>
+
+Persönliche Beratung und Abholung nach vorheriger
+
+Terminvereinbarung.
+
+</p>
+
+<a class="btn btn-whatsapp"
+
+href="https://wa.me/491745201068"
+
+target="_blank" rel="noopener noreferrer">
+
+PEDIR POR WHATSAPP
+
+</a>
+
+<p>
+
+Offizieller Chogan-Shop:
+
+</p>
+
+<a class="btn"
+
+href="https://www.chogangroupspa.com/referral/SAL28A7EA/ES/"
+
+target="_blank" rel="noopener noreferrer">
+
+CHOGAN SHOP ÖFFNEN
+
+</a>
+
+<p>
+
+E-Mail:
+
+<a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AVISO LEGAL -->
+
+<section class="legal">
+
+<div class="container">
+
+<h2>Impressum und rechtliche Hinweise</h2>
+
+<h3>Angaben gemäß § 5 DDG</h3>
+
+<p>
+
+<strong>Parfüm und Düfte Perez</strong><br>
+
+Inhaber: Salvador Pérez<br>
+
+Steinstraße 57<br>
+
+34385 Bad Karlshafen<br>
+
+Deutschland
+
+</p>
+
+<h3>Kontakt</h3>
+
+<p>
+
+E-Mail:
+
+<a href="mailto:info@parfuemperez.com">info@parfuemperez.com</a><br>
+
+Telefon / WhatsApp:
+
+<a href="https://wa.me/491745201068">+49 174 5201068</a>
+
+</p>
+
+<h3>Umsatzsteuer</h3>
+
+<p>
+
+Für meine Umsätze gilt die Steuerbefreiung für Kleinunternehmer
+
+gemäß § 19 UStG.
+
+</p>
+
+<h3>Unabhängiger Vertriebspartner von Chogan</h3>
+
+<p>
+
+Parfüm und Düfte Perez ist ein unabhängiges Angebot eines
+
+Vertriebspartners und keine offizielle Unternehmenswebsite
+
+der Chogan Group.
+
+</p>
+
+<h3>Externe Links</h3>
+
+<p>
+
+Diese Website enthält Links zu externen Seiten Dritter.
+
+Für deren Inhalte sind ausschließlich deren Betreiber verantwortlich.
+
+</p>
+
+<h3>Datenschutz</h3>
+
+<p>
+
+Wenn du per E-Mail oder WhatsApp Kontakt aufnimmst,
+
+werden die übermittelten Angaben zur Bearbeitung deiner Anfrage
+
+verwendet. Bei der Nutzung externer Dienste gelten zusätzlich
+
+die Datenschutzbestimmungen des jeweiligen Anbieters.
+
+</p>
+
+</div>
 
 </section>
 
@@ -490,1307 +664,945 @@ footer p{font:12px/1.8 Arial;color:#d5cabc}
 
 <footer>
 
-  <div class="brand">
-
-    Parfüm und Düfte Perez
-
-    <small>KOSMETIK &amp; PFLEGE</small>
-
-  </div>
-
-  <div class="footlinks">
-
-    <a href="#" data-i18n="home">Startseite</a>
-
-    <a href="#gamas" data-i18n="navCollections">Kollektionen</a>
-
-    <a href="#kontakt" data-i18n="navContact">Kontakt</a>
-
-  </div>
-
-  <p>© <span id="year"></span> Parfüm und Düfte Perez</p>
-
-  <div class="legal">
-
-    <p>Parfüm und Düfte Perez</p>
-
-    <p>Deutschland</p>
-
-  </div>
+<p>© 2026 Parfüm und Düfte Perez – Cremas & Cosméticos.</p>
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/491745201068"
+<!-- VENTANA DE CATÁLOGOS: MISMO SISTEMA QUE PERFUMES -->
 
-   target="_blank" rel="noopener" data-i18n="whatsapp">
+<div class="modal-overlay" id="catalogModal" aria-hidden="true">
 
-  PEDIR POR WHATSAPP
+<div class="modal-window"
 
-</a>
+role="dialog"
+
+aria-modal="true"
+
+aria-label="Produktkatalog">
+
+<button class="modal-close"
+
+type="button"
+
+id="closeCatalogModal">
+
+✕ Schließen
+
+</button>
+
+<div id="modalContent"></div>
+
+</div>
+
+</div>
+
+<div id="google_translate_element"></div>
 
 <script>
 
-const REPO = "https://raw.githubusercontent.com/salvador29-del/cremas-cosmeticos-/main/";
+/* =========================================
 
-const WA = "https://wa.me/491745201068";
+   CONFIGURACIÓN DEL REPOSITORIO GITHUB
 
-const languages = {
+========================================= */
 
-de:{
+const GITHUB_OWNER = "salvador29-del";
 
- topbar:"KOSMETIK · PFLEGE · SCHÖNHEIT",
+const GITHUB_REPO = "cremas-cosmeticos-";
 
- navCollections:"Kollektionen",navContact:"Kontakt",
+const GITHUB_BRANCH = "main";
 
- eyebrow:"Schönheit in ihrer schönsten Form",
+const API_BASE =
 
- heroTitle:"Pflege, die sich besonders anfühlt",
+`https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/`;
 
- heroText:"Entdecken Sie unsere Kosmetik- und Körperpflegekollektionen. Elegante Präsentationen, ausgewählte Produkte und persönliche Beratung.",
+const BRANCH_URL =
 
- discover:"KOLLEKTIONEN ENTDECKEN",selection:"Unsere Auswahl",
+`https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/`;
 
- collections:"Kollektionen",collectionText:"Wählen Sie eine Pflegeserie und entdecken Sie die Produkte.",
+/*
 
- contact:"Kontakt",contactText:"Wir freuen uns auf Ihre Nachricht.",
+IMPORTANTE:
 
- personalOrder:"Persönliche Bestellung",orderText:"Bestellungen und Abholung nach Vereinbarung.",
+Se utilizan exactamente los nombres de tus 14 carpetas.
 
- whatsapp:"PEDIR POR WHATSAPP",home:"Startseite",
+*/
 
- view:"PRODUKT ANSEHEN",hide:"PRODUKTE AUSBLENDEN",
-
- article:"Artikel",price:"Preis",ask:"Preis und Artikel auf Anfrage",
-
- descriptions:[
-
- "Duftende Körperpflege für jeden Tag.",
-
- "Körper- und Gesichtspflege mit Neem.",
-
- "Pflege für Körper, Gesicht und Haare.",
-
- "Reinigende Pflege mit Salicylsäure.",
-
- "Gesichtspflege mit Schneckenschleim.",
-
- "Pflege für Gesicht, Körper, Haare und Hygiene.",
-
- "Ausgewählte Pflegeprodukte und Salben.",
-
- "Sanfte Pflege für die tägliche Babyroutine.",
-
- "Elegante Pflege für Gesicht und Körper.",
-
- "Gesichtspflege und intensive Feuchtigkeit.",
-
- "Zarte Düfte für die Haarpflege.",
-
- "Produkte für Sonne und Sommer.",
-
- "Duftende Duschgele für jeden Tag.",
-
- "Duftende Körpercremes für jeden Tag."
-
-]},
-
-es:{
-
- topbar:"COSMÉTICA · CUIDADO · BELLEZA",
-
- navCollections:"Colecciones",navContact:"Contacto",
-
- eyebrow:"La belleza en su forma más especial",
-
- heroTitle:"Cuidados que te hacen sentir especial",
-
- heroText:"Descubre nuestras colecciones de cosmética y cuidado corporal. Presentaciones elegantes, productos seleccionados y atención personalizada.",
-
- discover:"DESCUBRIR COLECCIONES",selection:"Nuestra selección",
-
- collections:"Colecciones",collectionText:"Elige una gama y descubre sus productos.",
-
- contact:"Contacto",contactText:"Estaremos encantados de recibir tu mensaje.",
-
- personalOrder:"Pedido personalizado",orderText:"Pedidos y recogida con cita previa.",
-
- whatsapp:"PEDIR POR WHATSAPP",home:"Inicio",
-
- view:"VER PRODUCTO",hide:"OCULTAR PRODUCTOS",
-
- article:"Artículo",price:"Precio",ask:"Consultar artículo y precio",
-
- descriptions:[
-
- "Cuidado perfumado para cada día.",
-
- "Cuidado corporal y facial con aceite de Neem.",
-
- "Cuidado corporal, facial y capilar.",
-
- "Cuidado purificante con ácido salicílico.",
-
- "Cuidado facial con baba de caracol.",
-
- "Cuidado facial, corporal, capilar e higiene.",
-
- "Selección de productos de cuidado y ungüentos.",
-
- "Cuidado suave para el bebé cada día.",
-
- "Cuidado elegante para el rostro y el cuerpo.",
-
- "Cuidado facial e hidratación.",
-
- "Aromas delicados para el cuidado del cabello.",
-
- "Productos para el sol y el verano.",
-
- "Geles de baño perfumados para cada día.",
-
- "Cremas corporales perfumadas para cada día."
-
-]},
-
-it:{
-
- topbar:"COSMETICA · CURA · BELLEZZA",
-
- navCollections:"Collezioni",navContact:"Contatti",
-
- eyebrow:"La bellezza nella sua forma più speciale",
-
- heroTitle:"La cura che ti fa sentire speciale",
-
- heroText:"Scopri le nostre collezioni di cosmetici e cura del corpo. Presentazioni eleganti, prodotti selezionati e assistenza personalizzata.",
-
- discover:"SCOPRI LE COLLEZIONI",selection:"La nostra selezione",
-
- collections:"Collezioni",collectionText:"Scegli una linea e scopri i prodotti.",
-
- contact:"Contatti",contactText:"Saremo felici di ricevere il tuo messaggio.",
-
- personalOrder:"Ordine personalizzato",orderText:"Ordini e ritiro su appuntamento.",
-
- whatsapp:"ORDINA SU WHATSAPP",home:"Home",
-
- view:"VEDI PRODOTTO",hide:"NASCONDI PRODOTTI",
-
- article:"Articolo",price:"Prezzo",ask:"Articolo e prezzo su richiesta",
-
- descriptions:[
-
- "Cura profumata per ogni giorno.","Cura del corpo e del viso con Neem.",
-
- "Cura del corpo, del viso e dei capelli.","Cura purificante con acido salicilico.",
-
- "Cura del viso con bava di lumaca.","Cura del viso, del corpo, dei capelli e igiene.",
-
- "Selezione di prodotti per la cura e unguenti.","Cura delicata quotidiana per il bambino.",
-
- "Cura elegante per viso e corpo.","Cura del viso e idratazione.",
-
- "Fragranze delicate per la cura dei capelli.","Prodotti per il sole e l'estate.",
-
- "Gel doccia profumati per ogni giorno.","Creme corpo profumate per ogni giorno."
-
-]},
-
-tr:{
-
- topbar:"KOZMETİK · BAKIM · GÜZELLİK",
-
- navCollections:"Koleksiyonlar",navContact:"İletişim",
-
- eyebrow:"En özel haliyle güzellik",
-
- heroTitle:"Kendinizi özel hissettiren bakım",
-
- heroText:"Kozmetik ve vücut bakım koleksiyonlarımızı keşfedin. Zarif sunumlar, seçilmiş ürünler ve kişisel danışmanlık.",
-
- discover:"KOLEKSİYONLARI KEŞFET",selection:"Seçimimiz",
-
- collections:"Koleksiyonlar",collectionText:"Bir bakım serisi seçin ve ürünleri keşfedin.",
-
- contact:"İletişim",contactText:"Mesajınızı bekliyoruz.",
-
- personalOrder:"Kişisel sipariş",orderText:"Sipariş ve teslimat randevu ile yapılır.",
-
- whatsapp:"WHATSAPP'TAN SİPARİŞ",home:"Ana sayfa",
-
- view:"ÜRÜNÜ GÖR",hide:"ÜRÜNLERİ GİZLE",
-
- article:"Ürün kodu",price:"Fiyat",ask:"Ürün kodu ve fiyat sorunuz",
-
- descriptions:[
-
- "Her gün için hoş kokulu bakım.","Neem yağı ile yüz ve vücut bakımı.",
-
- "Vücut, yüz ve saç bakımı.","Salisilik asit ile arındırıcı bakım.",
-
- "Salyangoz özü ile yüz bakımı.","Yüz, vücut, saç ve hijyen bakımı.",
-
- "Bakım ürünleri ve merhemler seçkisi.","Bebekler için günlük nazik bakım.",
-
- "Yüz ve vücut için zarif bakım.","Yüz bakımı ve nemlendirme.",
-
- "Saç bakımı için narin kokular.","Güneş ve yaz ürünleri.",
-
- "Her gün için hoş kokulu duş jelleri.","Hoş kokulu vücut kremleri."
-
-]},
-
-ru:{
-
- topbar:"КОСМЕТИКА · УХОД · КРАСОТА",
-
- navCollections:"Коллекции",navContact:"Контакты",
-
- eyebrow:"Красота в её особенном проявлении",
-
- heroTitle:"Уход, который дарит особенные ощущения",
-
- heroText:"Откройте наши коллекции косметики и средств по уходу за телом. Элегантная презентация, тщательно подобранные продукты и индивидуальная консультация.",
-
- discover:"ОТКРЫТЬ КОЛЛЕКЦИИ",selection:"Наш выбор",
-
- collections:"Коллекции",collectionText:"Выберите серию и откройте для себя продукты.",
-
- contact:"Контакты",contactText:"Будем рады вашему сообщению.",
-
- personalOrder:"Индивидуальный заказ",orderText:"Заказы и получение по предварительной договорённости.",
-
- whatsapp:"ЗАКАЗАТЬ В WHATSAPP",home:"Главная",
-
- view:"ПОСМОТРЕТЬ ПРОДУКТЫ",hide:"СКРЫТЬ ПРОДУКТЫ",
-
- article:"Артикул",price:"Цена",ask:"Уточнить артикул и цену",
-
- descriptions:[
-
- "Ароматный уход на каждый день.","Уход за лицом и телом с маслом нима.",
-
- "Уход за телом, лицом и волосами.","Очищающий уход с салициловой кислотой.",
-
- "Уход за лицом с муцином улитки.","Уход за лицом, телом, волосами и гигиена.",
-
- "Подборка средств ухода и мазей.","Нежный ежедневный уход за малышом.",
-
- "Элегантный уход за лицом и телом.","Уход за лицом и увлажнение.",
-
- "Нежные ароматы для ухода за волосами.","Средства для солнца и лета.",
-
- "Ароматные гели для душа на каждый день.","Ароматные кремы для тела."
-
-]},
-
-pt:{
-
- topbar:"COSMÉTICA · CUIDADO · BELEZA",
-
- navCollections:"Coleções",navContact:"Contacto",
-
- eyebrow:"A beleza na sua forma mais especial",
-
- heroTitle:"Cuidados que fazem sentir-se especial",
-
- heroText:"Descubra as nossas coleções de cosmética e cuidados corporais. Apresentações elegantes, produtos selecionados e aconselhamento personalizado.",
-
- discover:"DESCOBRIR COLEÇÕES",selection:"A nossa seleção",
-
- collections:"Coleções",collectionText:"Escolha uma gama e descubra os produtos.",
-
- contact:"Contacto",contactText:"Teremos todo o gosto em receber a sua mensagem.",
-
- personalOrder:"Encomenda personalizada",orderText:"Encomendas e recolha mediante marcação.",
-
- whatsapp:"ENCOMENDAR POR WHATSAPP",home:"Início",
-
- view:"VER PRODUTO",hide:"OCULTAR PRODUTOS",
-
- article:"Artigo",price:"Preço",ask:"Consultar artigo e preço",
-
- descriptions:[
-
- "Cuidado perfumado para todos os dias.","Cuidado corporal e facial com óleo de Neem.",
-
- "Cuidado corporal, facial e capilar.","Cuidado purificante com ácido salicílico.",
-
- "Cuidado facial com baba de caracol.","Cuidado facial, corporal, capilar e higiene.",
-
- "Seleção de produtos de cuidado e pomadas.","Cuidado suave diário para o bebé.",
-
- "Cuidado elegante para o rosto e o corpo.","Cuidado facial e hidratação.",
-
- "Aromas delicados para o cuidado do cabelo.","Produtos para o sol e o verão.",
-
- "Géis de banho perfumados para todos os dias.","Cremes corporais perfumados para todos os dias."
-
-]},
-
-sq:{
-
- topbar:"KOZMETIKË · KUJDES · BUKURI",
-
- navCollections:"Koleksionet",navContact:"Kontakt",
-
- eyebrow:"Bukuria në formën e saj më të veçantë",
-
- heroTitle:"Kujdes që ju bën të ndiheni të veçantë",
-
- heroText:"Zbuloni koleksionet tona të kozmetikës dhe kujdesit për trupin. Prezantime elegante, produkte të përzgjedhura dhe këshillim personal.",
-
- discover:"ZBULONI KOLEKSIONET",selection:"Përzgjedhja jonë",
-
- collections:"Koleksionet",collectionText:"Zgjidhni një gamë dhe zbuloni produktet.",
-
- contact:"Kontakt",contactText:"Do të jemi të lumtur të marrim mesazhin tuaj.",
-
- personalOrder:"Porosi personale",orderText:"Porositë dhe marrja bëhen me takim.",
-
- whatsapp:"POROSIT NË WHATSAPP",home:"Kryefaqja",
-
- view:"SHIKO PRODUKTIN",hide:"FSHIH PRODUKTET",
-
- article:"Artikulli",price:"Çmimi",ask:"Pyetni për artikullin dhe çmimin",
-
- descriptions:[
-
- "Kujdes aromatik për çdo ditë.","Kujdes për trupin dhe fytyrën me vaj Neem.",
-
- "Kujdes për trupin, fytyrën dhe flokët.","Kujdes pastrues me acid salicilik.",
-
- "Kujdes për fytyrën me sekrecion kërmilli.","Kujdes për fytyrën, trupin, flokët dhe higjienën.",
-
- "Përzgjedhje produktesh kujdesi dhe pomadash.","Kujdes i butë për foshnjën çdo ditë.",
-
- "Kujdes elegant për fytyrën dhe trupin.","Kujdes dhe hidratim për fytyrën.",
-
- "Aroma delikate për kujdesin e flokëve.","Produkte për diellin dhe verën.",
-
- "Xhel dushi aromatik për çdo ditë.","Kremra trupi aromatikë për çdo ditë."
-
-]},
-
-en:{
-
- topbar:"COSMETICS · CARE · BEAUTY",
-
- navCollections:"Collections",navContact:"Contact",
-
- eyebrow:"Beauty in its most special form",
-
- heroTitle:"Care that makes you feel special",
-
- heroText:"Discover our cosmetics and body care collections. Elegant presentations, selected products and personal assistance.",
-
- discover:"DISCOVER COLLECTIONS",selection:"Our selection",
-
- collections:"Collections",collectionText:"Choose a collection and discover its products.",
-
- contact:"Contact",contactText:"We look forward to hearing from you.",
-
- personalOrder:"Personal order",orderText:"Orders and collection by appointment.",
-
- whatsapp:"ORDER VIA WHATSAPP",home:"Home",
-
- view:"VIEW PRODUCT",hide:"HIDE PRODUCTS",
-
- article:"Article",price:"Price",ask:"Ask for article number and price",
-
- descriptions:[
-
- "Fragrant care for every day.","Body and face care with Neem oil.",
-
- "Body, face and hair care.","Purifying care with salicylic acid.",
-
- "Facial care with snail secretion.","Face, body, hair care and hygiene.",
-
- "Selected care products and ointments.","Gentle everyday baby care.",
-
- "Elegant care for face and body.","Facial care and hydration.",
-
- "Delicate fragrances for hair care.","Products for sun and summer.",
-
- "Fragrant shower gels for every day.","Fragrant body creams for every day."
-
-]},
-
-fr:{
-
- topbar:"COSMÉTIQUE · SOIN · BEAUTÉ",
-
- navCollections:"Collections",navContact:"Contact",
-
- eyebrow:"La beauté dans toute sa splendeur",
-
- heroTitle:"Des soins qui vous font vous sentir unique",
-
- heroText:"Découvrez nos collections de cosmétiques et de soins du corps. Présentations élégantes, produits sélectionnés et conseils personnalisés.",
-
- discover:"DÉCOUVRIR LES COLLECTIONS",selection:"Notre sélection",
-
- collections:"Collections",collectionText:"Choisissez une gamme et découvrez les produits.",
-
- contact:"Contact",contactText:"Nous serons ravis de recevoir votre message.",
-
- personalOrder:"Commande personnalisée",orderText:"Commandes et retrait sur rendez-vous.",
-
- whatsapp:"COMMANDER SUR WHATSAPP",home:"Accueil",
-
- view:"VOIR LE PRODUIT",hide:"MASQUER LES PRODUITS",
-
- article:"Article",price:"Prix",ask:"Demander l'article et le prix",
-
- descriptions:[
-
- "Soin parfumé pour tous les jours.","Soin du corps et du visage à l'huile de Neem.",
-
- "Soin du corps, du visage et des cheveux.","Soin purifiant à l'acide salicylique.",
-
- "Soin du visage à la bave d'escargot.","Soin du visage, du corps, des cheveux et hygiène.",
-
- "Sélection de produits de soin et de pommades.","Soin doux quotidien pour bébé.",
-
- "Soin élégant pour le visage et le corps.","Soin du visage et hydratation.",
-
- "Parfums délicats pour les cheveux.","Produits pour le soleil et l'été.",
-
- "Gels douche parfumés pour tous les jours.","Crèmes corporelles parfumées pour tous les jours."
-
-]},
-
-pl:{
-
- topbar:"KOSMETYKI · PIELĘGNACJA · PIĘKNO",
-
- navCollections:"Kolekcje",navContact:"Kontakt",
-
- eyebrow:"Piękno w wyjątkowej odsłonie",
-
- heroTitle:"Pielęgnacja, która daje wyjątkowe uczucie",
-
- heroText:"Odkryj nasze kolekcje kosmetyków i produktów do pielęgnacji ciała. Eleganckie prezentacje, wybrane produkty i indywidualne doradztwo.",
-
- discover:"ODKRYJ KOLEKCJE",selection:"Nasz wybór",
-
- collections:"Kolekcje",collectionText:"Wybierz serię pielęgnacyjną i odkryj produkty.",
-
- contact:"Kontakt",contactText:"Czekamy na Twoją wiadomość.",
-
- personalOrder:"Zamówienie indywidualne",orderText:"Zamówienia i odbiór po wcześniejszym uzgodnieniu.",
-
- whatsapp:"ZAMÓW PRZEZ WHATSAPP",home:"Strona główna",
-
- view:"ZOBACZ PRODUKT",hide:"UKRYJ PRODUKTY",
-
- article:"Numer artykułu",price:"Cena",ask:"Zapytaj o numer artykułu i cenę",
-
- descriptions:[
-
- "Pachnąca pielęgnacja na każdy dzień.","Pielęgnacja ciała i twarzy z olejem Neem.",
-
- "Pielęgnacja ciała, twarzy i włosów.","Oczyszczająca pielęgnacja z kwasem salicylowym.",
-
- "Pielęgnacja twarzy ze śluzem ślimaka.","Pielęgnacja twarzy, ciała, włosów i higiena.",
-
- "Wybrane produkty pielęgnacyjne i maści.","Delikatna codzienna pielęgnacja niemowląt.",
-
- "Elegancka pielęgnacja twarzy i ciała.","Pielęgnacja twarzy i nawilżenie.",
-
- "Delikatne zapachy do pielęgnacji włosów.","Produkty na słońce i lato.",
-
- "Pachnące żele pod prysznic na każdy dzień.","Pachnące kremy do ciała na każdy dzień."
-
-]}
-
-};
-
-/* 14 carpetas reales de GitHub y sus archivos */
-
-const collections = [
+const ranges = [
 
 {
 
- folder:"01_Body_Mist",title:"Body Mist",
+ id:"body-mist",
 
- video:"video-lush-cloud-cuerpo.mp4",
+ folder:"01_Body_Mist",
 
- images:[
-
- "brazilian-sunset-lush-cloud-100ml.png",
-
- "golden-hour-lush-cloud-100ml.png",
-
- "pacific-aura-lush-cloud-100ml.png",
-
- "summer-dream-lush-cloud-100ml.png",
-
- "tropical-breeze-lush-cloud-100ml.png"
-
- ]
+ name:"Body Mist"
 
 },
 
 {
 
- folder:"02_Aceite_de_Neem",title:"Aceite de Neem",
+ id:"neem",
 
- video:"Video_Gama_Aceite_de_Neem_Guitarra_Flamenca_ligero.mp4",
+ folder:"02_Aceite_de_Neem",
 
- images:[
-
- "champu-neem-250ml.png",
-
- "crema-corporal-neem-10ml.png",
-
- "crema-corporal-neem-150ml.png",
-
- "crema-de-pie-neem-75ml.png",
-
- "crema-facial-neem-10ml.png",
-
- "crema-facial-neem-50ml.png",
-
- "crema-manos-neem-75ml.png",
-
- "crema-manos-y-unas-neem-10ml.png",
-
- "crema-manos-y-unas-neem-75ml.png",
-
- "crema-pie-neem-10ml.png",
-
- "jabon-liquido-neem-1000ml.png",
-
- "jabon-liquido-neem-260ml.png",
-
- "limpiador-interno-neem-260ml.png",
-
- "mascarilla-facil-neem-50ml.png",
-
- "set-bustitas-neem.png"
-
- ]
+ name:"Aceite de Neem"
 
 },
 
 {
 
- folder:"03_Aceite_de_Argan",title:"Aceite de Argán",
+ id:"argan",
 
- video:"Video_Argan_MP4_compatible.mp4",
+ folder:"03_Aceite_de_Argan",
 
- images:[
-
- "acondicionador-capilar-argan-250ml.png",
-
- "acondicionador-capilar-argan-50ml.png",
-
- "champu-reestructurante-argan-250ml.png",
-
- "champu-reestructurante-argan-50ml.png",
-
- "crema-corporal-bio-argan-150ml.png",
-
- "crema-de-manos-bio-argan-75ml.png",
-
- "crema-de-pies-bio-argan-75ml.png",
-
- "crema-facial-argan-10ml.png",
-
- "crema-facial-argan-50ml.png",
-
- "jabon-liquido-argan-1000ml.png",
-
- "jabon-liquido-argan-260ml.png",
-
- "limpiador-intimo-argan-260ml.png",
-
- "mascarilla-antiedad-argan-50ml.png",
-
- "mascarilla-capilar-argan-150ml.png",
-
- "mascarilla-capilar-argan-30ml.png",
-
- "mascarilla-capilar-argan-500ml.png",
-
- "mascarilla-desenredante-argan-150ml.png",
-
- "set-de-bustitas-argan.png",
-
- "suero-reestructurante-argan-30ml.png"
-
- ]
+ name:"Aceite de Argán"
 
 },
 
 {
 
- folder:"04_Purificante_Acido_Salicilico",title:"Ácido Salicílico",
+ id:"salicilico",
 
- video:"Video_Gama_Acido_Salicilico.mp4",
+ folder:"04_Purificante_Acido_Salicilico",
 
- images:[
-
- "champu-anticaspa-acido-salicilico-250ml.png",
-
- "gel-facial-acido-salicilico-100ml.png",
-
- "limpiador-anti-acne-acido-salicilico-260ml.png",
-
- "mascarilla-facial-acido-salicilico-50ml.png"
-
- ]
+ name:"Purificante Ácido Salicílico"
 
 },
 
 {
 
- folder:"05_Baba_de_Caracol",title:"Baba de Caracol",
+ id:"caracol",
 
- video:"Parfume_Perez_Baba_Caracol_59s.mp4",
+ folder:"05_Baba_de_Caracol",
 
- images:[
-
- "acondicionador-baba-250ml.png",
-
- "champu-baba-caracol-250ml.png",
-
- "crema-corporal-baba-10ml.png",
-
- "crema-corporal-baba-150ml.png",
-
- "crema-de-manos-baba-10ml.png",
-
- "crema-de-manos-baba-75ml.png",
-
- "crema-de-ojos-baba-15ml.png",
-
- "crema-de-pies-baba-75ml.png",
-
- "crema-facial-baba-50ml.png",
-
- "deo-crema-baba-50ml.png",
-
- "gel-de-bano-baba-250ml.png",
-
- "gel-facial-baba-260ml.png",
-
- "jabon-liquido-baba-260ml.png",
-
- "limpiador-intimo-baba-260ml.png",
-
- "mascarilla-capilar-baba-150ml.png",
-
- "mascarilla-facial-baba-50ml.png",
-
- "mascarilla-spray-baba-150ml.png"
-
- ]
+ name:"Baba de Caracol"
 
 },
 
 {
 
- folder:"06_Aloe_Vera",title:"Aloe Vera",
+ id:"aloe",
 
- video:"Parfuem_Perez_AloeVera_iPhone.mp4",
+ folder:"06_Aloe_Vera",
 
- images:[
-
- "champu-lavado-aloe-vera-250ml.png",
-
- "champu-lavado-aloe-vera-50ml.png",
-
- "crema-contorno-ojos-aloe-vera.png",
-
- "crema-corporal-aloe-vera-10ml.png",
-
- "crema-corporal-aloe-vera-150ml.png",
-
- "crema-corporal-aloe-vera-30ml.png",
-
- "crema-de-manos-aloe-vera-10ml.png",
-
- "crema-de-manos-aloe-vera-75ml.png",
-
- "crema-facial-aloe-vera-10ml.png",
-
- "crema-facial-dia-aloe-vera-50ml.png",
-
- "crema-facial-noche-aloe-vera-50ml.png",
-
- "enjuague-bucal-aloe-vera-250ml.png",
-
- "enjuague-bucal-aloe-vera-80ml.png",
-
- "gel-bio-aloe-vera-10ml.png",
-
- "gel-bio-aloe-vera-150ml.png",
-
- "gel-de-bano-aloe-vera-250ml.png",
-
- "gel-de-bano-aloe-vera-50ml.png",
-
- "limpiador-intimo-aloe-vera-260ml.png",
-
- "limpiador-intimo-aloe-vera-50ml.png",
-
- "mascarilla-capilar-aloe-vera-150ml.png",
-
- "mascarilla-exfoliante-aloe-vera-75ml.png",
-
- "pasta-dentifrica-aloe-vera-115g.png",
-
- "set-bustine-aloe-vera.png",
-
- "spray-de-auxilios-aloe-vera-150ml.png"
-
- ]
+ name:"Aloe Vera"
 
 },
 
 {
 
- folder:"07_Remedios_y_Ungüentos",title:"Remedios y Ungüentos",
+ id:"remedios",
 
- video:"Video_Gama_Remedy_56_segundos_sin_precios_ni_articulos.mp4",
+ folder:"07_Remedios_y_Ungüentos",
 
- images:[
-
- "buzzoff-150ml.png",
-
- "gel-calmante-para-quemaduras-50ml.png",
-
- "gel-para-alivio-del-picor-75ml.png",
-
- "unguento-balsamico-50ml.png",
-
- "unguento-con-garra-del-diablo-150ml.png",
-
- "unguento-con-ictiol-30ml.png"
-
- ]
+ name:"Remedios y Ungüentos"
 
 },
 
 {
 
- folder:"08_Bebe",title:"Bebé",
+ id:"bebe",
 
- video:"video_gama_babycare_sin_precio_articulo_iphone.mp4",
+ folder:"08_Bebe",
 
- images:[
-
- "champu-biologico-bebe-200ml.png",
-
- "champu-para-bebe-200ml.png",
-
- "espuma-bano-bebe-200ml.png",
-
- "leche-corporal-bebe-150ml.png",
-
- "limpiador-suave-bebe-260ml.png"
-
- ]
+ name:"Bebé"
 
 },
 
 {
 
- folder:"09_Leche_de_Burra",title:"Leche de Burra",
+ id:"burra",
 
- video:"Leche_de_Burra_Todas_las_Imagenes_35s.mp4",
+ folder:"09_Leche_de_Burra",
 
- images:[
-
- "champu-con-leche-burra.png",
-
- "crema-facial-de-dia-burra.png",
-
- "crema-facial-de-noche-burro.png",
-
- "gel-de-bano-burra.png",
-
- "leche-corporal-burra.png",
-
- "limpiador-intimo-burra.png",
-
- "set-bustine-burra.png",
-
- "set-bustine-dia-burra.png"
-
- ]
+ name:"Leche de Burra"
 
 },
 
 {
 
- folder:"10_Acido_Hialuronico_Colageno",title:"Ácido Hialurónico y Colágeno",
+ id:"hialuronico",
 
- video:"video_hialuronico_sin_precios.mp4",
+ folder:"10_Acido_Hialuronico_Colageno",
 
- images:[
-
- "crema-facial-acido-hialuronico-10ml.png",
-
- "crema-facial-acido-hialuronico-50ml.png",
-
- "mascarilla-facial-acido-hialuronico-75ml.png",
-
- "serum-gel-acido-hialuronico.png",
-
- "set-bustine-acido-hialuronico.png",
-
- "suero-gel-acido-hialuronico-10ml.png"
-
- ]
+ name:"Ácido Hialurónico y Colágeno"
 
 },
 
 {
 
- folder:"11_Aurodhea_Lush_Cloud",title:"Aurodhea Lush Cloud",
+ id:"lush",
 
- video:"LUSH_CLOUD_Hair_Mist_IPHONE.mp4",
+ folder:"11_Aurodhea_Lush_Cloud",
 
- images:[
-
- "blooming-musk-lush-cloud.png",
-
- "golden-essence-lush-cloud.png",
-
- "juicy-bliss-lush-cloud.png",
-
- "oriental-seduction-lush-cloud.png",
-
- "white-petals-lush-cloud.png"
-
- ]
+ name:"Aurodhea Lush Cloud"
 
 },
 
 {
 
- folder:"12_Solares",title:"Solares",
+ id:"solares",
 
- video:"Gama_Solares_55_segundos.mp4",
+ folder:"12_Solares",
 
- images:[
-
- "aceite-solar-150ml.png",
-
- "gel-para-despues-150ml.png",
-
- "glitterain-150ml.png",
-
- "glitterain-pink-150ml.png",
-
- "spray-aftersun-150ml.png",
-
- "spray-capilar-100ml.png",
-
- "spray-protector-anti-sal-150ml.png",
-
- "spray-refrescante-150ml.png",
-
- "spray-solar-spf-15-150ml.png",
-
- "spray-solar-spf-30-150ml.png",
-
- "spray-solar-spf-50-150ml.png"
-
- ]
+ name:"Solares"
 
 },
 
 {
 
- folder:"13_Gel_de_bano",title:"Geles de Baño",
+ id:"gel",
 
- video:"Gel_de_bano_Elegante_56s.mp4",
+ folder:"13_Gel_de_bano",
 
- images:[
-
- "ar-00-gel-ducha-perfumado-unisex.png",
-
- "ar-01-gel-bano-hombre-250ml.png",
-
- "ar-02-gel-bano-hombre-250ml.png",
-
- "ar-03-gel-bano-hombre-250ml.png",
-
- "ar-05-gel-bano-hombre-250ml.png",
-
- "ar-07-gel-bano-mujer-250ml.png",
-
- "ar-10-gel-bano-perfumado-250ml.png",
-
- "ar-105-gel-bano-unisex-250ml.png",
-
- "ar-111-gel-bano-unisex-250ml.png",
-
- "ar-118-gel-bano-unisex-250ml.png",
-
- "ar-119-gel-bano-mujer-250ml.png",
-
- "ar-121-gel-bano-mujer-250ml.png",
-
- "ar-129-gel-bano-unisex-250ml.png",
-
- "ar-130-gel-bano-unisex-250ml.png",
-
- "ar-134-gel-bano-unisex-250ml.png",
-
- "ar-16-gel-bano-perfumado-250ml.png",
-
- "ar-19-gel-bano-mujer-250ml.png",
-
- "ar-23-gel-mujer-bano-250ml.png",
-
- "ar-33-gel-hombre-bano-250ml.png",
-
- "ar-42-gel-bano-mujer-250ml.png",
-
- "ar-51-gel-bano-mujer-250ml.png",
-
- "ar-55-gel-bano-mujer-250ml.png",
-
- "ar-61-gel-bano-hombre-250ml.png",
-
- "ar-68-gel-bano-hombre-250ml.png",
-
- "ar-80-gel-bano-mujer-250ml.png",
-
- "ar-94-gel-bano-hombre-250ml.png"
-
- ]
+ name:"Gel de Baño"
 
 },
 
 {
 
- folder:"14_Cremas_Corporales",title:"Cremas Corporales",
+ id:"corporales",
 
- video:"crema_corporal_elegante.mp4",
+ folder:"14_Cremas_Corporales",
 
- images:[
-
- "art-07-crema-corporal-fragante-150ml.png",
-
- "art-10-crema-corporal-perfumada-150ml.png",
-
- "art-119-crema-corporal-fragante-150ml.png",
-
- "art-121-crema-corporal-fragante-150ml.png",
-
- "art-19-crema-corporal-fragante-150ml.png",
-
- "art-23-crema-corporal-fragante-150ml.png",
-
- "art-42-crema-corporal-fragante-150ml.png",
-
- "art-55-crema-corporal-fragante-150ml.png",
-
- "art-80-crema-corporal-fragante-150ml.png",
-
- "art.51-crema-corporal-fragante-150ml.png"
-
- ]
+ name:"Cremas Corporales"
 
 }
 
 ];
 
-/* Datos confirmados anteriormente.
+/* =========================================
 
-   Los productos sin ficha confirmada muestran consulta, no un precio inventado. */
+   SELECTOR DE IDIOMAS
 
-const productData = {
+   MISMO SISTEMA QUE PERFUMES
 
- "brazilian-sunset-lush-cloud-100ml.png":{article:"SBM005",price:"19,90 €"},
+========================================= */
 
- "golden-hour-lush-cloud-100ml.png":{article:"SBM003",price:"19,90 €"},
+(function(){
 
- "pacific-aura-lush-cloud-100ml.png":{article:"SBM002",price:"19,90 €"},
+const selector = document.getElementById("language");
 
- "summer-dream-lush-cloud-100ml.png":{article:"SBM004",price:"19,90 €"},
+const allowed = [
 
- "tropical-breeze-lush-cloud-100ml.png":{article:"SBM001",price:"19,90 €"},
+"de","es","it","tr","ru","pt","sq","pl","en","fr"
 
- "champu-neem-250ml.png":{article:"NM01B",price:"19,90 €"},
+];
 
- "crema-corporal-neem-150ml.png":{article:"NM03B",price:"24,90 €"},
+let ready = false;
 
- "crema-de-pie-neem-75ml.png":{article:"NM05B",price:"13,90 €"},
+let pending = null;
 
- "crema-facial-neem-50ml.png":{article:"NM06C",price:"39,90 €"},
+window.googleTranslateElementInit = function(){
 
- "crema-manos-y-unas-neem-75ml.png":{article:"NM04",price:"12,90 €"},
+ if(!window.google || !google.translate)return;
 
- "crema-corporal-neem-10ml.png":{article:"CU39B",price:"2,50 €"},
+ new google.translate.TranslateElement({
 
- "crema-manos-y-unas-neem-10ml.png":{article:"CU40B",price:"2,50 €"},
+  pageLanguage:"de",
 
- "crema-pie-neem-10ml.png":{article:"CU41B",price:"2,50 €"},
+  includedLanguages:allowed.join(","),
 
- "jabon-liquido-neem-1000ml.png":{article:"RSNM07B",price:"8,90 €"},
+  autoDisplay:false
 
- "jabon-liquido-neem-260ml.png":{article:"NM07B",price:"3,99 €"},
+ },"google_translate_element");
 
- "limpiador-interno-neem-260ml.png":{article:"NM08B",price:"7,99 €"},
+ ready = true;
 
- "mascarilla-facil-neem-50ml.png":{article:"NM09B",price:"18,90 €"},
-
- "gel-para-alivio-del-picor-75ml.png":{article:"MD04B",price:"13,90 €"},
-
- "crema-facial-acido-hialuronico-50ml.png":{article:"CR05C",price:"31,90 €"},
-
- "mascarilla-facial-acido-hialuronico-75ml.png":{article:"CR08C",price:"44,90 €"},
-
- "serum-gel-acido-hialuronico.png":{article:"POM01B",price:"21,90 €"},
-
- "crema-facial-de-dia-burra.png":{article:"LA04C",price:"54,90 €"},
-
- "crema-facial-de-noche-burro.png":{article:"LA05C",price:"64,90 €"},
-
- "leche-corporal-burra.png":{article:"LA03B",price:"19,90 €"},
-
- "gel-para-despues-150ml.png":{article:"",price:""}
+ if(pending)changeLanguage(pending);
 
 };
 
-/* Traducción de los nombres de las 14 gamas */
+function changeLanguage(lang){
 
-const collectionNames = {
+ pending = lang;
 
- de:["Body Mist","Neemöl","Arganöl","Salicylsäure","Schneckenschleim","Aloe Vera","Pflege & Salben","Baby","Eselsmilch","Hyaluronsäure & Kollagen","Aurodhea Lush Cloud","Sonnenschutz","Duschgele","Körpercremes"],
+ if(!ready)return;
 
- es:["Body Mist","Aceite de Neem","Aceite de Argán","Ácido Salicílico","Baba de Caracol","Aloe Vera","Remedios y Ungüentos","Bebé","Leche de Burra","Ácido Hialurónico y Colágeno","Aurodhea Lush Cloud","Solares","Geles de Baño","Cremas Corporales"],
+ const combo = document.querySelector(".goog-te-combo");
 
- it:["Body Mist","Olio di Neem","Olio di Argan","Acido Salicilico","Bava di Lumaca","Aloe Vera","Rimedi e Unguenti","Bambino","Latte d'Asina","Acido Ialuronico e Collagene","Aurodhea Lush Cloud","Solari","Gel Doccia","Creme Corpo"],
+ if(combo){
 
- tr:["Body Mist","Neem Yağı","Argan Yağı","Salisilik Asit","Salyangoz Özü","Aloe Vera","Bakım ve Merhemler","Bebek","Eşek Sütü","Hyaluronik Asit ve Kolajen","Aurodhea Lush Cloud","Güneş Ürünleri","Duş Jelleri","Vücut Kremleri"],
+  combo.value = lang;
 
- ru:["Body Mist","Масло нима","Аргановое масло","Салициловая кислота","Муцин улитки","Алоэ вера","Средства и мази","Детская серия","Ослиное молоко","Гиалуроновая кислота и коллаген","Aurodhea Lush Cloud","Солнцезащитная серия","Гели для душа","Кремы для тела"],
+  combo.dispatchEvent(new Event("change"));
 
- pt:["Body Mist","Óleo de Neem","Óleo de Argão","Ácido Salicílico","Baba de Caracol","Aloe Vera","Remédios e Pomadas","Bebé","Leite de Burra","Ácido Hialurónico e Colagénio","Aurodhea Lush Cloud","Protetores Solares","Géis de Banho","Cremes Corporais"],
+ }else{
 
- sq:["Body Mist","Vaj Neem","Vaj Argani","Acid Salicilik","Sekrecion Kërmilli","Aloe Vera","Produkte dhe Pomada","Bebe","Qumësht Gomari","Acid Hialuronik dhe Kolagjen","Aurodhea Lush Cloud","Produkte Dielli","Xhel Dushi","Kremra Trupi"],
+  setTimeout(function(){
 
- en:["Body Mist","Neem Oil","Argan Oil","Salicylic Acid","Snail Mucin","Aloe Vera","Remedies & Ointments","Baby","Donkey Milk","Hyaluronic Acid & Collagen","Aurodhea Lush Cloud","Sun Care","Shower Gels","Body Creams"],
+   const c = document.querySelector(".goog-te-combo");
 
- fr:["Body Mist","Huile de Neem","Huile d'Argan","Acide salicylique","Bave d'escargot","Aloe Vera","Remèdes et pommades","Bébé","Lait d'ânesse","Acide hyaluronique et collagène","Aurodhea Lush Cloud","Solaires","Gels douche","Crèmes corporelles"],
+   if(c){
 
- pl:["Body Mist","Olejek Neem","Olej arganowy","Kwas salicylowy","Śluz ślimaka","Aloe Vera","Preparaty i maści","Dla dzieci","Mleko ośle","Kwas hialuronowy i kolagen","Aurodhea Lush Cloud","Ochrona przeciwsłoneczna","Żele pod prysznic","Kremy do ciała"]
+    c.value = lang;
 
-};
-
-function humanize(filename){
-
- return filename.replace(/\.[^.]+$/,"")
-
-  .replace(/[-_]/g," ")
-
-  .replace(/\bml\b/gi,"ml")
-
-  .replace(/\b(\w)/g,c=>c.toUpperCase());
-
-}
-
-function renderCollections(lang){
-
- const t=languages[lang]||languages.de;
-
- const names=collectionNames[lang]||collectionNames.de;
-
- const grid=document.getElementById("collectionGrid");
-
- grid.innerHTML="";
-
- collections.forEach((item,index)=>{
-
-  const card=document.createElement("article");
-
-  card.className="card";
-
-  const media=document.createElement("div");
-
-  media.className="media";
-
-  if(item.video){
-
-   const video=document.createElement("video");
-
-   video.controls=true;
-
-   video.playsInline=true;
-
-   video.preload="metadata";
-
-   video.setAttribute("webkit-playsinline","");
-
-   video.setAttribute("aria-label",item.title);
-
-   const source=document.createElement("source");
-
-   source.src=REPO+encodeURIComponent(item.folder)+"/"+encodeURIComponent(item.video);
-
-   source.type="video/mp4";
-
-   video.appendChild(source);
-
-   media.appendChild(video);
-
-  }else{
-
-   media.innerHTML='<div class="placeholder">VIDEO<br><strong>'+item.title+'</strong></div>';
-
-  }
-
-  const title=document.createElement("h3");
-
-  title.textContent=names[index]||item.title;
-
-  const description=document.createElement("p");
-
-  description.textContent=t.descriptions[index]||"";
-
-  const button=document.createElement("button");
-
-  button.className="btn btn-outline";
-
-  button.type="button";
-
-  button.textContent=t.view;
-
-  button.setAttribute("aria-expanded","false");
-
-  const products=document.createElement("div");
-
-  products.className="products";
-
-  const gallery=document.createElement("div");
-
-  gallery.className="gallery";
-
-  item.images.forEach(filename=>{
-
-   const figure=document.createElement("figure");
-
-   const img=document.createElement("img");
-
-   img.loading="lazy";
-
-   img.alt=humanize(filename);
-
-   img.src=REPO+encodeURIComponent(item.folder)+"/"+encodeURIComponent(filename);
-
-   img.onerror=()=>{
-
-    img.style.display="none";
-
-    const error=document.createElement("div");
-
-    error.className="missing";
-
-    error.textContent="Imagen no disponible: "+filename;
-
-    figure.insertBefore(error,caption);
-
-   };
-
-   const caption=document.createElement("figcaption");
-
-   caption.textContent=humanize(filename);
-
-   const info=document.createElement("div");
-
-   info.className="product-info";
-
-   const data=productData[filename];
-
-   if(data && data.article && data.price){
-
-    info.innerHTML="<strong>"+t.article+":</strong> "+data.article+
-
-      "<br><strong>"+t.price+":</strong> "+data.price;
-
-   }else{
-
-    info.textContent=t.ask;
+    c.dispatchEvent(new Event("change"));
 
    }
 
-   const order=document.createElement("a");
+  },700);
 
-   order.className="product-order";
-
-   order.href=WA+"?text="+encodeURIComponent(
-
-     "Hola, estoy interesado/a en "+humanize(filename)+" ("+item.title+"). ¿Me puede informar?"
-
-   );
-
-   order.target="_blank";
-
-   order.rel="noopener";
-
-   order.textContent=t.whatsapp;
-
-   figure.append(img,caption,info,order);
-
-   gallery.appendChild(figure);
-
-  });
-
-  products.appendChild(gallery);
-
-  button.addEventListener("click",()=>{
-
-   const isOpen=products.classList.toggle("open");
-
-   button.textContent=isOpen?t.hide:t.view;
-
-   button.setAttribute("aria-expanded",String(isOpen));
-
-  });
-
-  card.append(media,title,description,button,products);
-
-  grid.appendChild(card);
-
- });
+ }
 
 }
 
-function setLanguage(lang){
+selector.addEventListener("change",function(){
 
- const t=languages[lang]||languages.de;
+ if(!allowed.includes(this.value)){
 
- document.documentElement.lang=lang;
+  this.value = "de";
 
- document.querySelectorAll("[data-i18n]").forEach(el=>{
+  return;
 
-  const key=el.dataset.i18n;
+ }
 
-  if(t[key]!==undefined)el.textContent=t[key];
-
- });
-
- renderCollections(lang);
-
-}
-
-document.getElementById("language").addEventListener("change",event=>{
-
- setLanguage(event.target.value);
+ changeLanguage(this.value);
 
 });
 
-document.getElementById("year").textContent=new Date().getFullYear();
+const script = document.createElement("script");
 
-setLanguage("de");
+script.src =
+
+"https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+
+script.async = true;
+
+document.head.appendChild(script);
+
+})();
+
+/* =========================================
+
+   FUNCIONES PARA LEER LAS CARPETAS DE GITHUB
+
+========================================= */
+
+function encodePath(path){
+
+ return path.split("/").map(part =>
+
+ encodeURIComponent(part)
+
+ ).join("/");
+
+}
+
+function rawURL(path){
+
+ return BRANCH_URL + encodePath(path);
+
+}
+
+async function getFiles(folder){
+
+ const url =
+
+ API_BASE + encodeURIComponent(folder) + "?ref=" + GITHUB_BRANCH;
+
+ const response = await fetch(url);
+
+ if(!response.ok){
+
+  throw new Error(
+
+   "No se pudo acceder a la carpeta " + folder +
+
+   ". Código: " + response.status
+
+  );
+
+ }
+
+ return await response.json();
+
+}
+
+function isImage(file){
+
+ return /\.(jpg|jpeg|png|webp|gif)$/i.test(file.name);
+
+}
+
+function isVideo(file){
+
+ return /\.(mp4|webm|mov|m4v|ogv)$/i.test(file.name);
+
+}
+
+function escapeHTML(value){
+
+ return String(value).replace(/[&<>"']/g,function(char){
+
+  return {
+
+   "&":"&amp;",
+
+   "<":"&lt;",
+
+   ">":"&gt;",
+
+   '"':"&quot;",
+
+   "'":"&#39;"
+
+  }[char];
+
+ });
+
+}
+
+/* =========================================
+
+   CREAR LOS CATÁLOGOS
+
+========================================= */
+
+const videoGrid = document.getElementById("videoGrid");
+
+const catalogStorage = document.getElementById("catalogStorage");
+
+const sectionElements = {};
+
+const sectionAnchors = {};
+
+async function createRange(range){
+
+ const section = document.createElement("section");
+
+ section.className = "products catalog-section";
+
+ section.id = range.id;
+
+ section.innerHTML = `
+
+  <div class="container">
+
+   <h2 class="section-title">
+
+    ${escapeHTML(range.name)}
+
+   </h2>
+
+   <p class="intro">
+
+    ${escapeHTML(range.name)}
+
+   </p>
+
+   <div class="product-grid" id="gallery-${range.id}">
+
+    <p class="loading-message">
+
+     Produkte werden geladen...
+
+    </p>
+
+   </div>
+
+   <p style="text-align:center">
+
+    <a class="btn btn-whatsapp"
+
+    href="https://wa.me/491745201068"
+
+    target="_blank"
+
+    rel="noopener noreferrer">
+
+     PEDIR POR WHATSAPP
+
+    </a>
+
+   </p>
+
+  </div>
+
+ `;
+
+ catalogStorage.appendChild(section);
+
+ const marker = document.createComment("catalog " + range.id);
+
+ section.parentNode.insertBefore(marker,section);
+
+ sectionElements[range.id] = section;
+
+ sectionAnchors[range.id] = marker;
+
+ try{
+
+  const files = await getFiles(range.folder);
+
+  const images = files.filter(isImage);
+
+  const gallery =
+
+  document.getElementById("gallery-" + range.id);
+
+  gallery.innerHTML = "";
+
+  if(images.length === 0){
+
+   gallery.innerHTML = `
+
+    <p class="error-message">
+
+     Keine Produktbilder in dieser Produktreihe gefunden.
+
+    </p>
+
+   `;
+
+  }else{
+
+   images.forEach(function(file){
+
+    const card = document.createElement("article");
+
+    card.className = "product-card";
+
+    const image = document.createElement("img");
+
+    image.src = file.download_url || rawURL(
+
+     range.folder + "/" + file.name
+
+    );
+
+    image.alt = file.name;
+
+    image.loading = "lazy";
+
+    image.style.cursor = "zoom-in";
+
+    image.addEventListener("click",function(){
+
+     openImage(image.src,image.alt);
+
+    });
+
+    const title = document.createElement("h3");
+
+    title.textContent =
+
+    file.name.replace(/\.[^.]+$/,"")
+
+    .replace(/[_-]/g," ");
+
+    card.appendChild(image);
+
+    card.appendChild(title);
+
+    gallery.appendChild(card);
+
+   });
+
+  }
+
+ }catch(error){
+
+  console.error(error);
+
+  document.getElementById("gallery-" + range.id).innerHTML = `
+
+   <p class="error-message">
+
+    Diese Produktreihe konnte nicht geladen werden.
+
+    Bitte überprüfe die carpeta en GitHub.
+
+   </p>
+
+  `;
+
+ }
+
+}
+
+/* =========================================
+
+   CREAR LOS VÍDEOS Y BOTONES
+
+========================================= */
+
+async function createVideoCard(range){
+
+ const article = document.createElement("article");
+
+ article.className = "video-card";
+
+ article.innerHTML = `
+
+  <h3>${escapeHTML(range.name)}</h3>
+
+  <div class="loading-message">
+
+   Video wird geladen...
+
+  </div>
+
+  <p>${escapeHTML(range.name)}</p>
+
+  <button class="btn"
+
+   type="button"
+
+   data-open-modal="${range.id}">
+
+   VER PRODUCTO
+
+  </button>
+
+ `;
+
+ videoGrid.appendChild(article);
+
+ const loading = article.querySelector(".loading-message");
+
+ try{
+
+  const files = await getFiles(range.folder);
+
+  const videos = files.filter(isVideo);
+
+  loading.innerHTML = "";
+
+  if(videos.length === 0){
+
+   loading.textContent = "Video wird vorbereitet.";
+
+  }else{
+
+   videos.forEach(function(file){
+
+    const video = document.createElement("video");
+
+    video.controls = true;
+
+    video.playsInline = true;
+
+    video.preload = "metadata";
+
+    const source = document.createElement("source");
+
+    source.src =
+
+    file.download_url || rawURL(
+
+     range.folder + "/" + file.name
+
+    );
+
+    source.type =
+
+    /\.webm$/i.test(file.name) ? "video/webm" :
+
+    /\.ogv$/i.test(file.name) ? "video/ogg" :
+
+    "video/mp4";
+
+    video.appendChild(source);
+
+    video.appendChild(
+
+     document.createTextNode(
+
+      "Tu navegador no puede reproducir este vídeo."
+
+     )
+
+    );
+
+    loading.appendChild(video);
+
+   });
+
+  }
+
+ }catch(error){
+
+  console.error(error);
+
+  loading.textContent =
+
+  "Video nicht verfügbar. Bitte GitHub-Ordner überprüfen.";
+
+ }
+
+}
+
+/* =========================================
+
+   INICIAR LAS 14 GAMAS
+
+========================================= */
+
+async function initializePage(){
+
+ videoGrid.innerHTML = "";
+
+ catalogStorage.innerHTML = "";
+
+ for(const range of ranges){
+
+  await createRange(range);
+
+  await createVideoCard(range);
+
+ }
+
+}
+
+/* =========================================
+
+   VENTANAS DE CATÁLOGOS
+
+   MISMO FUNCIONAMIENTO QUE PERFUMES
+
+========================================= */
+
+(function(){
+
+const overlay =
+
+document.getElementById("catalogModal");
+
+const content =
+
+document.getElementById("modalContent");
+
+const close =
+
+document.getElementById("closeCatalogModal");
+
+let active = null;
+
+let lastFocus = null;
+
+function closeModal(){
+
+ if(!active)return;
+
+ const section = sectionElements[active];
+
+ const marker = sectionAnchors[active];
+
+ if(section && marker && marker.parentNode){
+
+  marker.parentNode.insertBefore(section,marker);
+
+ }
+
+ overlay.classList.remove("is-open");
+
+ overlay.setAttribute("aria-hidden","true");
+
+ document.body.classList.remove("modal-active");
+
+ active = null;
+
+ if(lastFocus){
+
+  lastFocus.focus();
+
+ }
+
+}
+
+document.addEventListener("click",function(event){
+
+ const button = event.target.closest("[data-open-modal]");
+
+ if(!button)return;
+
+ event.preventDefault();
+
+ const id = button.getAttribute("data-open-modal");
+
+ if(!sectionElements[id])return;
+
+ if(active)closeModal();
+
+ lastFocus = button;
+
+ active = id;
+
+ content.appendChild(sectionElements[id]);
+
+ overlay.classList.add("is-open");
+
+ overlay.setAttribute("aria-hidden","false");
+
+ document.body.classList.add("modal-active");
+
+ overlay.scrollTop = 0;
+
+ close.focus();
+
+});
+
+close.addEventListener("click",closeModal);
+
+overlay.addEventListener("click",function(event){
+
+ if(event.target === overlay){
+
+  closeModal();
+
+ }
+
+});
+
+document.addEventListener("keydown",function(event){
+
+ if(event.key === "Escape" && active){
+
+  closeModal();
+
+ }
+
+});
+
+})();
+
+/* =========================================
+
+   AMPLIAR FOTOGRAFÍAS
+
+========================================= */
+
+function openImage(src,alt){
+
+ let zoom = document.getElementById("imageZoom");
+
+ if(!zoom){
+
+  zoom = document.createElement("div");
+
+  zoom.id = "imageZoom";
+
+  zoom.style.cssText = `
+
+   position:fixed;
+
+   inset:0;
+
+   z-index:10001;
+
+   background:rgba(0,0,0,.97);
+
+   display:flex;
+
+   justify-content:center;
+
+   align-items:center;
+
+   padding:15px;
+
+  `;
+
+  zoom.innerHTML = `
+
+   <button type="button"
+
+    aria-label="Cerrar fotografía"
+
+    style="
+
+     position:absolute;
+
+     top:15px;
+
+     right:18px;
+
+     background:#d4af37;
+
+     color:#090909;
+
+     border:0;
+
+     border-radius:50%;
+
+     width:43px;
+
+     height:43px;
+
+     font-size:27px;
+
+     cursor:pointer;
+
+    ">×</button>
+
+   <img style="
+
+    max-width:95%;
+
+    max-height:88vh;
+
+    object-fit:contain;
+
+   ">
+
+  `;
+
+  document.body.appendChild(zoom);
+
+  zoom.querySelector("button").addEventListener("click",function(){
+
+   zoom.style.display = "none";
+
+  });
+
+  zoom.addEventListener("click",function(event){
+
+   if(event.target === zoom){
+
+    zoom.style.display = "none";
+
+   }
+
+  });
+
+ }
+
+ const img = zoom.querySelector("img");
+
+ img.src = src;
+
+ img.alt = alt;
+
+ zoom.style.display = "flex";
+
+}
+
+/* =========================================
+
+   TECLA ESC PARA CERRAR FOTOGRAFÍAS
+
+========================================= */
+
+document.addEventListener("keydown",function(event){
+
+ if(event.key === "Escape"){
+
+  const zoom = document.getElementById("imageZoom");
+
+  if(zoom){
+
+   zoom.style.display = "none";
+
+  }
+
+ }
+
+});
+
+/* INICIAR */
+
+initializePage();
 
 </script>
 
