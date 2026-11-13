@@ -840,8 +840,6 @@ body{top:0!important}
 
   >
 
-  <!-- TEXTOS HTML: GOOGLE TRANSLATE PUEDE TRADUCIRLOS -->
-
   <div class="header-banner-copy">
 
    <h2>Schönheit und Eleganz</h2>
@@ -1220,7 +1218,7 @@ const ranges = [
 
 ];
 
-/* SELECTOR DE 10 IDIOMAS CON MEMORIA */
+/* SELECTOR DE 10 IDIOMAS - CAMBIO INMEDIATO */
 
 (function(){
 
@@ -1230,9 +1228,11 @@ const ranges = [
 
  const STORAGE_KEY = "parfuemPerez_language";
 
- let ready = false;
+ let pending = "de";
 
- let pending = null;
+ let translateReady = false;
+
+ let retryTimer = null;
 
  function getSavedLanguage(){
 
@@ -1249,32 +1249,6 @@ const ranges = [
   }catch(error){
 
    console.warn("No se pudo leer el idioma guardado.",error);
-
-  }
-
-  const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]+)/);
-
-  if(match){
-
-   try{
-
-    const value = decodeURIComponent(match[1]);
-
-    const parts = value.split("/");
-
-    const cookieLanguage = parts[2];
-
-    if(cookieLanguage && allowed.includes(cookieLanguage)){
-
-     return cookieLanguage;
-
-    }
-
-   }catch(error){
-
-    console.warn("No se pudo leer la cookie de idioma.",error);
-
-   }
 
   }
 
@@ -1298,11 +1272,11 @@ const ranges = [
 
  function setTranslateCookie(lang){
 
-  const cookieValue = "/de/" + lang;
+  const value = "/de/" + lang;
 
   document.cookie =
 
-   "googtrans=" + encodeURIComponent(cookieValue) +
+   "googtrans=" + encodeURIComponent(value) +
 
    ";path=/;max-age=31536000;SameSite=Lax";
 
@@ -1310,7 +1284,9 @@ const ranges = [
 
  function clearTranslateCookie(){
 
-  const expired = "googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;";
+  const expired =
+
+   "googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;";
 
   document.cookie = expired;
 
@@ -1320,7 +1296,9 @@ const ranges = [
 
   if(location.hostname.indexOf(".") !== -1){
 
-   const rootDomain = location.hostname.split(".").slice(-2).join(".");
+   const parts = location.hostname.split(".");
+
+   const rootDomain = parts.slice(-2).join(".");
 
    document.cookie =
 
@@ -1338,11 +1316,11 @@ const ranges = [
 
   if(!combo){
 
-   if(attempt < 30){
+   if(attempt < 120){
 
     setTimeout(function(){
 
-     applyLanguage(lang,attempt + 1);
+     applyLanguage(lang,attempt+1);
 
     },300);
 
@@ -1352,9 +1330,35 @@ const ranges = [
 
   }
 
-  combo.value = (lang === "de") ? "" : lang;
+  if(lang !== "de"){
 
-  combo.dispatchEvent(new Event("change"));
+   const optionExists = Array.from(combo.options).some(function(option){
+
+    return option.value === lang;
+
+   });
+
+   if(!optionExists && attempt < 120){
+
+    setTimeout(function(){
+
+     applyLanguage(lang,attempt+1);
+
+    },300);
+
+    return;
+
+   }
+
+  }
+
+  combo.value = lang === "de" ? "" : lang;
+
+  combo.dispatchEvent(
+
+   new Event("change",{bubbles:true})
+
+  );
 
  }
 
@@ -1362,7 +1366,7 @@ const ranges = [
 
   if(!allowed.includes(lang)){
 
-   lang = "de";
+   return;
 
   }
 
@@ -1380,27 +1384,27 @@ const ranges = [
 
   }
 
-  if(ready){
+  if(retryTimer){
 
-   applyLanguage(lang);
+   clearTimeout(retryTimer);
+
+   retryTimer = null;
 
   }
 
+  applyLanguage(lang);
+
  }
 
- const savedLanguage = getSavedLanguage();
+ selector.value = pending = getSavedLanguage();
 
- selector.value = savedLanguage;
-
- pending = savedLanguage;
-
- if(savedLanguage === "de"){
+ if(pending === "de"){
 
   clearTranslateCookie();
 
  }else{
 
-  setTranslateCookie(savedLanguage);
+  setTranslateCookie(pending);
 
  }
 
@@ -1410,7 +1414,7 @@ const ranges = [
 
   if(!allowed.includes(selected)){
 
-   this.value = getSavedLanguage();
+   this.value = pending;
 
    return;
 
@@ -1438,17 +1442,13 @@ const ranges = [
 
   },"google_translate_element");
 
-  ready = true;
+  translateReady = true;
 
-  if(pending){
+  retryTimer = setTimeout(function(){
 
-   setTimeout(function(){
+   applyLanguage(pending);
 
-    applyLanguage(pending);
-
-   },500);
-
-  }
+  },500);
 
  };
 
