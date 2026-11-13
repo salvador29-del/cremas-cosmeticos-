@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html lang="de">
@@ -105,6 +107,112 @@ header p{
  border:1px solid var(--gold);
 
  border-radius:8px
+
+}
+
+/* NUEVA CABECERA GRÁFICA DE CREMAS */
+
+.header-banner-wrap{
+
+ position:relative;
+
+ width:100%;
+
+ max-width:1500px;
+
+ margin:22px auto 0;
+
+ overflow:hidden;
+
+ border:1px solid var(--gold);
+
+ border-radius:15px;
+
+ box-shadow:0 8px 28px #75613B30;
+
+ background:#e9dfcd
+
+}
+
+.header-banner{
+
+ display:block;
+
+ width:100%;
+
+ height:auto;
+
+ max-height:560px;
+
+ object-fit:contain;
+
+ margin:0 auto
+
+}
+
+/* TEXTO REAL SOBRE LA FOTOGRAFÍA */
+
+.header-banner-copy{
+
+ position:absolute;
+
+ left:5%;
+
+ bottom:7%;
+
+ width:min(55%,650px);
+
+ padding:18px 22px;
+
+ text-align:left;
+
+ background:rgba(255,253,247,.88);
+
+ border:1px solid var(--gold);
+
+ border-radius:12px;
+
+ box-shadow:0 5px 22px #0002;
+
+ backdrop-filter:blur(3px)
+
+}
+
+.header-banner-copy h2{
+
+ margin:0 0 7px;
+
+ color:var(--brown);
+
+ font-family:Georgia,"Times New Roman",serif;
+
+ font-size:clamp(23px,4vw,42px);
+
+ line-height:1.15
+
+}
+
+.header-banner-copy p{
+
+ margin:5px 0;
+
+ color:#5e503e;
+
+ font-style:normal;
+
+ font-size:clamp(12px,1.7vw,17px)
+
+}
+
+.header-banner-copy .banner-small{
+
+ color:#987746;
+
+ font-weight:bold;
+
+ letter-spacing:1.5px;
+
+ font-size:clamp(10px,1.4vw,14px)
 
 }
 
@@ -622,6 +730,62 @@ body{top:0!important}
 
 }
 
+/* ADAPTACIÓN DE CABECERA PARA MÓVILES */
+
+@media(max-width:600px){
+
+ header{padding:20px 10px}
+
+ .header-banner-wrap{
+
+  margin-top:17px;
+
+  border-radius:10px
+
+ }
+
+ .header-banner-copy{
+
+  left:3%;
+
+  bottom:3%;
+
+  width:94%;
+
+  padding:9px 12px;
+
+  border-radius:8px
+
+ }
+
+ .header-banner-copy h2{
+
+  font-size:clamp(17px,5vw,25px);
+
+  margin-bottom:3px
+
+ }
+
+ .header-banner-copy p{
+
+  font-size:11px;
+
+  line-height:1.35;
+
+  margin:3px 0
+
+ }
+
+ .header-banner-copy .banner-small{
+
+  font-size:9px;
+
+  letter-spacing:1px
+
+ }
+
+}
+
 </style>
 
 </head>
@@ -659,6 +823,42 @@ body{top:0!important}
   <option value="fr">🇫🇷 Français</option>
 
  </select>
+
+ <!-- NUEVA FOTO DE CABECERA -->
+
+ <div class="header-banner-wrap">
+
+  <img
+
+   class="header-banner"
+
+   src="./cabecera-crema.PNG"
+
+   alt="Parfüm und Düfte Perez – Cremas, cosméticos y cuidado de la piel"
+
+   loading="eager"
+
+   fetchpriority="high"
+
+  >
+
+  <!-- TEXTOS HTML: GOOGLE TRANSLATE PUEDE TRADUCIRLOS -->
+
+  <div class="header-banner-copy">
+
+   <h2>Schönheit und Eleganz</h2>
+
+   <p>Entdecke die Welt der Schönheit und Pflege.</p>
+
+   <p class="banner-small">
+
+    GESICHT · KÖRPER · PFLEGE · KOSMETIK
+
+   </p>
+
+  </div>
+
+ </div>
 
 </header>
 
@@ -1036,8 +1236,6 @@ const ranges = [
 
  let pending = null;
 
- /* Leer la preferencia guardada */
-
  function getSavedLanguage(){
 
   try{
@@ -1055,8 +1253,6 @@ const ranges = [
    console.warn("No se pudo leer el idioma guardado.",error);
 
   }
-
-  /* Si no hay preferencia guardada, comprobar la cookie */
 
   const match = document.cookie.match(/(?:^|;\s*)googtrans=([^;]+)/);
 
@@ -1088,8 +1284,6 @@ const ranges = [
 
  }
 
- /* Guardar la preferencia elegida */
-
  function saveLanguage(lang){
 
   try{
@@ -1104,8 +1298,6 @@ const ranges = [
 
  }
 
- /* Guardar la cookie que utiliza Google Translate */
-
  function setTranslateCookie(lang){
 
   const cookieValue = "/de/" + lang;
@@ -1117,8 +1309,6 @@ const ranges = [
    ";path=/;max-age=31536000;SameSite=Lax";
 
  }
-
- /* Eliminar la cookie cuando se vuelve al alemán original */
 
  function clearTranslateCookie(){
 
@@ -1142,8 +1332,6 @@ const ranges = [
 
  }
 
- /* Aplicar el idioma en el selector interno de Google */
-
  function applyLanguage(lang,attempt){
 
   attempt = attempt || 0;
@@ -1166,21 +1354,11 @@ const ranges = [
 
   }
 
-  /*
-
-   * Alemán es el idioma original de la página.
-
-   * Google Translate utiliza el valor vacío para mostrar el original.
-
-   */
-
   combo.value = (lang === "de") ? "" : lang;
 
   combo.dispatchEvent(new Event("change"));
 
  }
-
- /* Función central para cambiar y recordar el idioma */
 
  function changeLanguage(lang){
 
@@ -1212,8 +1390,6 @@ const ranges = [
 
  }
 
- /* Recuperar el idioma al abrir o actualizar la página */
-
  const savedLanguage = getSavedLanguage();
 
  selector.value = savedLanguage;
@@ -1230,8 +1406,6 @@ const ranges = [
 
  }
 
- /* Detectar cambios del usuario */
-
  selector.addEventListener("change",function(){
 
   const selected = this.value;
@@ -1247,8 +1421,6 @@ const ranges = [
   changeLanguage(selected);
 
  });
-
- /* Inicializar Google Translate */
 
  window.googleTranslateElementInit = function(){
 
@@ -1269,14 +1441,6 @@ const ranges = [
   },"google_translate_element");
 
   ready = true;
-
-  /*
-
-   * Esperar a que Google cree su selector interno
-
-   * y después aplicar el idioma guardado.
-
-   */
 
   if(pending){
 
@@ -1854,16 +2018,6 @@ async function initializePage(){
 
  catalogStorage.innerHTML = "";
 
- /*
-
-  IMPORTANTE:
-
-  Cada gama puede utilizar la consulta alternativa
-
-  de su propia carpeta si falla el árbol de GitHub.
-
- */
-
  const results = await Promise.allSettled(
 
   ranges.map(async function(range){
@@ -1918,13 +2072,7 @@ async function initializePage(){
 
 }
 
-/* VENTANA INDEPENDIENTE DE PRODUCTOS
-
-   Al cerrar, devuelve la galería a su lugar original.
-
-   La página conserva la posición donde estaba el cliente.
-
-*/
+/* VENTANA INDEPENDIENTE DE PRODUCTOS */
 
 (function(){
 
